@@ -16,6 +16,7 @@ namespace NotationApp.Models
         private string bio;
         private DateTime? dateJoined;
         private string phoneNumber;
+        private List<string> sharedWithMe = new();
 
         public string Id
         {
@@ -59,7 +60,7 @@ namespace NotationApp.Models
             set => SetProperty(ref phoneNumber, value);
         }
 
-        private List<string> sharedWithMe = new();
+        
         public List<string> SharedWithMe
         {
             get => sharedWithMe;

@@ -29,6 +29,8 @@ namespace NotationApp.ViewModels
         public ObservableCollection<Note_Realtime> SharedWithMeNotes { get; private set; } = new();
         public ObservableCollection<Drawing> Drawings { get; private set; } = new();
         public ObservableCollection<Drawing> SharedWithMeDrawings { get; private set; } = new();
+
+        public ObservableCollection<HomeItem> Items { get; } = new();
         public string SelectedTag { get; private set; } = "All";
 
         [ObservableProperty] private Note_Realtime selectedNote;
@@ -47,108 +49,111 @@ namespace NotationApp.ViewModels
 
         #region Note Loading and Management
 
-        private async Task SyncToRemoteDatabase(Note_Realtime note)
-        {
-            if (!IsConnectedToInternet()) return;
-
-            try
-            {
-                Debug.WriteLine($"Starting sync to Firebase for note ID: {note.Id}");
-                Debug.WriteLine($"SharedWithUsers before sync: {note.SharedWithUsers}");
-
-                string firebaseUrl = $"https://notationapp-98854-default-rtdb.firebaseio.com/notes/{note.Id}.json";
-                using var client = new HttpClient();
-
-                // Đảm bảo SharedWithUsers không null trước khi sync
-                if (string.IsNullOrEmpty(note.SharedWithUsers))
-                {
-                    note.SharedWithUsers = JsonConvert.SerializeObject(new Dictionary<string, string>());
-                }
-
-                // Tạo object để sync
-                var noteToSync = new
-                {
-                    Id = note.Id,
-                    Title = note.Title,
-                    Text = note.Text,
-                    CreateDate = note.CreateDate,
-                    UpdateDate = note.UpdateDate,
-                    IsDeleted = note.IsDeleted,
-                    IsSynced = note.IsSynced,
-                    TagName = note.TagName,
-                    IsPinned = note.IsPinned,
-                    OwnerId = note.OwnerId,
-                    IsShared = note.IsShared,
-                    Permission = note.Permission,
-                    ShareLink = note.ShareLink,
-                    SharedWithUsers = note.SharedWithUsers  // Ensure this is included
-                };
-
-                var jsonData = JsonConvert.SerializeObject(noteToSync);
-                Debug.WriteLine($"Data being sent to Firebase: {jsonData}");
-
-                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-                var response = await client.PutAsync(firebaseUrl, content);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    note.IsSynced = true;
-                    await _database.UpdateNoteAsync(note);
-                    Debug.WriteLine($"Successfully synced note {note.Id} to Firebase");
-
-                    // Verify the sync
-                    var verifyResponse = await client.GetAsync(firebaseUrl);
-                    if (verifyResponse.IsSuccessStatusCode)
-                    {
-                        var verifyData = await verifyResponse.Content.ReadAsStringAsync();
-                        Debug.WriteLine($"Verification data from Firebase: {verifyData}");
-                    }
-                }
-                else
-                {
-                    Debug.WriteLine($"Failed to sync to Firebase. Status: {response.StatusCode}");
-                    Debug.WriteLine($"Response content: {await response.Content.ReadAsStringAsync()}");
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error during Firebase sync: {ex.Message}");
-                Debug.WriteLine($"Stack trace: {ex.StackTrace}");
-            }
-        }
-
         [RelayCommand]
-        public async Task LoadAllContentAsync()
+        public async Task LoadItemsAsync()
         {
             try
             {
                 IsLoading = true;
-                StatusMessage = "Loading content...";
+                Items.Clear();
 
                 var userId = Preferences.Get("UserId", string.Empty);
-                if (string.IsNullOrEmpty(userId))
+                var userEmail = Preferences.Get("UserEmail", string.Empty);
+
+                if (string.IsNullOrEmpty(userId) || string.IsNullOrEmpty(userEmail))
                 {
                     StatusMessage = "User not logged in";
                     return;
                 }
 
-                await Task.WhenAll(
-                    LoadNotesAsync(),
-                    LoadDrawingsAsync()
-                );
+                // Load notes
+                var ownedNotes = await _database.GetOwnedNotesAsync(userId);
+                var sharedNotes = await _database.GetSharedNotesAsync(userEmail);
+                var allNotes = ownedNotes.Where(n => !n.IsDeleted)
+                    .Concat(sharedNotes.Where(n => !n.IsDeleted && n.OwnerId != userId));
 
-                StatusMessage = string.Empty;
+                // Load drawings
+                var ownedDrawings = await _database.GetOwnedDrawingsAsync(userId);
+                var sharedDrawings = await _database.GetSharedDrawingsAsync(userEmail);
+                var allDrawings = ownedDrawings.Where(d => !d.IsDeleted)
+                    .Concat(sharedDrawings.Where(d => !d.IsDeleted && d.OwnerId != userId));
+
+                // Convert to HomeItems
+                var homeItems = allNotes.Select(n => new HomeItem
+                {
+                    Id = n.Id,
+                    Title = n.Title,
+                    Content = n.PlainText,
+                    UpdateDate = n.UpdateDate,
+                    TagName = n.TagName,
+                    IsPinned = n.IsPinned,
+                    IsShared = n.IsShared,
+                    ItemType = "Note",
+                    OriginalItem = n
+                })
+                .Concat(allDrawings.Select(d => new HomeItem
+                {
+                    Id = d.Id,
+                    Title = d.Title,
+                    UpdateDate = d.UpdateDate,
+                    TagName = d.TagName,
+                    IsPinned = d.IsPinned,
+                    IsShared = d.IsShared,
+                    ItemType = "Drawing",
+                    OriginalItem = d
+                }))
+                .OrderByDescending(i => i.UpdateDate);
+
+                foreach (var item in homeItems)
+                {
+                    Items.Add(item);
+                }
+
+                Debug.WriteLine($"Loaded {ownedNotes.Count()} owned notes, {sharedNotes.Count()} shared notes, {ownedDrawings.Count()} owned drawings, {sharedDrawings.Count()} shared drawings");
             }
             catch (Exception ex)
             {
-                StatusMessage = "Error loading content";
-                Debug.WriteLine($"Error in LoadAllContentAsync: {ex}");
+                StatusMessage = $"Error loading items: {ex.Message}";
+                Debug.WriteLine($"Error in LoadItemsAsync: {ex}");
             }
             finally
             {
                 IsLoading = false;
             }
         }
+
+        //[RelayCommand]
+        //public async Task LoadAllContentAsync()
+        //{
+        //    try
+        //    {
+        //        IsLoading = true;
+        //        StatusMessage = "Loading content...";
+
+        //        var userId = Preferences.Get("UserId", string.Empty);
+        //        if (string.IsNullOrEmpty(userId))
+        //        {
+        //            StatusMessage = "User not logged in";
+        //            return;
+        //        }
+
+        //        await Task.WhenAll(
+        //            LoadNotesAsync(),
+        //            LoadDrawingsAsync()
+        //        );
+
+        //        StatusMessage = string.Empty;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        StatusMessage = "Error loading content";
+        //        Debug.WriteLine($"Error in LoadAllContentAsync: {ex}");
+        //    }
+        //    finally
+        //    {
+        //        IsLoading = false;
+        //    }
+        //}
 
         [RelayCommand]
         public async Task LoadNotesAsync()
@@ -565,39 +570,93 @@ namespace NotationApp.ViewModels
         {
             try
             {
-                var userId = Preferences.Get("UserId", string.Empty);
-                if (string.IsNullOrEmpty(userId))
-                {
-                    StatusMessage = "User not logged in";
-                    return;
-                }
+                //Console.WriteLine($"Filtering by tag: {tag}");
+                //if (tag == "All")
+                //{
+                //    await LoadItemsAsync();
+                //    Console.WriteLine("Finished loading all items");
+                //    return;
+                //}
 
-                SelectedTag = tag ?? "All";
-                var allNotes = await _database.GetNotesAsync();
+                var userId = Preferences.Get("UserId", string.Empty);
+                // Lấy email từ Preferences
+                var userEmail = Preferences.Get("UserEmail", string.Empty);
+
+                if (string.IsNullOrEmpty(userId)) return;
+                SelectedTag = tag;
+
+                var notes = await _database.GetNotesAsync();
+                var drawings = await _database.GetDrawingsAsync();
+
 
                 var filteredNotes = tag switch
                 {
-                    "All" => allNotes.Where(n => !n.IsDeleted && n.OwnerId == userId),
-                    "Pinned" => allNotes.Where(n => n.IsPinned && !n.IsDeleted && n.OwnerId == userId),
-                    "Shared" => allNotes.Where(n => n.IsShared && !n.IsDeleted && (JsonConvert.DeserializeObject<string[]>(n.SharedWithUsers)?.Contains(userId) ?? false)),
-                    "Work" => allNotes.Where(n => n.TagName == "Work" && !n.IsDeleted && n.OwnerId == userId),
-                    "Personal" => allNotes.Where(n => n.TagName == "Personal" && !n.IsDeleted && n.OwnerId == userId),
-                    "Todo" => allNotes.Where(n => n.TagName == "Todo" && !n.IsDeleted && n.OwnerId == userId),
-                    "Study" => allNotes.Where(n => n.TagName == "Study" && !n.IsDeleted && n.OwnerId == userId),
-                    "Other" => allNotes.Where(n => n.TagName == "Other" && !n.IsDeleted && n.OwnerId == userId),
-                    _ => allNotes.Where(n => !n.IsDeleted && n.OwnerId == userId)
+                    "All" => notes.Where(n => !n.IsDeleted && n.OwnerId == userId),
+                    "Pinned" => notes.Where(n => n.IsPinned && !n.IsDeleted && n.OwnerId == userId),
+                    "Shared" => notes.Where(n => n.IsSharedWithUser(userEmail)),
+                    _ => notes.Where(n => n.TagName == tag && !n.IsDeleted && n.OwnerId == userId)
                 };
 
-                Notes.Clear();
-                foreach (var note in filteredNotes)
+                var filteredDrawings = tag switch
                 {
-                    Notes.Add(note);
+                    "All" => drawings.Where(d => !d.IsDeleted && d.OwnerId == userId),
+                    "Pinned" => drawings.Where(d => d.IsPinned && !d.IsDeleted && d.OwnerId == userId),
+                    "Shared" => drawings.Where(d => d.IsShared && !d.IsDeleted && d.OwnerId == userId &&
+                        (JsonConvert.DeserializeObject<Dictionary<string, string>>(d.SharedWithUsers ?? "{}")?.ContainsKey(userEmail) ?? false)),
+                    _ => drawings.Where(d => d.TagName == tag && !d.IsDeleted && d.OwnerId == userId)
+                };
+
+                // Phần còn lại giữ nguyên như cũ
+                var homeItems = filteredNotes.Select(n => new HomeItem
+                {
+                    Id = n.Id,
+                    Title = n.Title,
+                    Content = n.PlainText,
+                    UpdateDate = n.UpdateDate,
+                    TagName = n.TagName,
+                    IsPinned = n.IsPinned,
+                    IsShared = n.IsShared,
+                    ItemType = "Note",
+                    OriginalItem = n
+                })
+                .Concat(filteredDrawings.Select(d => new HomeItem
+                {
+                    Id = d.Id,
+                    Title = d.Title,
+                    UpdateDate = d.UpdateDate,
+                    TagName = d.TagName,
+                    IsPinned = d.IsPinned,
+                    IsShared = d.IsShared,
+                    ItemType = "Drawing",
+                    OriginalItem = d
+                }))
+                .OrderByDescending(i => i.UpdateDate);
+
+                Items.Clear();
+                foreach (var item in homeItems)
+                {
+                    Items.Add(item);
                 }
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"FilterByTag error: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", "Failed to filter notes", "OK");
+                await Shell.Current.DisplayAlert("Lỗi", "Không thể lọc các mục", "OK");
+            }
+        }
+
+        [RelayCommand]
+        private async Task TapItem(HomeItem item)
+        {
+            var navigationParameter = new Dictionary<string, object>();
+            if (item.ItemType == "Note")
+            {
+                navigationParameter.Add("SelectedNote", item.OriginalItem);
+                await Shell.Current.GoToAsync("NotePage", navigationParameter);
+            }
+            else if (item.ItemType == "Drawing")
+            {
+                navigationParameter.Add("SelectedDrawing", item.OriginalItem);
+                await Shell.Current.GoToAsync("DrawingPage", navigationParameter);
             }
         }
         [RelayCommand]

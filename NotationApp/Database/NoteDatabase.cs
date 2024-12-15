@@ -186,18 +186,16 @@ namespace NotationApp.Database
             return _database.ExecuteAsync("DELETE FROM Note_Realtime WHERE Id = ?", note.Id);
         }
 
-        public async Task<List<Note_Realtime>> GetSharedNotesAsync(string userId)
+        public async Task<List<Note_Realtime>> GetSharedNotesAsync(string userEmail)
         {
-            if (string.IsNullOrEmpty(userId))
+            if (string.IsNullOrEmpty(userEmail))
                 return new List<Note_Realtime>();
 
             var notes = await _database.Table<Note_Realtime>()
-                .Where(n => !n.IsDeleted)
+                .Where(n => !n.IsDeleted && n.IsShared)
                 .ToListAsync();
 
-            return notes.Where(n =>
-                n.IsShared &&
-                (n.SharedWithUsers.Contains(userId) || n.Permission == Note_Realtime.SharePermission.Full))
+            return notes.Where(n => n.IsSharedWithUser(userEmail))
                 .OrderByDescending(n => n.UpdateDate)
                 .ToList();
         }

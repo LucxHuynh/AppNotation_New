@@ -10,14 +10,14 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>com.companyname.notationapp</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
-    <IntermediateOutputPath>E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>E:\GitHub+Java\LOCv2\AppNotation\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
     <RegisteredManifestChecksum>4076C5AAA3266C06C8F51FBFEC752C64F9CCC333B55BF2EDC5F0A8B02597CBBB</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>com.companyname.notationapp_1.0.0.1_x64__9zz4h110yvjzm</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>com.companyname.notationapp_9zz4h110yvjzm!App</RegisteredUserModeAppID>
@@ -26,392 +26,392 @@
     <RegisteredVersion>1.0.0.1</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-14T06:39:57.924</Modified>
+      <Modified>2024-12-15T14:14:05.668</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-14T05:58:55.857</Modified>
+      <Modified>2024-12-15T13:18:07.358</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NotationApp.runtimeconfig.json">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NotationApp.runtimeconfig.json">
       <PackagePath>NotationApp.runtimeconfig.json</PackagePath>
-      <Modified>2024-12-12T17:20:18.851</Modified>
+      <Modified>2024-12-15T13:18:06.908</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NotationApp.dll">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NotationApp.dll">
       <PackagePath>NotationApp.dll</PackagePath>
-      <Modified>2024-12-14T06:39:56.686</Modified>
+      <Modified>2024-12-15T14:14:03.705</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>NotationApp.exe</PackagePath>
-      <Modified>2024-12-14T06:39:56.770</Modified>
+      <Modified>2024-12-15T14:14:03.769</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\Resources\Raw\drawing_editor.html">
-      <PackagePath>Resources\Raw\drawing_editor.html</PackagePath>
-      <Modified>2024-12-12T17:18:13.401</Modified>
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\Resources\Raw\drawing_editor.html">
+      <PackagePath>drawing_editor.html</PackagePath>
+      <Modified>2024-12-15T10:02:50.248</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\Resources\Raw\editor.html">
-      <PackagePath>Resources\Raw\editor.html</PackagePath>
-      <Modified>2024-12-12T17:18:13.401</Modified>
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\Resources\Raw\editor.html">
+      <PackagePath>editor.html</PackagePath>
+      <Modified>2024-12-15T10:02:27.362</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-12-12T17:18:19.440</Modified>
+      <Modified>2024-12-15T12:59:18.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-12-12T17:18:19.440</Modified>
+      <Modified>2024-12-15T12:59:18.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-12-12T17:18:19.441</Modified>
+      <Modified>2024-12-15T12:59:18.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-12-12T17:18:19.441</Modified>
+      <Modified>2024-12-15T12:59:18.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-12-12T17:18:19.441</Modified>
+      <Modified>2024-12-15T12:59:18.734</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2024-12-12T17:18:19.407</Modified>
+      <Modified>2024-12-15T12:59:18.702</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2024-12-12T17:18:19.408</Modified>
+      <Modified>2024-12-15T12:59:18.705</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\allnote.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\allnote.scale-100.png">
       <PackagePath>allnote.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.504</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-12-13T04:34:40.033</Modified>
+      <Modified>2024-12-15T12:59:56.514</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.028</Modified>
+      <Modified>2024-12-15T12:59:56.507</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.028</Modified>
+      <Modified>2024-12-15T12:59:56.507</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.028</Modified>
+      <Modified>2024-12-15T12:59:56.507</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.028</Modified>
+      <Modified>2024-12-15T12:59:56.507</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.028</Modified>
+      <Modified>2024-12-15T12:59:56.507</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.031</Modified>
+      <Modified>2024-12-15T12:59:56.512</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.031</Modified>
+      <Modified>2024-12-15T12:59:56.512</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.031</Modified>
+      <Modified>2024-12-15T12:59:56.511</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.031</Modified>
+      <Modified>2024-12-15T12:59:56.511</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.031</Modified>
+      <Modified>2024-12-15T12:59:56.511</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.032</Modified>
+      <Modified>2024-12-15T12:59:56.512</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.031</Modified>
+      <Modified>2024-12-15T12:59:56.512</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.031</Modified>
+      <Modified>2024-12-15T12:59:56.512</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.031</Modified>
+      <Modified>2024-12-15T12:59:56.512</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.031</Modified>
+      <Modified>2024-12-15T12:59:56.512</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.033</Modified>
+      <Modified>2024-12-15T12:59:56.514</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.033</Modified>
+      <Modified>2024-12-15T12:59:56.514</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.032</Modified>
+      <Modified>2024-12-15T12:59:56.514</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.032</Modified>
+      <Modified>2024-12-15T12:59:56.514</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.032</Modified>
+      <Modified>2024-12-15T12:59:56.513</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.032</Modified>
+      <Modified>2024-12-15T12:59:56.513</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.032</Modified>
+      <Modified>2024-12-15T12:59:56.513</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.032</Modified>
+      <Modified>2024-12-15T12:59:56.513</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.032</Modified>
+      <Modified>2024-12-15T12:59:56.513</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.032</Modified>
+      <Modified>2024-12-15T12:59:56.513</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.509</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.508</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.508</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.508</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.508</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.509</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.509</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.509</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.509</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.509</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.030</Modified>
+      <Modified>2024-12-15T12:59:56.510</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.030</Modified>
+      <Modified>2024-12-15T12:59:56.510</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.030</Modified>
+      <Modified>2024-12-15T12:59:56.510</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.030</Modified>
+      <Modified>2024-12-15T12:59:56.509</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.030</Modified>
+      <Modified>2024-12-15T12:59:56.509</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.508</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.508</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.508</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.029</Modified>
+      <Modified>2024-12-15T12:59:56.507</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.028</Modified>
+      <Modified>2024-12-15T12:59:56.507</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\apple_logo.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\apple_logo.scale-100.png">
       <PackagePath>apple_logo.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.033</Modified>
+      <Modified>2024-12-15T12:59:56.515</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\arrow_down.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\arrow_down.scale-100.png">
       <PackagePath>arrow_down.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.035</Modified>
+      <Modified>2024-12-15T12:59:56.505</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\attach.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\attach.scale-100.png">
       <PackagePath>attach.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.515</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\bin.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\bin.scale-100.png">
       <PackagePath>bin.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.506</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\checkbox_checked.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\checkbox_checked.scale-100.png">
       <PackagePath>checkbox_checked.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.516</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\default_profile.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\default_profile.scale-100.png">
       <PackagePath>default_profile.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.033</Modified>
+      <Modified>2024-12-15T12:59:56.515</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.028</Modified>
+      <Modified>2024-12-15T12:59:56.517</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.028</Modified>
+      <Modified>2024-12-15T12:59:56.516</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.027</Modified>
+      <Modified>2024-12-15T12:59:56.516</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.027</Modified>
+      <Modified>2024-12-15T12:59:56.516</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.027</Modified>
+      <Modified>2024-12-15T12:59:56.516</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dots.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dots.scale-100.png">
       <PackagePath>dots.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.505</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\draw.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\draw.scale-100.png">
       <PackagePath>draw.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.033</Modified>
+      <Modified>2024-12-15T12:59:56.514</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ellipsis.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\ellipsis.scale-100.png">
       <PackagePath>ellipsis.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.506</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\folder.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\folder.scale-100.png">
       <PackagePath>folder.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.506</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\format.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\format.scale-100.png">
       <PackagePath>format.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.033</Modified>
+      <Modified>2024-12-15T12:59:56.505</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\google_logo.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\google_logo.scale-100.png">
       <PackagePath>google_logo.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.033</Modified>
+      <Modified>2024-12-15T12:59:56.504</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\grid.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\grid.scale-100.png">
       <PackagePath>grid.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.033</Modified>
+      <Modified>2024-12-15T12:59:56.504</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\lessthan.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\lessthan.scale-100.png">
       <PackagePath>lessthan.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.505</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\microphone.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\microphone.scale-100.png">
       <PackagePath>microphone.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.505</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notes.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notes.scale-100.png">
       <PackagePath>notes.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.506</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notes_amico.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notes_amico.scale-100.png">
       <PackagePath>notes_amico.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.506</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notes_bro.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notes_bro.scale-100.png">
       <PackagePath>notes_bro.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.514</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notes_pana.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notes_pana.scale-100.png">
       <PackagePath>notes_pana.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.033</Modified>
+      <Modified>2024-12-15T12:59:56.515</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notes_rafiki.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\notes_rafiki.scale-100.png">
       <PackagePath>notes_rafiki.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.515</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\peoples.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\peoples.scale-100.png">
       <PackagePath>peoples.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.504</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\pin_icon.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\pin_icon.scale-100.png">
       <PackagePath>pin_icon.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.504</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\redo.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\redo.scale-100.png">
       <PackagePath>redo.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.515</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\restore.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\restore.scale-100.png">
       <PackagePath>restore.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.505</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\save.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\save.scale-100.png">
       <PackagePath>save.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.505</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\search.scale-100.png">
       <PackagePath>search.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.506</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\share.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\share.scale-100.png">
       <PackagePath>share.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.506</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\undo.scale-100.png">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\undo.scale-100.png">
       <PackagePath>undo.scale-100.png</PackagePath>
-      <Modified>2024-12-13T04:34:40.034</Modified>
+      <Modified>2024-12-15T12:59:56.516</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\firebase-credentials.json">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\firebase-credentials.json">
       <PackagePath>firebase-credentials.json</PackagePath>
-      <Modified>2024-12-12T17:18:16.742</Modified>
+      <Modified>2024-12-15T12:59:16.582</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\GitHub+Java\LOCv2\AppNotation\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NotationApp.deps.json">
+    <AppxPackagedFile Include="E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NotationApp.deps.json">
       <PackagePath>NotationApp.deps.json</PackagePath>
-      <Modified>2024-12-14T05:58:55.634</Modified>
+      <Modified>2024-12-15T13:18:06.737</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\pc\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.41\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

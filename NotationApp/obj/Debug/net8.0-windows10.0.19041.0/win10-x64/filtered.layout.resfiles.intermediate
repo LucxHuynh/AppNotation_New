@@ -86,5 +86,5 @@ splashSplashScreen.scale-125.png
 splashSplashScreen.scale-150.png
 splashSplashScreen.scale-200.png
 splashSplashScreen.scale-400.png
-Resources\Raw\drawing_editor.html
-Resources\Raw\editor.html
+drawing_editor.html
+editor.html

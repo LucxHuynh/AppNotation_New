@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -272,11 +273,154 @@
             input.click();
         }
 
+        //// Công cụ Pencil
+        //stage.on('mousedown', () => {
+        //    if (currentTool === 'pencil') {
+        //        isDrawing = true;
+        //        const pos = stage.getPointerPosition();
+        //        currentLine = new Konva.Line({
+        //            stroke: currentColor,
+        //            strokeWidth: brushSize,
+        //            points: [pos.x, pos.y],
+        //            lineCap: 'round',
+        //            lineJoin: 'round',
+        //            draggable: false,
+        //        });
+        //        layer.add(currentLine);
+        //    }
+        //});
+
+        //stage.on('mousemove', () => {
+        //    if (isDrawing && currentTool === 'pencil') {
+        //        const pos = stage.getPointerPosition();
+        //        const points = currentLine.points().concat([pos.x, pos.y]);
+        //        currentLine.points(points);
+        //        layer.batchDraw();
+        //    }
+        //});
+
+        //stage.on('mouseup', () => {
+        //    if (isDrawing && currentTool === 'pencil') {
+        //        isDrawing = false;
+
+        //        // Lưu hành động vẽ vào lịch sử
+        //        addToHistory({
+        //            type: 'add',
+        //            object: currentLine,
+        //        });
+        //    }
+        //});
+
+        //// Công cụ Eraser
+        //stage.on('click', (e) => {
+        //    if (currentTool === 'eraser' && e.target !== stage) {
+        //        e.target.destroy();
+        //        history.push(() => layer.add(e.target));
+        //        layer.batchDraw();
+        //    }
+        //});
+
+        //// Công cụ Text
+        //function addText() {
+        //    if (currentTool === 'text') {
+        //        const pos = stage.getPointerPosition();
+        //        const textNode = new Konva.Text({
+        //            x: pos.x,
+        //            y: pos.y,
+        //            text: 'Double click to edit',
+        //            fontSize: 16,
+        //            fontFamily: 'Arial',
+        //            fill: currentColor,
+        //            draggable: true,
+        //        });
+        //        layer.add(textNode);
+        //        layer.draw();
+
+        //        // Lưu hành động thêm text vào lịch sử
+        //        addToHistory({
+        //            type: 'add',
+        //            object: textNode,
+        //        });
+
+        //        textNode.on('dblclick', () => {
+        //            const textPosition = textNode.absolutePosition();
+        //            const stageBox = stage.container().getBoundingClientRect();
+
+        //            const textarea = document.createElement('textarea');
+        //            document.body.appendChild(textarea);
+
+        //            textarea.value = textNode.text();
+        //            textarea.style.position = 'absolute';
+        //            textarea.style.top = `${textPosition.y + stageBox.top}px`;
+        //            textarea.style.left = `${textPosition.x + stageBox.left}px`;
+        //            textarea.style.width = `${textNode.width() - textNode.padding() * 2}px`;
+        //            textarea.style.height = `${textNode.height() - textNode.padding() * 2}px`;
+        //            textarea.style.border = 'none';
+        //            textarea.style.padding = '50px';
+        //            textarea.style.margin = '50px';
+        //            textarea.style.overflow = 'hidden';
+        //            textarea.style.background = 'none';
+        //            textarea.style.outline = 'none';
+        //            textarea.style.resize = 'none';
+        //            textarea.style.lineHeight = `${textNode.lineHeight()}`;
+        //            textarea.style.fontFamily = textNode.fontFamily();
+        //            textarea.style.transformOrigin = 'left top';
+        //            textarea.style.textAlign = textNode.align();
+        //            textarea.style.color = textNode.fill();
+        //            textarea.focus();
+
+        //            textarea.addEventListener('keydown', (e) => {
+        //                if (e.key === 'Enter') {
+        //                    // Lưu trạng thái cũ và mới để Undo/Redo
+        //                    addToHistory({
+        //                        type: 'update',
+        //                        object: textNode,
+        //                        oldAttrs: { text: textNode.text() },
+        //                        newAttrs: { text: textarea.value },
+        //                    });
+
+        //                    textNode.text(textarea.value);
+        //                    layer.draw();
+        //                    document.body.removeChild(textarea);
+        //                }
+        //            });
+
+        //            textarea.addEventListener('blur', () => {
+        //                textNode.text(textarea.value);
+        //                layer.draw();
+        //                document.body.removeChild(textarea);
+        //            });
+        //        });
+        //    }
+        //}
+
+        //// Công cụ Fill
+        //stage.on('click', (e) => {
+        //    if (currentTool === 'fill' && e.target !== stage) {
+        //        const target = e.target;
+        //        if (target.fill) {
+        //            // Lưu trạng thái cũ và mới để Undo/Redo
+        //            const oldFill = target.fill();
+        //            addToHistory({
+        //                type: 'update',
+        //                object: target,
+        //                oldAttrs: { fill: oldFill },
+        //                newAttrs: { fill: currentColor },
+        //            });
+
+        //            // Đặt màu cho đối tượng
+        //            target.fill(currentColor);
+        //            layer.batchDraw();
+        //        } else {
+        //            console.warn('Object does not support fill property.');
+        //        }
+        //    }
+        //});
+
         // Công cụ Pencil
-        stage.on('mousedown', () => {
+        const handleDrawStart = (pos) => {
             if (currentTool === 'pencil') {
                 isDrawing = true;
-                const pos = stage.getPointerPosition();
                 currentLine = new Konva.Line({
                     stroke: currentColor,
                     strokeWidth: brushSize,
@@ -287,34 +431,49 @@
                 });
                 layer.add(currentLine);
             }
-        });
+        };
 
-        stage.on('mousemove', () => {
+        const handleDrawMove = (pos) => {
             if (isDrawing && currentTool === 'pencil') {
-                const pos = stage.getPointerPosition();
                 const points = currentLine.points().concat([pos.x, pos.y]);
                 currentLine.points(points);
                 layer.batchDraw();
             }
-        });
+        };
 
-        stage.on('mouseup', () => {
+        const handleDrawEnd = () => {
             if (isDrawing && currentTool === 'pencil') {
                 isDrawing = false;
-
-                // Lưu hành động vẽ vào lịch sử
                 addToHistory({
                     type: 'add',
                     object: currentLine,
                 });
             }
+        };
+
+        // Mouse events
+        stage.on('mousedown touchstart', (e) => {
+            handleDrawStart(stage.getPointerPosition());
+        });
+
+        stage.on('mousemove touchmove', (e) => {
+            if (e.evt.type === 'touchmove') e.evt.preventDefault();
+            handleDrawMove(stage.getPointerPosition());
+        });
+
+        stage.on('mouseup touchend', () => {
+            handleDrawEnd();
         });
 
         // Công cụ Eraser
-        stage.on('click', (e) => {
+        stage.on('click tap', (e) => {
             if (currentTool === 'eraser' && e.target !== stage) {
-                e.target.destroy();
-                history.push(() => layer.add(e.target));
+                const target = e.target;
+                addToHistory({
+                    type: 'remove',
+                    object: target
+                });
+                target.destroy();
                 layer.batchDraw();
             }
         });
@@ -326,7 +485,7 @@
                 const textNode = new Konva.Text({
                     x: pos.x,
                     y: pos.y,
-                    text: 'Double click to edit',
+                    text: 'Nhấp đúp để chỉnh sửa',
                     fontSize: 16,
                     fontFamily: 'Arial',
                     fill: currentColor,
@@ -335,13 +494,13 @@
                 layer.add(textNode);
                 layer.draw();
 
-                // Lưu hành động thêm text vào lịch sử
                 addToHistory({
                     type: 'add',
                     object: textNode,
                 });
 
-                textNode.on('dblclick', () => {
+                // Xử lý chỉnh sửa text
+                const editText = (e) => {
                     const textPosition = textNode.absolutePosition();
                     const stageBox = stage.container().getBoundingClientRect();
 
@@ -352,53 +511,59 @@
                     textarea.style.position = 'absolute';
                     textarea.style.top = `${textPosition.y + stageBox.top}px`;
                     textarea.style.left = `${textPosition.x + stageBox.left}px`;
-                    textarea.style.width = `${textNode.width() - textNode.padding() * 2}px`;
-                    textarea.style.height = `${textNode.height() - textNode.padding() * 2}px`;
-                    textarea.style.border = 'none';
-                    textarea.style.padding = '50px';
-                    textarea.style.margin = '50px';
+                    textarea.style.width = `${textNode.width()}px`;
+                    textarea.style.height = `${textNode.height()}px`;
+                    textarea.style.fontSize = '16px';
+                    textarea.style.border = '1px solid #999';
+                    textarea.style.padding = '5px';
+                    textarea.style.margin = '0';
                     textarea.style.overflow = 'hidden';
-                    textarea.style.background = 'none';
+                    textarea.style.background = 'white';
                     textarea.style.outline = 'none';
                     textarea.style.resize = 'none';
-                    textarea.style.lineHeight = `${textNode.lineHeight()}`;
+                    textarea.style.lineHeight = textNode.lineHeight();
                     textarea.style.fontFamily = textNode.fontFamily();
                     textarea.style.transformOrigin = 'left top';
                     textarea.style.textAlign = textNode.align();
                     textarea.style.color = textNode.fill();
                     textarea.focus();
 
-                    textarea.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter') {
-                            // Lưu trạng thái cũ và mới để Undo/Redo
+                    const handleEnter = (e) => {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                            e.preventDefault();
+                            completeEdit();
+                        }
+                    };
+
+                    const completeEdit = () => {
+                        const newText = textarea.value;
+                        if (newText !== textNode.text()) {
                             addToHistory({
                                 type: 'update',
                                 object: textNode,
                                 oldAttrs: { text: textNode.text() },
-                                newAttrs: { text: textarea.value },
+                                newAttrs: { text: newText },
                             });
-
-                            textNode.text(textarea.value);
-                            layer.draw();
-                            document.body.removeChild(textarea);
+                            textNode.text(newText);
                         }
-                    });
-
-                    textarea.addEventListener('blur', () => {
-                        textNode.text(textarea.value);
                         layer.draw();
                         document.body.removeChild(textarea);
-                    });
-                });
+                        textarea.removeEventListener('keydown', handleEnter);
+                    };
+
+                    textarea.addEventListener('keydown', handleEnter);
+                    textarea.addEventListener('blur', completeEdit);
+                };
+
+                textNode.on('dblclick dbltap', editText);
             }
         }
 
         // Công cụ Fill
-        stage.on('click', (e) => {
+        stage.on('click tap', (e) => {
             if (currentTool === 'fill' && e.target !== stage) {
                 const target = e.target;
                 if (target.fill) {
-                    // Lưu trạng thái cũ và mới để Undo/Redo
                     const oldFill = target.fill();
                     addToHistory({
                         type: 'update',
@@ -406,12 +571,8 @@
                         oldAttrs: { fill: oldFill },
                         newAttrs: { fill: currentColor },
                     });
-
-                    // Đặt màu cho đối tượng
                     target.fill(currentColor);
                     layer.batchDraw();
-                } else {
-                    console.warn('Object does not support fill property.');
                 }
             }
         });

@@ -99,6 +99,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:NotationApp.ViewModels.HomePageViewModel.SelectedNote">
             <inheritdoc cref="F:NotationApp.ViewModels.HomePageViewModel.selectedNote"/>
@@ -120,11 +121,11 @@
             <param name="value">The new property value that was set.</param>
             <remarks>This method is invoked right after the value of <see cref="P:NotationApp.ViewModels.HomePageViewModel.SearchQuery"/> is changed.</remarks>
         </member>
-        <member name="F:NotationApp.ViewModels.HomePageViewModel.loadAllContentCommand">
-            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.LoadAllContentCommand"/>.</summary>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.loadItemsCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.LoadItemsCommand"/>.</summary>
         </member>
-        <member name="P:NotationApp.ViewModels.HomePageViewModel.LoadAllContentCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.LoadAllContentAsync"/>.</summary>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.LoadItemsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.LoadItemsAsync"/>.</summary>
         </member>
         <member name="F:NotationApp.ViewModels.HomePageViewModel.loadNotesCommand">
             <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.LoadNotesCommand"/>.</summary>
@@ -168,6 +169,12 @@
         <member name="P:NotationApp.ViewModels.HomePageViewModel.FilterByTagCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.FilterByTag(System.String)"/>.</summary>
         </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.tapItemCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.TapItemCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.TapItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.TapItem(NotationApp.ViewModels.HomeItem)"/>.</summary>
+        </member>
         <member name="F:NotationApp.ViewModels.HomePageViewModel.shareItemCommand">
             <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.ShareItemCommand"/>.</summary>
         </member>
@@ -196,6 +203,9 @@
         </member>
         <member name="P:NotationApp.ViewModels.NotePageViewModel.SelectedDrawing">
             <inheritdoc cref="F:NotationApp.ViewModels.NotePageViewModel.selectedDrawing"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.NotePageViewModel.IsEditable">
+            <inheritdoc cref="F:NotationApp.ViewModels.NotePageViewModel.isEditable"/>
         </member>
         <member name="P:NotationApp.ViewModels.NotePageViewModel.Title">
             <inheritdoc cref="F:NotationApp.ViewModels.NotePageViewModel.title"/>
@@ -516,6 +526,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StatusMessage">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StatusMessage" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsEditable">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsEditable" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Text">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Text" generated properties.</summary>
         </member>
@@ -590,6 +603,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StatusMessage">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StatusMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsEditable">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsEditable" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Text">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Text" generated properties.</summary>

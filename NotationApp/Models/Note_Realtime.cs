@@ -38,7 +38,7 @@ namespace NotationApp.Models
         // New properties for user and sharing
         public string OwnerId { get; set; } = string.Empty; // ID of the note creator
         public bool IsShared { get; set; } = false; // Indicates if note is shared
-        public string SharedWithUsers { get; set; } = JsonConvert.SerializeObject(Array.Empty<string>());
+        public string SharedWithUsers { get; set; } = JsonConvert.SerializeObject(new Dictionary<string, string>());
         public string ShareLink { get; set; } = string.Empty; // Optional public share link
         public SharePermission Permission { get; set; } = SharePermission.ReadOnly; // Permission level for shared users
 
@@ -74,6 +74,46 @@ namespace NotationApp.Models
             Full // Includes ability to reshare
         }
 
+        public bool IsSharedWithUser(string userEmail)
+        {
+            if (!IsShared || IsDeleted || string.IsNullOrEmpty(userEmail))
+                return false;
+
+            try
+            {
+                var sharedUsers = JsonConvert.DeserializeObject<Dictionary<string, string>>(SharedWithUsers ?? "{}");
+                return sharedUsers.ContainsKey(userEmail);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+        public bool CanUserEdit(string userEmail)
+        {
+            if (string.IsNullOrEmpty(userEmail))
+                return false;
+
+            // Owner can always edit
+            if (OwnerId == userEmail)
+                return true;
+
+            try
+            {
+                var sharedUsers = JsonConvert.DeserializeObject<Dictionary<string, string>>(SharedWithUsers ?? "{}");
+                if (sharedUsers.TryGetValue(userEmail, out string permission))
+                {
+                    return permission == "ReadWrite" || permission == "Full";
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+        }
 
     }
 
