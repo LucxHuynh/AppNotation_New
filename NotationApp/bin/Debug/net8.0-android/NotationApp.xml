@@ -1,0 +1,631 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NotationApp</name>
+    </assembly>
+    <members>
+        <member name="T:NotationApp.ViewModels.AppShellViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:NotationApp.ViewModels.AppShellViewModel.UserProfileImage">
+            <inheritdoc cref="F:NotationApp.ViewModels.AppShellViewModel.userProfileImage"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.AppShellViewModel.UserDisplayName">
+            <inheritdoc cref="F:NotationApp.ViewModels.AppShellViewModel.userDisplayName"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.AppShellViewModel.UserEmail">
+            <inheritdoc cref="F:NotationApp.ViewModels.AppShellViewModel.userEmail"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.AppShellViewModel.IsUserLoggedIn">
+            <inheritdoc cref="F:NotationApp.ViewModels.AppShellViewModel.isUserLoggedIn"/>
+        </member>
+        <member name="F:NotationApp.ViewModels.AppShellViewModel.navigateToProfileCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.AppShellViewModel.NavigateToProfileCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.AppShellViewModel.NavigateToProfileCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.AppShellViewModel.NavigateToProfile"/>.</summary>
+        </member>
+        <member name="T:NotationApp.ViewModels.BinPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:NotationApp.ViewModels.BinPageViewModel.selectAllItemsCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.BinPageViewModel.SelectAllItemsCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.BinPageViewModel.SelectAllItemsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.BinPageViewModel.SelectAllItems"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.BinPageViewModel.restoreSelectedItemsCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.BinPageViewModel.RestoreSelectedItemsCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.BinPageViewModel.RestoreSelectedItemsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.BinPageViewModel.RestoreSelectedItemsAsync"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.BinPageViewModel.deleteSelectedItemsCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.BinPageViewModel.DeleteSelectedItemsCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.BinPageViewModel.DeleteSelectedItemsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.BinPageViewModel.DeleteSelectedItemsAsync"/>.</summary>
+        </member>
+        <member name="T:NotationApp.ViewModels.DrawingPageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:NotationApp.ViewModels.DrawingPageViewModel.Title">
+            <inheritdoc cref="F:NotationApp.ViewModels.DrawingPageViewModel.title"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.DrawingPageViewModel.ImagePath">
+            <inheritdoc cref="F:NotationApp.ViewModels.DrawingPageViewModel.imagePath"/>
+        </member>
+        <member name="F:NotationApp.ViewModels.DrawingPageViewModel.saveDrawingCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.DrawingPageViewModel.SaveDrawingCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.DrawingPageViewModel.SaveDrawingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.DrawingPageViewModel.SaveDrawingAsync(System.String)"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.DrawingPageViewModel.deleteDrawingCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.DrawingPageViewModel.DeleteDrawingCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.DrawingPageViewModel.DeleteDrawingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.DrawingPageViewModel.DeleteDrawingAsync"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.DrawingPageViewModel.togglePinCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.DrawingPageViewModel.TogglePinCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.DrawingPageViewModel.TogglePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.DrawingPageViewModel.TogglePinAsync"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.DrawingPageViewModel.updateTagCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.DrawingPageViewModel.UpdateTagCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.DrawingPageViewModel.UpdateTagCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.DrawingPageViewModel.UpdateTagAsync(System.String)"/>.</summary>
+        </member>
+        <member name="T:NotationApp.ViewModels.HomePageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.SelectedNote">
+            <inheritdoc cref="F:NotationApp.ViewModels.HomePageViewModel.selectedNote"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.SelectedDrawing">
+            <inheritdoc cref="F:NotationApp.ViewModels.HomePageViewModel.selectedDrawing"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.SearchQuery">
+            <inheritdoc cref="F:NotationApp.ViewModels.HomePageViewModel.searchQuery"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.IsLoading">
+            <inheritdoc cref="F:NotationApp.ViewModels.HomePageViewModel.isLoading"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.StatusMessage">
+            <inheritdoc cref="F:NotationApp.ViewModels.HomePageViewModel.statusMessage"/>
+        </member>
+        <member name="M:NotationApp.ViewModels.HomePageViewModel.OnSearchQueryChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:NotationApp.ViewModels.HomePageViewModel.SearchQuery"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:NotationApp.ViewModels.HomePageViewModel.SearchQuery"/> is changed.</remarks>
+        </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.loadAllContentCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.LoadAllContentCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.LoadAllContentCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.LoadAllContentAsync"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.loadNotesCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.LoadNotesCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.LoadNotesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.LoadNotesAsync"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.loadDrawingsCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.LoadDrawingsCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.LoadDrawingsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.LoadDrawingsAsync"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.addNoteCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.AddNoteCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.AddNoteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.AddNote"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.navigateToNoteCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.NavigateToNoteCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.NavigateToNoteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.NavigateToNoteAsync(NotationApp.Models.Note_Realtime)"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.tapNoteCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.TapNoteCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.TapNoteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.TapNote(NotationApp.Models.Note_Realtime)"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.selectNoteCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.SelectNoteCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.SelectNoteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.SelectNote"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.filterByTagCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.FilterByTagCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.FilterByTagCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.FilterByTag(System.String)"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.shareItemCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.ShareItemCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.ShareItemCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.ShareItemAsync(System.Object)"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.updateSharePermissionsCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.UpdateSharePermissionsCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.UpdateSharePermissionsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.UpdateSharePermissionsAsync(System.Object)"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.HomePageViewModel.stopSharingCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.StopSharingCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.HomePageViewModel.StopSharingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.StopSharingAsync(System.Object)"/>.</summary>
+        </member>
+        <member name="T:NotationApp.ViewModels.NotePageViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:NotationApp.ViewModels.NotePageViewModel.SelectedDrawing">
+            <inheritdoc cref="F:NotationApp.ViewModels.NotePageViewModel.selectedDrawing"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.NotePageViewModel.Title">
+            <inheritdoc cref="F:NotationApp.ViewModels.NotePageViewModel.title"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.NotePageViewModel.Text">
+            <inheritdoc cref="F:NotationApp.ViewModels.NotePageViewModel.text"/>
+        </member>
+        <member name="F:NotationApp.ViewModels.NotePageViewModel.saveNoteCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.NotePageViewModel.SaveNoteCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.NotePageViewModel.SaveNoteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.NotePageViewModel.SaveNoteAsync(System.String)"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.NotePageViewModel.createDrawingCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.NotePageViewModel.CreateDrawingCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.NotePageViewModel.CreateDrawingCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.NotePageViewModel.CreateDrawingAsync"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.NotePageViewModel.deleteNoteCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.NotePageViewModel.DeleteNoteCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.NotePageViewModel.DeleteNoteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.NotePageViewModel.DeleteNoteAsync"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.NotePageViewModel.togglePinCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.NotePageViewModel.TogglePinCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.NotePageViewModel.TogglePinCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.NotePageViewModel.TogglePinAsync"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.NotePageViewModel.updateTagCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.NotePageViewModel.UpdateTagCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.NotePageViewModel.UpdateTagCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.NotePageViewModel.UpdateTagAsync(System.String)"/>.</summary>
+        </member>
+        <member name="T:NotationApp.ViewModels.ShareDialogViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:NotationApp.ViewModels.ShareDialogViewModel.EmailInput">
+            <inheritdoc cref="F:NotationApp.ViewModels.ShareDialogViewModel.emailInput"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.ShareDialogViewModel.SelectedPermission">
+            <inheritdoc cref="F:NotationApp.ViewModels.ShareDialogViewModel.selectedPermission"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.ShareDialogViewModel.ShareLink">
+            <inheritdoc cref="F:NotationApp.ViewModels.ShareDialogViewModel.shareLink"/>
+        </member>
+        <member name="F:NotationApp.ViewModels.ShareDialogViewModel.addEmailCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.ShareDialogViewModel.AddEmailCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.ShareDialogViewModel.AddEmailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.ShareDialogViewModel.AddEmail"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.ShareDialogViewModel.removeEmailCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.ShareDialogViewModel.RemoveEmailCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.ShareDialogViewModel.RemoveEmailCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.ShareDialogViewModel.RemoveEmail(System.String)"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.ShareDialogViewModel.shareCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.ShareDialogViewModel.ShareCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.ShareDialogViewModel.ShareCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.ShareDialogViewModel.Share"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.ShareDialogViewModel.copyLinkCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.ShareDialogViewModel.CopyLinkCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.ShareDialogViewModel.CopyLinkCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.ShareDialogViewModel.CopyLink"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.ShareDialogViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.ShareDialogViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.ShareDialogViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.ShareDialogViewModel.Cancel"/>.</summary>
+        </member>
+        <member name="T:NotationApp.ViewModels.SignInViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:NotationApp.ViewModels.SignInViewModel.Email">
+            <inheritdoc cref="F:NotationApp.ViewModels.SignInViewModel.email"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.SignInViewModel.Password">
+            <inheritdoc cref="F:NotationApp.ViewModels.SignInViewModel.password"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.SignInViewModel.StatusMessage">
+            <inheritdoc cref="F:NotationApp.ViewModels.SignInViewModel.statusMessage"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.SignInViewModel.IsLoading">
+            <inheritdoc cref="F:NotationApp.ViewModels.SignInViewModel.isLoading"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.SignInViewModel.EmailError">
+            <inheritdoc cref="F:NotationApp.ViewModels.SignInViewModel.emailError"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.SignInViewModel.PasswordError">
+            <inheritdoc cref="F:NotationApp.ViewModels.SignInViewModel.passwordError"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.SignInViewModel.IsValid">
+            <inheritdoc cref="F:NotationApp.ViewModels.SignInViewModel.isValid"/>
+        </member>
+        <member name="M:NotationApp.ViewModels.SignInViewModel.OnEmailChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:NotationApp.ViewModels.SignInViewModel.Email"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:NotationApp.ViewModels.SignInViewModel.Email"/> is changed.</remarks>
+        </member>
+        <member name="M:NotationApp.ViewModels.SignInViewModel.OnPasswordChanged(System.String)">
+            <summary>Executes the logic for when <see cref="P:NotationApp.ViewModels.SignInViewModel.Password"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:NotationApp.ViewModels.SignInViewModel.Password"/> is changed.</remarks>
+        </member>
+        <member name="T:NotationApp.ViewModels.UserProfileViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:NotationApp.ViewModels.UserProfileViewModel.Profile">
+            <inheritdoc cref="F:NotationApp.ViewModels.UserProfileViewModel.profile"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.UserProfileViewModel.ProfileImage">
+            <inheritdoc cref="F:NotationApp.ViewModels.UserProfileViewModel.profileImage"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.UserProfileViewModel.IsBusy">
+            <inheritdoc cref="F:NotationApp.ViewModels.UserProfileViewModel.isBusy"/>
+        </member>
+        <member name="P:NotationApp.ViewModels.UserProfileViewModel.StatusMessage">
+            <inheritdoc cref="F:NotationApp.ViewModels.UserProfileViewModel.statusMessage"/>
+        </member>
+        <member name="F:NotationApp.ViewModels.UserProfileViewModel.loadProfileCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.UserProfileViewModel.LoadProfileCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.UserProfileViewModel.LoadProfileCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.UserProfileViewModel.LoadProfile"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.UserProfileViewModel.saveChangesCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.UserProfileViewModel.SaveChangesCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.UserProfileViewModel.SaveChangesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.UserProfileViewModel.SaveChanges"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.UserProfileViewModel.changePhotoCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.UserProfileViewModel.ChangePhotoCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.UserProfileViewModel.ChangePhotoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.UserProfileViewModel.ChangePhoto"/>.</summary>
+        </member>
+        <member name="F:NotationApp.ViewModels.UserProfileViewModel.signOutCommand">
+            <summary>The backing field for <see cref="P:NotationApp.ViewModels.UserProfileViewModel.SignOutCommand"/>.</summary>
+        </member>
+        <member name="P:NotationApp.ViewModels.UserProfileViewModel.SignOutCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.UserProfileViewModel.SignOut"/>.</summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserProfileImage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserProfileImage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserDisplayName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserDisplayName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserEmail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserEmail" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsUserLoggedIn">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsUserLoggedIn" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ImagePath">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ImagePath" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedNote">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedNote" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedDrawing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedDrawing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SearchQuery">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SearchQuery" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StatusMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StatusMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Text">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Text" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EmailInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EmailInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedPermission">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedPermission" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ShareLink">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ShareLink" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EmailError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EmailError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PasswordError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PasswordError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsValid">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsValid" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Profile">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Profile" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProfileImage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProfileImage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserProfileImage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserProfileImage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserDisplayName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserDisplayName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserEmail">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserEmail" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsUserLoggedIn">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsUserLoggedIn" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ImagePath">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ImagePath" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedNote">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedNote" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedDrawing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedDrawing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SearchQuery">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SearchQuery" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StatusMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StatusMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Text">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Text" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EmailInput">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EmailInput" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedPermission">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedPermission" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ShareLink">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ShareLink" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Email">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Email" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EmailError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EmailError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PasswordError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PasswordError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsValid">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsValid" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Profile">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Profile" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProfileImage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProfileImage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+    </members>
+</doc>

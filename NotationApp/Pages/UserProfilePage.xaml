@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotationApp.Pages.UserProfilePage"
+             Title="Profile">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="0">
+            <!-- Profile Image -->
+            <Frame CornerRadius="75" 
+                   HeightRequest="150" 
+                   WidthRequest="150" 
+                   Padding="0"
+                   IsClippedToBounds="True"
+                   HorizontalOptions="Center"
+                   Margin="0,20"
+                   BackgroundColor="#D9D9D9">
+                <Image Source="{Binding ProfileImage}"
+                       Aspect="AspectFill"
+                       HeightRequest="150"
+                       WidthRequest="150" />
+            </Frame>
+
+            <!-- Change Photo Button -->
+            <Button Text="Change Photo" 
+                    Command="{Binding ChangePhotoCommand}"
+                    BackgroundColor="#6349F6"
+                    TextColor="White"
+                    Margin="0,0,0,30"/>
+
+            <!-- Profile Fields -->
+            <Label Text="Name:" 
+                   Margin="0,0,0,5"/>
+            <Entry Text="{Binding Profile.DisplayName}" 
+                   Margin="0,0,0,20"/>
+
+            <Label Text="Email:" 
+                   Margin="0,0,0,5"/>
+            <Label Text="{Binding Profile.Email}"
+                   TextColor="#1C1B1F"
+                   Margin="5,0,0,20"/>
+
+            <Label Text="Phone:" 
+                   Margin="0,0,0,5"/>
+            <Entry Text="{Binding Profile.PhoneNumber}"
+                   Margin="0,0,0,20"/>
+
+            <Label Text="Joined:" 
+                   Margin="0,0,0,5"/>
+            <Label Text="{Binding Profile.DateJoined, StringFormat='{0:MM/dd/yyyy}'}"
+                   TextColor="#1C1B1F"
+                   Margin="5,0,0,30"/>
+
+            <!-- Action Buttons -->
+            <Button Text="Save Changes"
+                    Command="{Binding SaveChangesCommand}"
+                    BackgroundColor="#6349F6"
+                    TextColor="White"
+                    Margin="0,0,0,10"/>
+
+            <Button Text="Sign Out"
+                    Command="{Binding SignOutCommand}"
+                    BackgroundColor="#FF0000"
+                    TextColor="White"
+                    Margin="0,0,0,20"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

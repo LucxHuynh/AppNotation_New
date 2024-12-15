@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"            
+             x:Class="NotationApp.Pages.SignUpPage"
+             Shell.NavBarIsVisible="False">
+
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="24" Padding="24,0" VerticalOptions="Center">
+
+            <VerticalStackLayout Spacing="8">
+                <Label 
+                    Text="Create Account"
+                    TextColor="#1a41cc"
+                    FontSize="30"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start" />
+
+                <Label 
+                    Text="Create an account so you can explore all the existing jobs"
+                    TextColor="Black"
+                    FontSize="20"
+                    HorizontalOptions="Start" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="16">
+                <Frame 
+                    BorderColor="#e8e8e8"
+                    BackgroundColor="#f7f7f7"
+                    CornerRadius="8"
+                    HasShadow="False"
+                    Padding="16,2">
+                    <Entry 
+                        Placeholder="Email"
+                        Text="{Binding Email}"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        ClearButtonVisibility="Never"
+                         />
+                </Frame>
+
+                <Frame 
+                    BorderColor="#e8e8e8"
+                    BackgroundColor="#f7f7f7"
+                    CornerRadius="8"
+                    HasShadow="False"
+                    Padding="16,2">
+                    <Entry 
+                        Placeholder="Password"
+                        Text="{Binding Password}"
+                        IsPassword="True"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        ClearButtonVisibility="Never"
+                        />
+                </Frame>
+
+                <Frame 
+                    BorderColor="#e8e8e8"
+                    BackgroundColor="#f7f7f7"
+                    CornerRadius="8"
+                    HasShadow="False"
+                    Padding="16,2">
+                    <Entry 
+                        Placeholder="Confirm Password"
+                        Text="{Binding ConfirmPassword}"
+                        IsPassword="True"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        ClearButtonVisibility="Never"
+                         />
+                </Frame>
+
+                <Button 
+                    Text="Sign up"
+                    Command="{Binding RegisterUserCommand}"
+                    BackgroundColor="#1a41cc"
+                    TextColor="White"
+                    CornerRadius="8"
+                    HeightRequest="50"
+                    FontAttributes="Bold" />
+
+                <Label 
+                    Text="Already have an account"
+                    TextColor="Black"
+                    FontSize="14"
+                    HorizontalOptions="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateBackCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Label 
+                    Text="Or continue with"
+                    TextColor="#666666"
+                    FontSize="14"
+                    HorizontalOptions="Center" />
+
+                <HorizontalStackLayout 
+                    Spacing="16" 
+                    HorizontalOptions="Center">
+                    <Frame 
+                        BorderColor="#e8e8e8"
+                        BackgroundColor="White"
+                        CornerRadius="24"
+                        HeightRequest="48"
+                        WidthRequest="48"
+                        Padding="0"
+                        HasShadow="False">
+                        <Image 
+                            Source="google_logo.png"
+                            HeightRequest="24"
+                            WidthRequest="24"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                    </Frame>
+
+                    <Frame 
+                        BorderColor="#e8e8e8"
+                        BackgroundColor="White"
+                        CornerRadius="24"
+                        HeightRequest="48"
+                        WidthRequest="48"
+                        Padding="0"
+                        HasShadow="False">
+                        <Image 
+                            Source="apple_logo.png"
+                            HeightRequest="24"
+                            WidthRequest="24"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                    </Frame>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Label 
+                Text="{Binding StatusMessage}"
+                TextColor="Red"
+                HorizontalOptions="Center"
+                IsVisible="{Binding StatusMessage, Converter={StaticResource StringToBoolConverter}}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

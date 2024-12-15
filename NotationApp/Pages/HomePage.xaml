@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:NotationApp.Models"
+             xmlns:vm="clr-namespace:NotationApp.ViewModels"
+             x:Class="NotationApp.Pages.HomePage"
+             Title="My Note">
+    
+
+    <!-- Sử dụng AbsoluteLayout để đặt các thành phần -->
+    <AbsoluteLayout>
+        <!-- ScrollView chứa danh sách ghi chú -->
+        <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+            <VerticalStackLayout Padding="10">
+                <Grid Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- SearchBar kết nối với thuộc tính SearchQuery trong ViewModel -->
+                    <SearchBar Grid.Row="0"
+                           Placeholder="Tìm kiếm"
+                           BackgroundColor="#F5F5F5"
+                           HeightRequest="50"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="Start"
+                           Text="{Binding SearchQuery, Mode=TwoWay}" />
+
+                    <ScrollView Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0" HorizontalScrollBarVisibility="Never">
+                        <HorizontalStackLayout Spacing="8">
+                            <Button Text="All"
+                                Style="{StaticResource TagButtonStyle}"
+                                TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='ALL'}"
+                                BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='ALL'}"
+                                Command="{Binding FilterByTagCommand}"
+                                CommandParameter="ALL"/>
+
+                            <Button Text="Pinned" 
+                                Style="{StaticResource TagButtonStyle}"
+                                TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Pinned'}"
+                                BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Pinned'}"
+                                Command="{Binding FilterByTagCommand}" 
+                               CommandParameter="Pinned"/>
+
+                            <Button Text="Shared" 
+                                Style="{StaticResource TagButtonStyle}"
+                                TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Shared'}"
+                                BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Shared'}"
+                                Command="{Binding FilterByTagCommand}"
+                                CommandParameter="Shared"/>
+                            <Button Text="Work" 
+                                Style="{StaticResource TagButtonStyle}"
+                                TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Work'}"
+                                BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Work'}"
+                                Command="{Binding FilterByTagCommand}" 
+                                CommandParameter="Work"/>
+
+                            <Button Text="Personal" 
+                               Style="{StaticResource TagButtonStyle}" 
+                               TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Personal'}"
+                               BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Personal'}"
+                               Command="{Binding FilterByTagCommand}"
+                               CommandParameter="Personal"/>
+
+                            <Button Text="Todo" 
+                               Style="{StaticResource TagButtonStyle}"
+                               TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Todo'}"
+                               BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Todo'}"
+                               Command="{Binding FilterByTagCommand}"
+                               CommandParameter="Todo"/>
+
+                            <Button Text="Study" 
+                               Style="{StaticResource TagButtonStyle}"
+                               TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Study'}"
+                               BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Study'}"
+                               Command="{Binding FilterByTagCommand}"
+                               CommandParameter="Study"/>
+
+                            <Button Text="Other" 
+                               Style="{StaticResource TagButtonStyle}"
+                               TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Other'}"
+                               BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Other'}"
+                               Command="{Binding FilterByTagCommand}"
+                               CommandParameter="Other"/>
+                        </HorizontalStackLayout>
+                    </ScrollView>
+
+                </Grid>
+
+                <!-- CollectionView cho danh sách ghi chú -->
+                <!--<CollectionView x:Name="NotesCollectionView"
+                            Margin="0, 10, 0, 0"
+                            ItemsSource="{Binding Notes}"
+                            SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="10" CornerRadius="15" Margin="10" HasShadow="True" BackgroundColor="White">
+                                --><!-- Gắn TapGestureRecognizer vào Frame để bao phủ toàn bộ vùng hiển thị của ghi chú --><!--
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type vm:HomePageViewModel}}, Path=TapNoteCommand}" 
+                                                      CommandParameter="{Binding .}" />
+                                </Frame.GestureRecognizers>
+
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" VerticalOptions="CenterAndExpand" />
+                                    <Label Text="{Binding PlainText}" FontSize="Small" VerticalOptions="End" MaxLines="1" LineBreakMode="TailTruncation" />
+                                    <Label Text="{Binding UpdateDate, StringFormat='{0:MM/dd/yyyy HH:mm}'}" FontSize="Small" TextColor="Gray" HorizontalOptions="End"/>
+                                </VerticalStackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>-->
+
+                <CollectionView x:Name="NotesCollectionView" 
+                    Margin="6, 10, 0, 0"
+                    ItemsSource="{Binding Notes}"
+                    SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="10" CornerRadius="15" Margin="10" HasShadow="True" BackgroundColor="White">
+                                <!-- Thêm Grid để quản lý layout tốt hơn -->
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Tag Badge và Pin Icon Container -->
+                                    <Grid Grid.Row="0">
+                                        <Frame Grid.Column="1" 
+                                           Padding="6,2" 
+                                           CornerRadius="10"
+                                           BackgroundColor="#E3F2FD"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Start">
+                                            <Label Text="{Binding TagName}" 
+                                               TextColor="#1976D2"
+                                               FontSize="12"/>
+                                        </Frame>
+
+                                        <!-- Pin Icon nếu note được ghim -->
+                                        <Image IsVisible="{Binding IsPinned}"
+                                           Source="pin_icon.png"
+                                           HeightRequest="20"
+                                           WidthRequest="20"
+                                           HorizontalOptions="Start"/>
+                                    </Grid>
+
+                                    <!-- Note Content -->
+                                    <VerticalStackLayout Grid.Row="1" Spacing="5">
+                                        <Label Text="{Binding Title}" 
+                                           FontAttributes="Bold" 
+                                           VerticalOptions="CenterAndExpand"/>
+                                        <Label Text="{Binding PlainText}" 
+                                           FontSize="Small" 
+                                           VerticalOptions="End" 
+                                           MaxLines="2"
+                                           LineBreakMode="TailTruncation"/>
+                                    </VerticalStackLayout>
+
+                                    <!-- Date at bottom -->
+                                    <Label Grid.Row="2" 
+                                       Text="{Binding UpdateDate, StringFormat='{0:MM/dd/yyyy HH:mm}'}"
+                                       FontSize="Small"
+                                       TextColor="Gray"
+                                       HorizontalOptions="End"/>
+                                </Grid>
+
+                                <!-- Gesture Recognizer -->
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:HomePageViewModel}}, Path=TapNoteCommand}"
+                                        CommandParameter="{Binding}"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Nút tạo ghi chú mới treo lơ lửng ở góc phải dưới màn hình -->
+        <ImageButton Source="notes.png"
+            HeightRequest="40"
+            WidthRequest="40"
+            BackgroundColor="Black"
+            CornerRadius="20"
+            Padding="5"
+            Command="{Binding AddNoteCommand}"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="1, 1, -1, -1"
+            Margin="20"
+            />
+    </AbsoluteLayout>
+</ContentPage>

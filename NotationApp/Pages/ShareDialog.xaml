@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="NotationApp.Pages.ShareDialog"
+             Color="Transparent">
+    <Border BackgroundColor="White"
+            Stroke="Gray"
+            StrokeThickness="1"
+            WidthRequest="350"
+            HeightRequest="500"
+            Padding="15">
+        <Grid RowDefinitions="Auto,Auto,*,Auto,Auto">
+            <!-- Header -->
+            <Label Text="Share Item"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,15"/>
+
+            <!-- Email Input Section -->
+            <VerticalStackLayout Grid.Row="1" Spacing="5">
+                <Label Text="Add email to share:" />
+                <Grid ColumnDefinitions="*,Auto,Auto">
+                    <Entry x:Name="EmailEntry"
+                           Placeholder="Enter email address"
+                           Text="{Binding EmailInput}" />
+                    <Picker Grid.Column="1"
+                            WidthRequest="120"
+                            SelectedItem="{Binding SelectedPermission}"
+                            ItemsSource="{Binding Permissions}" />
+                    <Button Grid.Column="2"
+                            Text="Add"
+                            Command="{Binding AddEmailCommand}" />
+                </Grid>
+            </VerticalStackLayout>
+
+            <!-- Shared Users List -->
+            <VerticalStackLayout Grid.Row="2" Spacing="5" Margin="0,15,0,0">
+                <Label Text="Shared with:" />
+                <CollectionView ItemsSource="{Binding SharedUsers}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="5" 
+                                  ColumnDefinitions="*,Auto,Auto" 
+                                  Margin="0,5">
+                                <Label Text="{Binding Email}"
+                                       VerticalOptions="Center" />
+                                <Label Grid.Column="1"
+                                       Text="{Binding Permission}"
+                                       VerticalOptions="Center"
+                                       Margin="10,0" />
+                                <Button Grid.Column="2"
+                                        Text="✕"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type toolkit:Popup}}, Path=BindingContext.RemoveEmailCommand}"
+                                        CommandParameter="{Binding Email}"
+                                        BackgroundColor="Transparent"
+                                        TextColor="Red"
+                                        FontSize="15" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+
+            <!-- Share Link Section -->
+            <VerticalStackLayout Grid.Row="3" Spacing="5" Margin="0,15,0,0">
+                <Label Text="Share Link:" />
+                <Grid ColumnDefinitions="*, Auto">
+                    <Entry Text="{Binding ShareLink}"
+                           IsReadOnly="True" />
+                    <Button Grid.Column="1"
+                            Text="Copy"
+                            Command="{Binding CopyLinkCommand}" />
+                </Grid>
+            </VerticalStackLayout>
+
+            <!-- Action Buttons -->
+            <HorizontalStackLayout Grid.Row="4"
+                                 Spacing="10"
+                                 HorizontalOptions="End"
+                                 Margin="0,15,0,0">
+                <Button Text="Cancel"
+                        Command="{Binding CancelCommand}" />
+                <Button Text="Share"
+                        Command="{Binding ShareCommand}" />
+            </HorizontalStackLayout>
+        </Grid>
+    </Border>
+</toolkit:Popup>

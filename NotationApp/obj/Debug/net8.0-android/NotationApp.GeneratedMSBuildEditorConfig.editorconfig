@@ -1,0 +1,114 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
+build_property.TargetFramework = net8.0-android
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = NotationApp
+build_property.ProjectDir = D:\Hoc_Tap\DACN\Test\AppNotation\NotationApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Pages/BinPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.BinPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\BinPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\BinPage.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Pages/DrawingPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.DrawingPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\DrawingPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\DrawingPage.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Pages/FolderPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.FolderPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\FolderPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\FolderPage.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Pages/ForgotPasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.ForgotPasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ForgotPasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ForgotPasswordPage.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Pages/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\HomePage.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Pages/NotePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.NotePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\NotePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\NotePage.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Pages/ShareDialog.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.ShareDialog.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ShareDialog.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ShareDialog.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Pages/SignInPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.SignInPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\SignInPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\SignInPage.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Pages/SignUpPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.SignUpPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\SignUpPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\SignUpPage.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Pages/UserProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.UserProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\UserProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\UserProfilePage.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Platforms/Android/WelcomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Platforms.Android.WelcomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Platforms\Android\WelcomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Platforms\Android\WelcomePage.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/Hoc_Tap/DACN/Test/AppNotation/NotationApp/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotationApp", "NotationApp\NotationApp.csproj", "{8730C2D8-4F16-48EB-A172-E4D57C40648E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8730C2D8-4F16-48EB-A172-E4D57C40648E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8730C2D8-4F16-48EB-A172-E4D57C40648E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8730C2D8-4F16-48EB-A172-E4D57C40648E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8730C2D8-4F16-48EB-A172-E4D57C40648E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8730C2D8-4F16-48EB-A172-E4D57C40648E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8730C2D8-4F16-48EB-A172-E4D57C40648E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5027D4A3-2F87-4BCB-B166-25F20ADAA991}
+	EndGlobalSection
+EndGlobal

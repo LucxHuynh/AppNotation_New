@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="NotationApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:NotationApp.Pages"
+    xmlns:android="clr-namespace:NotationApp.Platforms.Android"
+    Title="NotationApp">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Primary">#512BD4</Color>
+            <Color x:Key="Secondary">#DFD8F7</Color>
+            <Color x:Key="Tertiary">#2B0B98</Color>
+
+            <Style TargetType="Shell">
+                <Setter Property="Shell.BackgroundColor" Value="Black"/>
+                <Setter Property="Shell.TitleColor" Value="Black"/>
+                <Setter Property="Shell.DisabledColor" Value="Gray"/>
+                <Setter Property="Shell.UnselectedColor" Value="Gray"/>
+            </Style>
+            <Style TargetType="ShellItem">
+                <Setter Property="Shell.ForegroundColor" Value="Black"/>
+                <Setter Property="Shell.BackgroundColor" Value="Blue"/>
+            </Style>
+            <Style TargetType="ShellSection">
+                <Setter Property="Shell.ForegroundColor" Value="Black"/>
+                <Setter Property="Shell.BackgroundColor" Value="Gray"/>
+            </Style>
+            <Style TargetType="ShellContent">
+                <Setter Property="Shell.ForegroundColor" Value="Black"/>
+                <Setter Property="Shell.BackgroundColor" Value="#512BD4"/>
+            </Style>
+            <Style x:Key="PrimaryButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style x:Key="SecondaryButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Secondary}"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style x:Key="CardFrame" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="BorderColor" Value="#EEEEEE"/>
+            </Style>
+            <Style x:Key="FieldLabel" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="{StaticResource Primary}"/>
+            </Style>
+
+
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <Shell.FlyoutHeader>
+        <Grid HeightRequest="180" BackgroundColor="{StaticResource Primary}">
+            <VerticalStackLayout 
+            Spacing="8" 
+            Padding="16"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+
+                <!-- Profile Image với Border và Shadow -->
+                <Frame
+                HeightRequest="80" 
+                WidthRequest="80"
+                CornerRadius="40"
+                Padding="0"
+                IsClippedToBounds="True"
+                BorderColor="White"
+                HorizontalOptions="Center"
+                HasShadow="True">
+                    <ImageButton 
+                    Command="{Binding NavigateToProfileCommand}"
+                    HeightRequest="80" 
+                    WidthRequest="80"
+                    Padding="0"
+                    Source="{Binding UserProfileImage}"
+                    Aspect="AspectFill"
+                    BackgroundColor="Transparent"/>
+                </Frame>
+
+                <!-- User Info Container -->
+                <VerticalStackLayout 
+                Spacing="4" 
+                HorizontalOptions="Center">
+
+                    <!-- User Display Name -->
+                    <Label 
+                    Text="{Binding UserDisplayName}"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+
+                    <!-- User Email -->
+                    <Label 
+                    Text="{Binding UserEmail}"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    FontSize="14"
+                    Opacity="0.9"/>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Tất cả ghi chú" Icon="allnote.png">
+        <ShellContent Route="HomePage"
+            ContentTemplate="{DataTemplate local:HomePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Thùng rác" Icon="bin.png">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:BinPage}"/>
+    </FlyoutItem>
+
+    <!--<FlyoutItem Title="Chia sẻ ghi chú" Icon="share.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:SharePage}"/>
+    </FlyoutItem>-->
+    
+    <FlyoutItem Title="Thư mục" Icon="folder.png">
+        <ShellContent
+            ContentTemplate="{DataTemplate local:FolderPage}"/>
+    </FlyoutItem>
+
+    <!-- Định nghĩa Route cho NotePage -->
+    <ShellContent Route="NotePage" ContentTemplate="{DataTemplate local:NotePage}" />
+    <ShellContent Route="DrawingPage" ContentTemplate="{DataTemplate local:DrawingPage}" />
+    <ShellContent Route="WelcomePage" ContentTemplate="{DataTemplate android:WelcomePage}" />
+    <ShellContent Route="SignInPage" ContentTemplate="{DataTemplate local:SignInPage}" />
+    <ShellContent Route="SignUpPage" ContentTemplate="{DataTemplate local:SignUpPage}" />
+    <ShellContent Route="UserProfilePage" ContentTemplate="{DataTemplate local:UserProfilePage}" />
+
+
+</Shell>

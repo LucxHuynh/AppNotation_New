@@ -1,0 +1,1 @@
+E:\GitHub+Java\LOCv2\AppNotation\NotationApp\NotationApp.csproj;x64

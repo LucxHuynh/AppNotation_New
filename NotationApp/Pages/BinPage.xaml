@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:NotationApp.ViewModels"
+             x:Class="NotationApp.Pages.BinPage"
+             Title="Trash Bin">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="checkbox_checked.png" Order="Primary" Priority="0" Clicked="OnSelectAllTapped" />
+        <ToolbarItem IconImageSource="bin.png" Order="Primary" Priority="1" Clicked="OnDeleteSelectedItems" />
+        <ToolbarItem IconImageSource="restore.png" Order="Primary" Priority="2" Clicked="OnRestoreSelectedItems" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <CollectionView x:Name="BinCollectionView"
+                      ItemsSource="{Binding DeletedItems}"
+                      Margin="10"
+                      ItemsLayout="VerticalList"
+                      SelectionMode="Multiple">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" CornerRadius="15" Margin="5" HasShadow="True" BackgroundColor="White">
+                        <Grid ColumnDefinitions="Auto,*">
+                            <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay}" 
+                                    CheckedChanged="OnItemCheckboxTapped"
+                                    VerticalOptions="Center"/>
+                            <VerticalStackLayout Grid.Column="1" Padding="10,0">
+                                <Grid ColumnDefinitions="*, Auto">
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                    <Label Grid.Column="1" 
+                                           Text="{Binding ItemType}"
+                                           FontSize="Small"
+                                           TextColor="Gray"/>
+                                </Grid>
+                                <Label Text="{Binding Content}"
+                                       FontSize="Small"
+                                       MaxLines="1"
+                                       LineBreakMode="TailTruncation" />
+                                <Label Text="{Binding UpdateDate, StringFormat='{0:MM/dd/yyyy HH:mm}'}"
+                                       FontSize="Small"
+                                       TextColor="Gray"
+                                       HorizontalOptions="End" />
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ScrollView>
+</ContentPage>

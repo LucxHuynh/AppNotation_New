@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotationApp.MainPage"
+             BackgroundColor="#F5F5F5">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+
+            <Grid Padding="10">
+                <!-- First Row: Search Bar -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Search Bar Row -->
+                <SearchBar Grid.Row="0"
+                   Placeholder="Search Folder"  
+                   BackgroundColor="#F5F5F5"
+                   HeightRequest="50"
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="Start" />
+
+                <!-- Last modified text and Grid/List toggle row -->
+                <Grid Grid.Row="1" ColumnDefinitions="*, Auto" Padding="0, 10, 0, 0">
+                    <!-- Left Section: Last modified with arrow -->
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                        <!-- Arrow Icon -->
+                        <Image Source="arrow_down.png" 
+                               HeightRequest="20" 
+                               WidthRequest="20" 
+                               VerticalOptions="Center"/>   
+
+                        <!-- Last modified text -->
+                        <Label Text="Last modified" 
+                               FontSize="Small" 
+                               VerticalOptions="Center" 
+                               Margin="5,0,0,0" />  
+                    </StackLayout>
+
+                    <!-- Right Section: Grid/List Toggle Button -->
+                    <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="End" VerticalOptions="Center">
+                        <ImageButton Source="grid.png" 
+                                     HeightRequest="20" 
+                                     WidthRequest="20" 
+                                     BackgroundColor="White"
+                                     Margin="0,0,10,0"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+
+            <!-- Folder Grid with Platform-Specific Adjustments -->
+            <CollectionView Margin="0, 10, 0, 0" 
+                            ItemsLayout="{OnPlatform iOS='VerticalGrid, 2', Android='VerticalGrid, 2', Default='VerticalGrid, 3'}">
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Ảnh nóng</x:String>
+                        <x:String>Học Tập</x:String>
+                        <x:String>Ảnh lạnh</x:String>
+                        <x:String>Tầng hầm</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10" CornerRadius="15" Margin="10" HasShadow="True" BackgroundColor="White">
+                            <Grid>
+                                <!-- Folder Icon, Name, and Notes -->
+                                <VerticalStackLayout>
+                                    <!-- Folder Image -->
+                                    <Image Source="folder.png" HeightRequest="60" WidthRequest="60" VerticalOptions="Start" />
+
+                                    <!-- Folder Name -->
+                                    <Label Text="{Binding .}" FontAttributes="Bold" VerticalOptions="CenterAndExpand" />
+
+                                    <!-- Number of Notes -->
+                                    <Label Text="15 notes" FontSize="Small" VerticalOptions="End" />
+                                </VerticalStackLayout>
+
+                                <!-- Menu Option -->
+                                <ImageButton Source="ellipsis.png"
+                                             HeightRequest="20" WidthRequest="20"
+                                             HorizontalOptions="End"
+                                             VerticalOptions="Start"
+                                             BackgroundColor="White"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!-- Floating Action Button for Android, Hidden for Windows -->
+            <Grid>
+                <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Button Text="+" 
+                        BackgroundColor="Blue" 
+                        TextColor="White" 
+                        CornerRadius="30"
+                        WidthRequest="60" 
+                        HeightRequest="60"
+                        AbsoluteLayout.LayoutBounds="1, 1, AutoSize, AutoSize"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        Margin="0, 0, 20, 20"
+                        x:Name="FloatingButton" />
+                </AbsoluteLayout>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+    <!-- Toolbar Button for Windows, Hidden on Mobile -->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Order="Primary" IconImageSource="add_icon.png" Priority="0" x:Name="ToolbarAddButton" />
+    </ContentPage.ToolbarItems>
+
+</ContentPage>
