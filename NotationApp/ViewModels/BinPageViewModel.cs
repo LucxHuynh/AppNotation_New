@@ -20,7 +20,7 @@ namespace NotationApp.ViewModels
         public BinPageViewModel()
         {
             _database = App.Database;
-            firebaseClient = new FirebaseClient("https://notationapp-98854-default-rtdb.firebaseio.com/");
+            firebaseClient = new FirebaseClient("https://my-maui-default-rtdb.firebaseio.com/");
         }
 
         public async Task LoadDeletedItemsAsync()

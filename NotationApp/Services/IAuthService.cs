@@ -15,8 +15,8 @@ namespace NotationApp.Services
     {
         Task<UserCredential> SignInWithEmailAndPassword(string email, string password);
         Task<UserCredential> CreateUserWithEmailAndPassword(string email, string password);
-        
-        //Task<UserCredential> SignInWithGoogle();
+
+        Task<UserCredential> SignInWithGoogle();
         //Task SendPasswordResetEmail(string email);
     }
 }

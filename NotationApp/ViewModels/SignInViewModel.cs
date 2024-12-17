@@ -8,6 +8,7 @@ using NotationApp.Pages;
 using NotationApp.Services;
 using System;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace NotationApp.ViewModels
 {
@@ -39,6 +40,8 @@ namespace NotationApp.ViewModels
 
         public IAsyncRelayCommand SignInCommand { get; }
         public IRelayCommand NavigateToRegisterCommand { get; }
+
+        public ICommand GoogleSignInCommand => new Command(async () => await SignInWithGoogle());
 
         public SignInViewModel(INavigation navigation, IAuthService authService)
         {
@@ -176,6 +179,54 @@ namespace NotationApp.ViewModels
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
+            }
+        }
+
+        [RelayCommand]
+        private async Task SignInWithGoogle()
+        {
+            try
+            {
+                IsLoading = true;
+                StatusMessage = "Signing in with Google...";
+
+                var result = await _authService.SignInWithGoogle();
+                if (result?.User != null)
+                {
+                    // Save user info
+                    Preferences.Default.Set("UserId", result.User.Uid);
+                    Preferences.Default.Set("UserEmail", result.User.Info.Email);
+                    Preferences.Default.Set("IsLoggedIn", true);
+
+                    // Update UI
+                    var shellViewModel = IPlatformApplication.Current.Services.GetService<AppShellViewModel>();
+                    if (shellViewModel != null)
+                    {
+                        shellViewModel.IsUserLoggedIn = true;
+                        await shellViewModel.UpdateUserData();
+                    }
+
+                    await Shell.Current.GoToAsync("//HomePage");
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert(
+                        "Error",
+                        "Failed to sign in with Google",
+                        "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = $"Error signing in with Google: {ex.Message}";
+                await App.Current.MainPage.DisplayAlert(
+                    "Error",
+                    "Failed to sign in with Google",
+                    "OK");
+            }
+            finally
+            {
+                IsLoading = false;
             }
         }
     }

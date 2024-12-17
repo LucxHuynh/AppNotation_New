@@ -8779,11 +8779,6 @@ E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-andr
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\NotationApp.runtimeconfig.json
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\NotationApp.dll
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\NotationApp.pdb
-E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\com.companyname.notationapp.apk
-E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\com.companyname.notationapp.aab
-E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\com.companyname.notationapp-Signed.aab
-E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\com.companyname.notationapp-Signed.apk
-E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\com.companyname.notationapp-Signed.apk.idsig
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\build.props
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\adb.props
@@ -8934,10 +8929,7 @@ E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-andr
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\NotationApp.pdb
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\NotationApp.genruntimeconfig.cache
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\NotationApp.runtimeconfig.json.bin
-E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\bin\com.companyname.notationapp.apk
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\bin\base.zip
-E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\bin\com.companyname.notationapp.aab
-E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\bin\com.companyname.notationapp.apks
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\res\values\colors.xml
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\uploadflags.txt
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\resolvedassemblies.hash
@@ -9894,7 +9886,6 @@ E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-andr
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\src\mono\com\google\android\material\textfield\TextInputLayout_OnEndIconChangedListenerImplementor.java
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\src\mono\MonoPackageManager_Resources.java
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\bin\packaged_resources
-E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\src\com\companyname\notationapp\R.java
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\_CompileJava.FileList.txt
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\compressed_assemblies.x86_64.ll
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\typemaps.x86_64.o
@@ -9913,3 +9904,13 @@ E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-andr
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\stamp\_GenerateJavaStubs.stamp
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\stamp\_GeneratePackageManagerJava.stamp
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\stamp\_ResolveLibraryProjectImports.stamp
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\com.cscompany.appnotations.apk
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\com.cscompany.appnotations.aab
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\com.cscompany.appnotations-Signed.aab
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\com.cscompany.appnotations-Signed.apk
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-android\com.cscompany.appnotations-Signed.apk.idsig
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\bin\com.cscompany.appnotations.apk
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\bin\com.cscompany.appnotations.aab
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\bin\com.cscompany.appnotations.apks
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\src\com\cscompany\appnotations\R.java
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\src\com\cscompany\appnotations\WebAuthenticatorCallback.java

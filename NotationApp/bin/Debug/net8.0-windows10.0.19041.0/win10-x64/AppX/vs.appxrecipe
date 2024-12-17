@@ -29,7 +29,7 @@
     <AppXManifest Include="E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-17T03:59:29.364</Modified>
+      <Modified>2024-12-17T13:00:34.568</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NotationApp.dll">
       <PackagePath>NotationApp.dll</PackagePath>
-      <Modified>2024-12-17T03:59:28.796</Modified>
+      <Modified>2024-12-17T13:00:32.370</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>NotationApp.exe</PackagePath>
-      <Modified>2024-12-17T03:59:28.802</Modified>
+      <Modified>2024-12-17T13:00:32.449</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\Resources\Raw\drawing_editor.html">
       <PackagePath>drawing_editor.html</PackagePath>
@@ -407,7 +407,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\firebase-credentials.json">
       <PackagePath>firebase-credentials.json</PackagePath>
-      <Modified>2024-12-15T12:59:16.582</Modified>
+      <Modified>2024-12-17T12:53:40.304</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NotationApp.deps.json">
       <PackagePath>NotationApp.deps.json</PackagePath>

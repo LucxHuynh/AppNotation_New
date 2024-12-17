@@ -63,7 +63,7 @@ namespace NotationApp.ViewModels
         {
             if (!IsConnectedToInternet()) return;
 
-            string firebaseUrl = $"https://notationapp-98854-default-rtdb.firebaseio.com/drawings/{drawing.Id}.json";
+            string firebaseUrl = $"https://my-maui-default-rtdb.firebaseio.com/drawings/{drawing.Id}.json";
 
             using (HttpClient client = new HttpClient())
             {

@@ -2,6 +2,7 @@
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -82,11 +83,19 @@ namespace NotationApp.Models
 
             try
             {
+                // Chuẩn hóa email cần kiểm tra
+                userEmail = userEmail.Trim().ToLower();
+
                 var sharedUsers = JsonConvert.DeserializeObject<Dictionary<string, string>>(SharedWithUsers ?? "{}");
-                return sharedUsers.ContainsKey(userEmail);
+                if (sharedUsers == null)
+                    return false;
+
+                // Kiểm tra chính xác email sau khi chuẩn hóa
+                return sharedUsers.Keys.Any(key => key.Trim().ToLower() == userEmail);
             }
-            catch
+            catch (Exception ex)
             {
+                Debug.WriteLine($"Error checking shared user: {ex.Message}");
                 return false;
             }
         }

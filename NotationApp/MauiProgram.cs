@@ -47,6 +47,11 @@ namespace NotationApp
         private static void RegisterServices(IServiceCollection services)
         {
             // Singleton Services
+            services.AddSingleton<IWebAuthenticator>(WebAuthenticator.Default);
+            services.AddSingleton<IAuthService>(sp =>new AuthService(
+                sp.GetRequiredService<IWebAuthenticator>(),
+                sp.GetRequiredService<IFirestoreService>()
+            ));
             services.AddSingleton<IFirestoreService, FirestoreService>();
             services.AddSingleton<IAuthService, AuthService>();
             services.AddSingleton<NoteDatabase>(_ =>

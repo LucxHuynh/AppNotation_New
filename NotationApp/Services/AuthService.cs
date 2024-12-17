@@ -1,5 +1,7 @@
 ﻿using Firebase.Auth;
 using Firebase.Auth.Providers;
+using Microsoft.Maui.Authentication;
+using Newtonsoft.Json;
 using NotationApp.Models;
 
 namespace NotationApp.Services
@@ -7,16 +9,23 @@ namespace NotationApp.Services
     public class AuthService : IAuthService
     {
         private readonly FirebaseAuthClient _authClient;
+        private readonly IWebAuthenticator _webAuthenticator;
+        private readonly IFirestoreService _firestoreService;
 
-        public AuthService()
+        private readonly string _clientId = "388493852290-qbf7b6q76g6ufpod7m72o08rrtr7ikom.apps.googleusercontent.com";
+
+        public AuthService(IWebAuthenticator webAuthenticator, IFirestoreService firestoreService)
         {
+            _webAuthenticator = webAuthenticator;
+            _firestoreService = firestoreService;
             var config = new FirebaseAuthConfig
             {
-                ApiKey = "AIzaSyATNq2OUsfWazU8b19kSFUPJ7liNr3S1Ns",
-                AuthDomain = "notationapp-98854.firebaseapp.com",
+                ApiKey = "AIzaSyD9oQxB8qWhG02NkOSnePhGILuFJiE8olM",
+                AuthDomain = "my-maui.firebaseapp.com",
                 Providers = new FirebaseAuthProvider[]
                 {
-                    new EmailProvider()
+                    new EmailProvider(),
+                    new GoogleProvider()
                 }
             };
 
@@ -78,29 +87,77 @@ namespace NotationApp.Services
 
 
 
-        //public async Task<Models.UserInfo> GetCurrentUserInfo()
-        //{
-        //    var user = _authClient.User;
-        //    if (user == null)
-        //        return null;
+        public async Task<UserCredential> SignInWithGoogle()
+        {
+            try
+            {
+                var scopes = new[]
+                {
+                    "openid",
+                    "email",
+                    "profile"
+                };
 
-        //    return new Models.UserInfo
-        //    {
-        //        DisplayName = user.Info.DisplayName,
-        //        Email = user.Info.Email,
-        //        PhotoUrl = user.Info.PhotoUrl,
-        //        Uid = user.Uid
-        //    };
-        //}
+                var authUrl = new Uri(
+                    $"https://accounts.google.com/o/oauth2/v2/auth" +
+                    $"?client_id={_clientId}" +
+                    $"&redirect_uri=com.cscompany.appnotations:/oauth2redirect" +
+                    $"&response_type=code id_token" +
+                    $"&scope={Uri.EscapeDataString(string.Join(" ", scopes))}" +
+                    $"&nonce={Guid.NewGuid()}" +
+                    $"&prompt=select_account");
 
-        //public bool IsSignedIn()
-        //{
-        //    return _authClient.User != null;
-        //}
+                var callbackUrl = new Uri("com.cscompany.appnotations:/oauth2redirect");
 
-        //public void SignOut()
-        //{
-        //    _authClient.SignOut();
-        //}
+                var result = await _webAuthenticator.AuthenticateAsync(new WebAuthenticatorOptions
+                {
+                    Url = authUrl,
+                    CallbackUrl = callbackUrl,
+                    PrefersEphemeralWebBrowserSession = true
+                });
+
+                if (result?.Properties != null)
+                {
+                    var idToken = result.Properties["id_token"];
+                    if (string.IsNullOrEmpty(idToken))
+                    {
+                        throw new Exception("No id_token received from Google");
+                    }
+
+                    // Sign in with Firebase
+                    var credential = GoogleProvider.GetCredential(idToken, OAuthCredentialTokenType.IdToken);
+                    var userCredential = await _authClient.SignInWithCredentialAsync(credential);
+
+                    if (userCredential?.User != null)
+                    {
+                        // Get or create user profile in Firestore
+                        var existingProfile = await _firestoreService.GetUserProfile(userCredential.User.Uid);
+                        if (existingProfile == null)
+                        {
+                            // Create new profile
+                            var newProfile = new UserProfile
+                            {
+                                Id = userCredential.User.Uid,
+                                Email = userCredential.User.Info.Email,
+                                DisplayName = userCredential.User.Info.DisplayName,
+                                DateJoined = DateTime.UtcNow
+                            };
+
+                            await _firestoreService.UpdateUserProfile(newProfile);
+                        }
+                    }
+
+                    return userCredential;
+                }
+
+                throw new Exception("Authentication failed: No result returned");
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Google sign-in error: {ex}");
+                throw new Exception($"Authentication failed: {ex.Message}");
+            }
+        }
     }
 }
+

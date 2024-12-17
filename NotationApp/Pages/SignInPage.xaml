@@ -99,37 +99,16 @@
                 <HorizontalStackLayout 
                     Spacing="16" 
                     HorizontalOptions="Center">
-                    <Frame 
-                        BorderColor="#e8e8e8"
-                        BackgroundColor="White"
-                        CornerRadius="24"
-                        HeightRequest="48"
-                        WidthRequest="48"
-                        Padding="0"
-                        HasShadow="False">
-                        <Image 
-                            Source="google_logo.png"
-                            HeightRequest="24"
-                            WidthRequest="24"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center" />
-                    </Frame>
-
-                    <Frame 
-                        BorderColor="#e8e8e8"
-                        BackgroundColor="White"
-                        CornerRadius="24"
-                        HeightRequest="48"
-                        WidthRequest="48"
-                        Padding="0"
-                        HasShadow="False">
-                        <Image 
-                            Source="apple_logo.png"
-                            HeightRequest="24"
-                            WidthRequest="24"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center" />
-                    </Frame>
+                    <Button 
+                        Command="{Binding GoogleSignInCommand}"
+                        Style="{StaticResource GoogleSignInButtonStyle}"
+                        HorizontalOptions="Center"
+                        ContentLayout="Left,8">
+                        <Button.ImageSource>
+                            <FileImageSource File="google_logo.png"/>
+                        </Button.ImageSource>
+                        <Button.Text>Sign in with Google</Button.Text>
+                    </Button>
                 </HorizontalStackLayout>
             </VerticalStackLayout>
 

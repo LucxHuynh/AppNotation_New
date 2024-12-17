@@ -84,7 +84,6 @@ namespace NotationApp.ViewModels
             }
         }
 
-        [RelayCommand]
         public async Task LoadNotesAsync()
         {
             try
@@ -94,32 +93,31 @@ namespace NotationApp.ViewModels
                 SharedWithMeNotes.Clear();
 
                 var userId = Preferences.Get("UserId", string.Empty);
+                var userEmail = Preferences.Get("UserEmail", string.Empty);
+
                 if (string.IsNullOrEmpty(userId))
                 {
                     StatusMessage = "User not logged in";
                     return;
                 }
 
-                // Load owned notes
+                // Load owned notes - bao gồm cả notes chưa share
                 var ownedNotes = await _database.GetOwnedNotesAsync(userId);
                 foreach (var note in ownedNotes.Where(n => !n.IsDeleted))
                 {
                     Notes.Add(note);
                 }
 
-                // Load shared notes
-                var sharedNotes = await _database.GetSharedNotesAsync(userId);
-                foreach (var note in sharedNotes.Where(n => !n.IsDeleted && n.OwnerId != userId))
+                // Load shared notes - chỉ load những note được share với user
+                var sharedNotes = await _database.GetSharedNotesAsync(userEmail);
+                foreach (var note in sharedNotes.Where(n => !n.IsDeleted && n.OwnerId != userId && n.IsSharedWithUser(userEmail)))
                 {
                     SharedWithMeNotes.Add(note);
                 }
-
-                Debug.WriteLine($"Loaded {Notes.Count} owned notes and {SharedWithMeNotes.Count} shared notes");
             }
             catch (Exception ex)
             {
                 StatusMessage = $"Error loading notes: {ex.Message}";
-                Debug.WriteLine($"Error in LoadNotesAsync: {ex}");
             }
             finally
             {
@@ -378,7 +376,7 @@ namespace NotationApp.ViewModels
             // Get notes keys with retry
             var keys = await ExecuteWithRetryAsync(async () =>
             {
-                var keysUrl = "https://notationapp-98854-default-rtdb.firebaseio.com/notes.json?shallow=true";
+                var keysUrl = "https://my-maui-default-rtdb.firebaseio.com/notes.json?shallow=true";
                 var response = await client.GetAsync(keysUrl);
                 response.EnsureSuccessStatusCode();
                 return await response.Content.ReadFromJsonAsync<Dictionary<string, object>>();
@@ -393,7 +391,7 @@ namespace NotationApp.ViewModels
                 {
                     var note = await ExecuteWithRetryAsync(async () =>
                     {
-                        var noteUrl = $"https://notationapp-98854-default-rtdb.firebaseio.com/notes/{key}.json";
+                        var noteUrl = $"https://my-maui-default-rtdb.firebaseio.com/notes/{key}.json";
                         var response = await client.GetAsync(noteUrl);
                         response.EnsureSuccessStatusCode();
                         return await response.Content.ReadFromJsonAsync<Note_Realtime>();
@@ -420,7 +418,7 @@ namespace NotationApp.ViewModels
             // Get drawings keys with retry
             var keys = await ExecuteWithRetryAsync(async () =>
             {
-                var keysUrl = "https://notationapp-98854-default-rtdb.firebaseio.com/drawings.json?shallow=true";
+                var keysUrl = "https://my-maui-default-rtdb.firebaseio.com/drawings.json?shallow=true";
                 var response = await client.GetAsync(keysUrl);
                 response.EnsureSuccessStatusCode();
                 return await response.Content.ReadFromJsonAsync<Dictionary<string, object>>();
@@ -435,7 +433,7 @@ namespace NotationApp.ViewModels
                 {
                     var drawing = await ExecuteWithRetryAsync(async () =>
                     {
-                        var drawingUrl = $"https://notationapp-98854-default-rtdb.firebaseio.com/drawings/{key}.json";
+                        var drawingUrl = $"https://my-maui-default-rtdb.firebaseio.com/drawings/{key}.json";
                         var response = await client.GetAsync(drawingUrl);
                         response.EnsureSuccessStatusCode();
                         return await response.Content.ReadFromJsonAsync<Drawing>();
@@ -501,57 +499,55 @@ namespace NotationApp.ViewModels
         {
             try
             {
-                //Console.WriteLine($"Filtering by tag: {tag}");
-                //if (tag == "All")
-                //{
-                //    await LoadItemsAsync();
-                //    Console.WriteLine("Finished loading all items");
-                //    return;
-                //}
-
                 var userId = Preferences.Get("UserId", string.Empty);
-                // Lấy email từ Preferences
                 var userEmail = Preferences.Get("UserEmail", string.Empty);
 
-                if (string.IsNullOrEmpty(userId)) return;
-                SelectedTag = tag;
+                Debug.WriteLine($"FilterByTag called with tag: {tag}");
+                Debug.WriteLine($"UserId: {userId}");
+                Debug.WriteLine($"UserEmail: {userEmail}");
 
-                // Load notes
+                // Load data
                 var ownedNotes = await _database.GetOwnedNotesAsync(userId);
-                var sharedNotes = await _database.GetSharedNotesAsync(userEmail);
+                Debug.WriteLine($"Loaded {ownedNotes.Count} owned notes");
 
-                // Load drawings
                 var ownedDrawings = await _database.GetOwnedDrawingsAsync(userId);
-                var sharedDrawings = await _database.GetSharedDrawingsAsync(userEmail);
+                Debug.WriteLine($"Loaded {ownedDrawings.Count} owned drawings");
 
+                // Kiểm tra dữ liệu mẫu
+                foreach (var note in ownedNotes)
+                {
+                    Debug.WriteLine($"Note: Id={note.Id}, Title={note.Title}, OwnerId={note.OwnerId}, IsDeleted={note.IsDeleted}");
+                }
+
+                foreach (var drawing in ownedDrawings)
+                {
+                    Debug.WriteLine($"Drawing: Id={drawing.Id}, Title={drawing.Title}, OwnerId={drawing.OwnerId}, IsDeleted={drawing.IsDeleted}");
+                }
+
+                var sharedNotes = await _database.GetSharedNotesAsync(userEmail);
+                var sharedDrawings = await _database.GetSharedDrawingsAsync(userEmail);
 
                 var filteredNotes = tag switch
                 {
-                    "All" => ownedNotes.Where(n => !n.IsDeleted && n.IsShared && n.TagName != "")
-                    .Concat(sharedNotes.Where(n => !n.IsDeleted && n.IsSharedWithUser(userEmail))),
-
+                    "ALL" => ownedNotes.Where(n => !n.IsDeleted),
                     "Pinned" => ownedNotes.Where(n => !n.IsDeleted && n.IsPinned),
-
-                    "Shared" => ownedNotes.Where(n => !n.IsDeleted && n.IsShared)
-                            .Concat(sharedNotes.Where(n => !n.IsDeleted && n.IsSharedWithUser(userEmail))),
-
+                    "Shared" => sharedNotes.Where(n => !n.IsDeleted && n.IsSharedWithUser(userEmail)),
                     _ => ownedNotes.Where(n => !n.IsDeleted && n.TagName == tag),
                 };
 
                 var filteredDrawings = tag switch
                 {
-                    "All" => ownedDrawings.Where(d => !d.IsDeleted)
-                   .Concat(sharedDrawings.Where(d => !d.IsDeleted && d.IsSharedWithUser(userEmail))),
-
+                    "ALL" => ownedDrawings.Where(d => !d.IsDeleted),
                     "Pinned" => ownedDrawings.Where(d => !d.IsDeleted && d.IsPinned),
-
                     "Shared" => ownedDrawings.Where(d => !d.IsDeleted && d.IsShared)
                             .Concat(sharedDrawings.Where(d => !d.IsDeleted && d.IsSharedWithUser(userEmail))),
-
                     _ => ownedDrawings.Where(d => !d.IsDeleted && d.TagName == tag),
                 };
 
-                // Phần còn lại giữ nguyên
+                Debug.WriteLine($"Filtered notes count: {filteredNotes.Count()}");
+                Debug.WriteLine($"Filtered drawings count: {filteredDrawings.Count()}");
+
+                // Convert to HomeItems
                 var homeItems = filteredNotes.Select(n => new HomeItem
                 {
                     Id = n.Id,
@@ -577,14 +573,22 @@ namespace NotationApp.ViewModels
                 }))
                 .OrderByDescending(i => i.UpdateDate);
 
+                var homeItemsList = homeItems.ToList(); // Chuyển sang list để đếm
+                Debug.WriteLine($"Total home items after conversion: {homeItemsList.Count}");
+
                 Items.Clear();
-                foreach (var item in homeItems)
+                foreach (var item in homeItemsList)
                 {
                     Items.Add(item);
+                    Debug.WriteLine($"Added item: ID={item.Id}, Type={item.ItemType}, Title={item.Title}");
                 }
+
+                Debug.WriteLine($"Final Items collection count: {Items.Count}");
             }
             catch (Exception ex)
             {
+                Debug.WriteLine($"Exception in FilterByTag: {ex.Message}");
+                Debug.WriteLine($"Stack trace: {ex.StackTrace}");
                 await Shell.Current.DisplayAlert("Lỗi", "Không thể lọc các mục", "OK");
             }
         }
