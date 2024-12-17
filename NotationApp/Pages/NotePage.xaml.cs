@@ -283,25 +283,26 @@ namespace NotationApp.Pages
             base.OnAppearing();
             await Task.Delay(2000); // Đợi WebView tải xong
 
-            var userEmail = Preferences.Get("UserEmail", string.Empty);
-            if (!_selectedNote.CanUserEdit(userEmail))
-            {
-                // Disable edit controls
-                EditorWebView.IsEnabled = false;
-                TitleEntry.IsEnabled = false;
+            //var userEmail = Preferences.Get("UserEmail", string.Empty);
+            //if (!_selectedNote.CanUserEdit(userEmail))
+            //{
+            //    // Disable edit controls
+            //    EditorWebView.IsEnabled = false;
+            //    TitleEntry.IsEnabled = false;
 
-                // Disable nút save bằng x:Name
-                SaveButton.IsEnabled = false; // Thêm x:Name="SaveButton" vào XAML
+            //    // Disable nút save bằng x:Name
+            //    SaveButton.IsEnabled = false; // Thêm x:Name="SaveButton" vào XAML
 
-                // Thông báo cho người dùng
-                await DisplayAlert(
-                    "Read Only",
-                    "You have read-only access to this note",
-                    "OK"
-                );
-            }
+            //    // Thông báo cho người dùng
+            //    await DisplayAlert(
+            //        "Read Only",
+            //        "You have read-only access to this note",
+            //        "OK"
+            //    );
+            //}
 
             LoadInitialContent();
+
         }
 
         // Hàm để nạp nội dung vào WebView editor

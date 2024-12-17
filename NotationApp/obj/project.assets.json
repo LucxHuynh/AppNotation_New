@@ -102608,11 +102608,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitHub+Java\\Nhan\\main\\AppNotation_New\\NotationApp\\NotationApp.csproj",
+      "projectUniqueName": "E:\\GitHub+Java\\AppNotation_fix\\AppNotation_New\\NotationApp\\NotationApp.csproj",
       "projectName": "NotationApp",
-      "projectPath": "E:\\GitHub+Java\\Nhan\\main\\AppNotation_New\\NotationApp\\NotationApp.csproj",
+      "projectPath": "E:\\GitHub+Java\\AppNotation_fix\\AppNotation_New\\NotationApp\\NotationApp.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "E:\\GitHub+Java\\Nhan\\main\\AppNotation_New\\NotationApp\\obj\\",
+      "outputPath": "E:\\GitHub+Java\\AppNotation_fix\\AppNotation_New\\NotationApp\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [

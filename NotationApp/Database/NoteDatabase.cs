@@ -73,20 +73,21 @@ namespace NotationApp.Database
                 {
                     return await _database.ExecuteAsync(
                         @"UPDATE Note_Realtime SET 
-                Title = ?, 
-                Text = ?, 
-                CreateDate = ?,
-                UpdateDate = ?, 
-                IsDeleted = ?,
-                IsSynced = ?,
-                TagName = ?,
-                IsPinned = ?,
-                OwnerId = ?,
-                IsShared = ?,
-                Permission = ?,
-                ShareLink = ?,
-                SharedWithUsers = ?
-                WHERE Id = ?",
+                        Title = ?, 
+                        Text = ?, 
+                        CreateDate = ?,
+                        UpdateDate = ?, 
+                        IsDeleted = ?,
+                        IsSynced = ?,
+                        TagName = ?,
+                        IsPinned = ?,
+                        OwnerId = ?,
+                        OwnerEmail = ?,
+                        IsShared = ?,
+                        Permission = ?,
+                        ShareLink = ?,
+                        SharedWithUsers = ?
+                        WHERE Id = ?",
                         note.Title ?? string.Empty,
                         note.Text ?? string.Empty,
                         note.CreateDate,
@@ -96,6 +97,7 @@ namespace NotationApp.Database
                         note.TagName ?? "Personal",
                         note.IsPinned,
                         note.OwnerId ?? string.Empty,
+                        note.OwnerEmail ?? string.Empty,
                         note.IsShared,
                         (int)note.Permission,
                         note.ShareLink ?? string.Empty,
@@ -160,6 +162,7 @@ namespace NotationApp.Database
                 TagName = ?,
                 IsPinned = ?,
                 OwnerId = ?,
+                OwnerEmail = ?,
                 IsShared = ?,
                 Permission = ?,
                 ShareLink = ?,
@@ -174,6 +177,7 @@ namespace NotationApp.Database
                 note.TagName ?? "Personal",
                 note.IsPinned,
                 note.OwnerId ?? string.Empty,
+                note.OwnerEmail ?? string.Empty,
                 note.IsShared,
                 (int)note.Permission,
                 note.ShareLink ?? string.Empty,
@@ -235,9 +239,11 @@ namespace NotationApp.Database
         {
             try
             {
-                var sharedUsers = !string.IsNullOrEmpty(drawing.SharedWithUsers)
-                ? JsonConvert.DeserializeObject<string[]>(drawing.SharedWithUsers)
-                : Array.Empty<string>();
+                if (string.IsNullOrEmpty(drawing.SharedWithUsers))
+                {
+                    drawing.SharedWithUsers = JsonConvert.SerializeObject(new Dictionary<string, string>());
+                }
+
                 var existingDrawing = await GetDrawingByIdAsync(drawing.Id);
                 if (existingDrawing != null)
                 {
@@ -252,6 +258,7 @@ namespace NotationApp.Database
                         TagName = ?,
                         IsPinned = ?,
                         OwnerId = ?,
+                        OwnerEmail = ?,
                         IsShared = ?,
                         Permission = ?,
                         ShareLink = ?,
@@ -266,10 +273,11 @@ namespace NotationApp.Database
                         drawing.TagName ?? "Personal",
                         drawing.IsPinned,
                         drawing.OwnerId ?? string.Empty,
+                        drawing.OwnerEmail ?? string.Empty,
                         drawing.IsShared,
                         (int)drawing.Permission,
                         drawing.ShareLink ?? string.Empty,
-                        drawing.SharedWithUsers = JsonConvert.SerializeObject(sharedUsers),
+                        drawing.SharedWithUsers,
                         drawing.Id);
                 }
 
@@ -290,39 +298,43 @@ namespace NotationApp.Database
 
         public Task<int> UpdateDrawingAsync(Drawing drawing)
         {
-            var sharedUsers = !string.IsNullOrEmpty(drawing.SharedWithUsers)
-            ? JsonConvert.DeserializeObject<string[]>(drawing.SharedWithUsers)
-            : Array.Empty<string>();
+            if (string.IsNullOrEmpty(drawing.SharedWithUsers))
+            {
+                drawing.SharedWithUsers = JsonConvert.SerializeObject(new Dictionary<string, string>());
+            }
+
             return _database.ExecuteAsync(
                 @"UPDATE Drawing SET 
-                        Title = ?, 
-                        ImagePath = ?, 
-                        CreateDate = ?,
-                        UpdateDate = ?, 
-                        IsDeleted = ?,
-                        IsSynced = ?,
-                        TagName = ?,
-                        IsPinned = ?,
-                        OwnerId = ?,
-                        IsShared = ?,
-                        Permission = ?,
-                        ShareLink = ?,
-                        SharedWithUsers = ?
-                        WHERE Id = ?",
-                        drawing.Title ?? string.Empty,
-                        drawing.ImagePath ?? string.Empty,
-                        drawing.CreateDate,
-                        drawing.UpdateDate,
-                        drawing.IsDeleted,
-                        drawing.IsSynced,
-                        drawing.TagName ?? "Personal",
-                        drawing.IsPinned,
-                        drawing.OwnerId ?? string.Empty,
-                        drawing.IsShared,
-                        (int)drawing.Permission,
-                        drawing.ShareLink ?? string.Empty,
-                        drawing.SharedWithUsers = JsonConvert.SerializeObject(sharedUsers),
-                        drawing.Id);
+                Title = ?, 
+                ImagePath = ?, 
+                CreateDate = ?,
+                UpdateDate = ?, 
+                IsDeleted = ?,
+                IsSynced = ?,
+                TagName = ?,
+                IsPinned = ?,
+                OwnerId = ?,
+                OwnerEmail = ?,
+                IsShared = ?,
+                Permission = ?,
+                ShareLink = ?,
+                SharedWithUsers = ?
+                WHERE Id = ?",
+                drawing.Title ?? string.Empty,
+                drawing.ImagePath ?? string.Empty,
+                drawing.CreateDate,
+                drawing.UpdateDate,
+                drawing.IsDeleted,
+                drawing.IsSynced,
+                drawing.TagName ?? "Personal",
+                drawing.IsPinned,
+                drawing.OwnerId ?? string.Empty,
+                drawing.OwnerEmail ?? string.Empty,
+                drawing.IsShared,
+                (int)drawing.Permission,
+                drawing.ShareLink ?? string.Empty,
+                drawing.SharedWithUsers,
+                drawing.Id);
         }
 
         public Task<int> DeleteDrawingAsync(Drawing drawing)

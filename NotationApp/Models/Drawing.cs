@@ -24,6 +24,7 @@ namespace NotationApp.Models
         public bool IsPinned { get; set; } = false;
         // New sharing properties
         public string OwnerId { get; set; } = string.Empty;
+        public string OwnerEmail { get; set; } = string.Empty;
         public bool IsShared { get; set; } = false;
         public string SharedWithUsers { get; set; } = JsonConvert.SerializeObject(new Dictionary<string, string>());
         public string ShareLink { get; set; } = string.Empty;
@@ -59,7 +60,7 @@ namespace NotationApp.Models
                 return false;
 
             // Owner can always edit
-            if (OwnerId == userEmail)
+            if (OwnerEmail == userEmail)
                 return true;
 
             try

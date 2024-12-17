@@ -16,7 +16,7 @@ namespace NotationApp.ViewModels
         private readonly NoteDatabase _database;
         private readonly Note_Realtime _note;
         private readonly string _currentUserId;
-
+        private readonly string _currentUserEmail;
 
         public ObservableCollection<Drawing> Drawings { get; private set; } = new();
         public ObservableCollection<Drawing> SharedWithMeDrawings { get; private set; } = new();
@@ -32,6 +32,7 @@ namespace NotationApp.ViewModels
             Title = _note.Title;
             Text = _note.Text;
             _currentUserId = Preferences.Get("UserId", string.Empty);
+            _currentUserEmail = Preferences.Get("UserEmail", string.Empty);
         }
 
         [ObservableProperty]
@@ -49,7 +50,6 @@ namespace NotationApp.ViewModels
                 _note.Title = Title;
                 _note.Text = htmlContent;
                 _note.UpdateDate = DateTime.Now;
-                _note.OwnerId = _currentUserId ?? "default_user"; // Đảm bảo OwnerId không null                   
 
                 // Lưu local
                 await _database.SaveNoteAsync(_note);
@@ -75,6 +75,7 @@ namespace NotationApp.ViewModels
                     CreateDate = DateTime.Now,
                     UpdateDate = DateTime.Now,
                     OwnerId = _currentUserId ?? "default_user",
+                    OwnerEmail = _currentUserEmail ?? "default_user",
                 };
 
                 Debug.WriteLine($"New drawing created with initial values: Title={newDraw.Title}, OwnerId={newDraw.OwnerId}");

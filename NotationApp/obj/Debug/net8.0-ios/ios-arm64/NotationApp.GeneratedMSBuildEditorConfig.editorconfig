@@ -13,101 +13,101 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NotationApp
-build_property.ProjectDir = E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\
+build_property.ProjectDir = E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/App.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/AppShell.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/MainPage.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Pages/BinPage.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Pages/BinPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.BinPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\BinPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\BinPage.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Pages/DrawingPage.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Pages/DrawingPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.DrawingPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\DrawingPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\DrawingPage.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Pages/FolderPage.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Pages/FolderPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.FolderPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\FolderPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\FolderPage.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Pages/ForgotPasswordPage.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Pages/ForgotPasswordPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.ForgotPasswordPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\ForgotPasswordPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\ForgotPasswordPage.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Pages/HomePage.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Pages/HomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.HomePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\HomePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\HomePage.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Pages/NotePage.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Pages/NotePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.NotePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\NotePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\NotePage.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Pages/ShareDialog.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Pages/ShareDialog.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.ShareDialog.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\ShareDialog.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\ShareDialog.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Pages/SignInPage.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Pages/SignInPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.SignInPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\SignInPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\SignInPage.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Pages/SignUpPage.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Pages/SignUpPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.SignUpPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\SignUpPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\SignUpPage.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Pages/UserProfilePage.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Pages/UserProfilePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Pages.UserProfilePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\UserProfilePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\UserProfilePage.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Platforms/Android/WelcomePage.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Platforms/Android/WelcomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Platforms.Android.WelcomePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Platforms\Android\WelcomePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Platforms\Android\WelcomePage.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Resources/Styles/Colors.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[E:/GitHub+Java/Nhan/main/AppNotation_New/NotationApp/Resources/Styles/Styles.xaml]
+[E:/GitHub+Java/AppNotation_fix/AppNotation_New/NotationApp/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = NotationApp.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml

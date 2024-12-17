@@ -37,6 +37,7 @@ namespace NotationApp.Models
 
         // New properties for user and sharing
         public string OwnerId { get; set; } = string.Empty; // ID of the note creator
+        public string OwnerEmail { get; set; } = string.Empty; // Email of the note creator
         public bool IsShared { get; set; } = false; // Indicates if note is shared
         public string SharedWithUsers { get; set; } = JsonConvert.SerializeObject(new Dictionary<string, string>());
         public string ShareLink { get; set; } = string.Empty; // Optional public share link
@@ -97,7 +98,7 @@ namespace NotationApp.Models
                 return false;
 
             // Owner can always edit
-            if (OwnerId == userEmail)
+            if (OwnerEmail == userEmail)
                 return true;
 
             try

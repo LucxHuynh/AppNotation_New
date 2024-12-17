@@ -99,7 +99,6 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="P:NotationApp.ViewModels.HomePageViewModel.SelectedNote">
             <inheritdoc cref="F:NotationApp.ViewModels.HomePageViewModel.selectedNote"/>
@@ -120,12 +119,6 @@
             <summary>Executes the logic for when <see cref="P:NotationApp.ViewModels.HomePageViewModel.SearchQuery"/> just changed.</summary>
             <param name="value">The new property value that was set.</param>
             <remarks>This method is invoked right after the value of <see cref="P:NotationApp.ViewModels.HomePageViewModel.SearchQuery"/> is changed.</remarks>
-        </member>
-        <member name="F:NotationApp.ViewModels.HomePageViewModel.loadItemsCommand">
-            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.LoadItemsCommand"/>.</summary>
-        </member>
-        <member name="P:NotationApp.ViewModels.HomePageViewModel.LoadItemsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.LoadItemsAsync"/>.</summary>
         </member>
         <member name="F:NotationApp.ViewModels.HomePageViewModel.loadNotesCommand">
             <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.LoadNotesCommand"/>.</summary>
