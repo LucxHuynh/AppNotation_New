@@ -93,6 +93,7 @@
 	  <None Remove="Resources\Images\pin_icon.png" />
 	  <None Remove="Resources\Images\restore.png" />
 	  <None Remove="Resources\Images\save.png" />
+	  <None Remove="Resources\Images\settings.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -122,9 +123,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\DrawingPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\FolderPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\ForgotPasswordPage.xaml">

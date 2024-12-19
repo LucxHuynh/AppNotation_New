@@ -29,55 +29,55 @@
 
                     <ScrollView Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0" HorizontalScrollBarVisibility="Never">
                         <HorizontalStackLayout Spacing="8">
-                            <Button Text="All"
+                            <Button Text="Tất cả"
                                 Style="{StaticResource TagButtonStyle}"
                                 TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='ALL'}"
                                 BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='ALL'}"
                                 Command="{Binding FilterByTagCommand}"
                                 CommandParameter="ALL"/>
 
-                            <Button Text="Pinned" 
+                            <Button Text="Đã ghim" 
                                 Style="{StaticResource TagButtonStyle}"
                                 TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Pinned'}"
                                 BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Pinned'}"
                                 Command="{Binding FilterByTagCommand}" 
                                CommandParameter="Pinned"/>
 
-                            <Button Text="Shared" 
+                            <Button Text="Được chia sẻ" 
                                 Style="{StaticResource TagButtonStyle}"
                                 TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Shared'}"
                                 BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Shared'}"
                                 Command="{Binding FilterByTagCommand}"
                                 CommandParameter="Shared"/>
-                            <Button Text="Work" 
+                            <Button Text="Công việc" 
                                 Style="{StaticResource TagButtonStyle}"
                                 TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Work'}"
                                 BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Work'}"
                                 Command="{Binding FilterByTagCommand}" 
                                 CommandParameter="Work"/>
 
-                            <Button Text="Personal" 
+                            <Button Text="Cá nhân" 
                                Style="{StaticResource TagButtonStyle}" 
                                TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Personal'}"
                                BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Personal'}"
                                Command="{Binding FilterByTagCommand}"
                                CommandParameter="Personal"/>
 
-                            <Button Text="Todo" 
+                            <Button Text="Công việc phải làm" 
                                Style="{StaticResource TagButtonStyle}"
                                TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Todo'}"
                                BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Todo'}"
                                Command="{Binding FilterByTagCommand}"
                                CommandParameter="Todo"/>
 
-                            <Button Text="Study" 
+                            <Button Text="Học tập" 
                                Style="{StaticResource TagButtonStyle}"
                                TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Study'}"
                                BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Study'}"
                                Command="{Binding FilterByTagCommand}"
                                CommandParameter="Study"/>
 
-                            <Button Text="Other" 
+                            <Button Text="Khác" 
                                Style="{StaticResource TagButtonStyle}"
                                TextColor="{Binding SelectedTag, Converter={StaticResource TagTextColorConverter}, ConverterParameter='Other'}"
                                BackgroundColor="{Binding SelectedTag, Converter={StaticResource TagColorConverter}, ConverterParameter='Other'}"

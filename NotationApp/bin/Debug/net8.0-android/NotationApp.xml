@@ -367,6 +367,31 @@
         <member name="P:NotationApp.ViewModels.UserProfileViewModel.SignOutCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:NotationApp.ViewModels.UserProfileViewModel.SignOut"/>.</summary>
         </member>
+        <member name="T:SignUpViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:SignUpViewModel.Email">
+            <inheritdoc cref="F:SignUpViewModel.email"/>
+        </member>
+        <member name="P:SignUpViewModel.Password">
+            <inheritdoc cref="F:SignUpViewModel.password"/>
+        </member>
+        <member name="P:SignUpViewModel.ConfirmPassword">
+            <inheritdoc cref="F:SignUpViewModel.confirmPassword"/>
+        </member>
+        <member name="P:SignUpViewModel.StatusMessage">
+            <inheritdoc cref="F:SignUpViewModel.statusMessage"/>
+        </member>
+        <member name="P:SignUpViewModel.IsLoading">
+            <inheritdoc cref="F:SignUpViewModel.isLoading"/>
+        </member>
+        <member name="F:SignUpViewModel.signInWithGoogleCommand">
+            <summary>The backing field for <see cref="P:SignUpViewModel.SignInWithGoogleCommand"/>.</summary>
+        </member>
+        <member name="P:SignUpViewModel.SignInWithGoogleCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:SignUpViewModel.SignInWithGoogle"/>.</summary>
+        </member>
         <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
             <summary>
             Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
@@ -556,6 +581,9 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsValid">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsValid" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConfirmPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Profile">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Profile" generated properties.</summary>
         </member>
@@ -633,6 +661,9 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsValid">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsValid" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConfirmPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Profile">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Profile" generated properties.</summary>

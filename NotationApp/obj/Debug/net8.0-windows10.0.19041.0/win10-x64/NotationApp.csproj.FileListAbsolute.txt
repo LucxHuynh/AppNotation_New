@@ -2025,3 +2025,4 @@ E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-wind
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\settings.scale-100.png

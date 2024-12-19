@@ -9914,3 +9914,4 @@ E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-andr
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\bin\com.cscompany.appnotations.apks
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\src\com\cscompany\appnotations\R.java
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\android\src\com\cscompany\appnotations\WebAuthenticatorCallback.java
+E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-android\resizetizer\r\drawable\settings.png

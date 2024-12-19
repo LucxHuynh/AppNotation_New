@@ -2231,4 +2231,3 @@ E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-ios\
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-ios\ios-arm64\Notation.188A01D9.Up2Date
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-ios\ios-arm64\NotationApp.genruntimeconfig.cache
 E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-ios\ios-arm64\ref\NotationApp.dll
-E:\GitHub+Java\AppNotation_fix\AppNotation_New\NotationApp\obj\Debug\net8.0-ios\ios-arm64\build-signature\signature

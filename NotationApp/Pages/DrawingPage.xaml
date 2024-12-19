@@ -24,7 +24,6 @@
 
              <!--Các nút thao tác nhỏ hơn với khoảng cách-->
             <ImageButton Source="save.png" Command="{Binding SaveCommand}" HeightRequest="24" WidthRequest="24" Grid.Column="4" VerticalOptions="Center" BackgroundColor="#512BD4" Clicked="OnSaveButtonClicked"/>
-            <!--<ImageButton Source="draw.png" HeightRequest="24" WidthRequest="24" Grid.Column="6" VerticalOptions="Center" BackgroundColor="Black"/>-->
             <ImageButton Source="dots.png" Command="{Binding MoreOptionsCommand}" HeightRequest="24" WidthRequest="24" Grid.Column="8" VerticalOptions="Center" BackgroundColor="#512BD4" Clicked="OnDotsButtonClicked"/>
         </Grid>
     </Shell.TitleView>

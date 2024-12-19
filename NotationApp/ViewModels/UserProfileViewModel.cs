@@ -39,7 +39,7 @@ namespace NotationApp.ViewModels
             try
             {
                 IsBusy = true;
-                StatusMessage = "Loading profile...";
+                StatusMessage = "Đang tải...";
 
                 // Kiểm tra UserId
                 var userId = Preferences.Default.Get("UserId", string.Empty);
@@ -50,7 +50,7 @@ namespace NotationApp.ViewModels
 
                 if (string.IsNullOrEmpty(userId))
                 {
-                    StatusMessage = "Please sign in to view profile";
+                    StatusMessage = "Vui lòng đăng nhập để xem hồ sơ";
                     return;
                 }
 
@@ -85,7 +85,7 @@ namespace NotationApp.ViewModels
             }
             catch (Exception ex)
             {
-                StatusMessage = "Failed to load profile";
+                StatusMessage = "Không tải được hồ sơ";
                 System.Diagnostics.Debug.WriteLine($"LoadProfile Error: {ex}");
             }
             finally
@@ -103,12 +103,12 @@ namespace NotationApp.ViewModels
             try
             {
                 IsBusy = true;
-                StatusMessage = "Saving changes...";
+                StatusMessage = "Đang lưu...";
 
                 string userId = Preferences.Get("UserId", string.Empty);
                 if (string.IsNullOrEmpty(userId))
                 {
-                    StatusMessage = "User ID not found";
+                    StatusMessage = "Không tìm thấy ID người dùng";
                     return;
                 }
 
@@ -117,7 +117,7 @@ namespace NotationApp.ViewModels
 
                 if (success)
                 {
-                    StatusMessage = "Profile updated successfully";
+                    StatusMessage = "Hồ sơ được cập nhật thành công";
                     await Task.Delay(2000);
                     StatusMessage = string.Empty;
                     var shellViewModel = IPlatformApplication.Current.Services.GetService<AppShellViewModel>();
@@ -125,12 +125,12 @@ namespace NotationApp.ViewModels
                 }
                 else
                 {
-                    StatusMessage = "Failed to update profile";
+                    StatusMessage = "Không thể cập nhật hồ sơ";
                 }
             }
             catch (Exception ex)
             {
-                StatusMessage = "Error saving profile";
+                StatusMessage = "Lỗi lưu hồ sơ";
                 System.Diagnostics.Debug.WriteLine($"Error in SaveChanges: {ex}");
             }
             finally
@@ -148,21 +148,20 @@ namespace NotationApp.ViewModels
             try
             {
                 IsBusy = true;
-                StatusMessage = "Selecting photo...";
 
                 var photo = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
                 {
-                    Title = "Select Profile Photo"
+                    Title = "Chọn ảnh hồ sơ"
                 });
 
                 if (photo != null)
                 {
-                    StatusMessage = "Uploading photo...";
+                    StatusMessage = "Đang tải ảnh...";
                     var userId = Preferences.Get("UserId", string.Empty);
 
                     if (string.IsNullOrEmpty(userId))
                     {
-                        StatusMessage = "User ID not found";
+                        StatusMessage = "Không tìm thấy ID người dùng";
                         return;
                     }
 
@@ -177,7 +176,7 @@ namespace NotationApp.ViewModels
                     }
                     else
                     {
-                        StatusMessage = "Failed to upload photo";
+                        StatusMessage = "Không thể tải ảnh lên";
                     }
                 }
             }
@@ -201,7 +200,6 @@ namespace NotationApp.ViewModels
             try
             {
                 IsBusy = true;
-                StatusMessage = "Signing out...";
 
                 // Clear preferences
                 Preferences.Clear();
@@ -225,7 +223,7 @@ namespace NotationApp.ViewModels
             }
             catch (Exception ex)
             {
-                StatusMessage = "Error signing out";
+                StatusMessage = "Lỗi đăng xuất";
                 Debug.WriteLine($"Error in SignOut: {ex}");
             }
             finally

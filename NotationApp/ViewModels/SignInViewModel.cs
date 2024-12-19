@@ -117,8 +117,8 @@ namespace NotationApp.ViewModels
             if (!IsValid)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Validation Error",
-                    "Please fix all validation errors before proceeding.",
+                    "Lỗi xác thực",
+                    "Vui lòng sửa tất cả các lỗi xác thực trước khi tiếp tục.",
                     "OK");
                 return;
             }
@@ -147,13 +147,13 @@ namespace NotationApp.ViewModels
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert("Error", "Invalid email or password", "OK");
+                    await App.Current.MainPage.DisplayAlert("Lỗi", "Email hoặc mật khẩu không hợp lệ", "OK");
                 }
             }
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine($"Unexpected Error: {ex}");
-                await App.Current.MainPage.DisplayAlert("Error", "An unexpected error occurred. Please try again", "OK");
+                await App.Current.MainPage.DisplayAlert("Lỗi", "Đã xảy ra lỗi không mong muốn. Vui lòng thử lại", "OK");
             }
             finally
             {
@@ -188,7 +188,6 @@ namespace NotationApp.ViewModels
             try
             {
                 IsLoading = true;
-                StatusMessage = "Signing in with Google...";
 
                 var result = await _authService.SignInWithGoogle();
                 if (result?.User != null)
@@ -211,17 +210,17 @@ namespace NotationApp.ViewModels
                 else
                 {
                     await App.Current.MainPage.DisplayAlert(
-                        "Error",
-                        "Failed to sign in with Google",
+                        "Lỗi",
+                        "Không đăng nhập được bằng Google",
                         "OK");
                 }
             }
             catch (Exception ex)
             {
-                StatusMessage = $"Error signing in with Google: {ex.Message}";
+                StatusMessage = $"Lỗi đăng nhập bằng Google: {ex.Message}";
                 await App.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "Failed to sign in with Google",
+                    "Lỗi",
+                    "Không đăng nhập được bằng Google",
                     "OK");
             }
             finally

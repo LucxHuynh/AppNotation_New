@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\services\\firestoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\services\\firestoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\signupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\appshellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\appshellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\signinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\signinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\sharedialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\sharedialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\notepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\notepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\homepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\homepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\database\\notedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\database\\notedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\drawingpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\drawingpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\notepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\notepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\homeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\homeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\forgotpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\forgotpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\binpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,12 +51,84 @@
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\binitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\drawingpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\drawingpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\appshellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\appshellviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\drawingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\drawingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\binpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\binpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\platforms\\android\\webauthenticatorcallback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\platforms\\android\\webauthenticatorcallback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\forgotpasswordpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\forgotpasswordpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\forgotpasswordpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\forgotpasswordpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\notepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\notepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\sharedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\sharedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\signuppage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\userprofilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\userprofilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\signinpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\signinpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\signinpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\signinpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\platforms\\android\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\platforms\\android\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\resources\\raw\\editor.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\resources\\raw\\editor.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\services\\firestoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\services\\firestoreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\database\\notedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\database\\notedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\userprofilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,20 +143,8 @@
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\firebase-credentials.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\platforms\\android\\webauthenticatorcallback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\platforms\\android\\webauthenticatorcallback.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\platforms\\android\\google-services.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -89,14 +157,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\platforms\\android\\mainactivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\signinpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\signinpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\signinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\signinviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\services\\googletokenresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -115,22 +175,6 @@
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\services\\awsaiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\forgotpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\forgotpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\forgotpasswordpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\forgotpasswordpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\forgotpasswordpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\forgotpasswordpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\homeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\homeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\models\\note_realtime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\models\\note_realtime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -139,24 +183,12 @@
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\notepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\notepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\notepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\models\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\models\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\viewmodels\\sharedialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\sharedialogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\sharedialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -167,16 +199,8 @@
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\models\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\drawingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\drawingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\drawingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\drawingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\pages\\sharedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\sharedialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|e:\\github\u002Bjava\\appnotation_fix\\appnotation_new\\notationapp\\models\\shareinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -206,473 +230,111 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "HomePageViewModel.cs",
               "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\HomePageViewModel.cs",
               "RelativeDocumentMoniker": "NotationApp\\ViewModels\\HomePageViewModel.cs",
               "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\HomePageViewModel.cs",
               "RelativeToolTip": "NotationApp\\ViewModels\\HomePageViewModel.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAYwH0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAPICAAAAAAAAAAAwwIECAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T12:31:20.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "NotePageViewModel.cs",
               "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\NotePageViewModel.cs",
               "RelativeDocumentMoniker": "NotationApp\\ViewModels\\NotePageViewModel.cs",
               "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\NotePageViewModel.cs",
               "RelativeToolTip": "NotationApp\\ViewModels\\NotePageViewModel.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDYAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAYwDYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T13:03:07.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NoteDatabase.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Database\\NoteDatabase.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Database\\NoteDatabase.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Database\\NoteDatabase.cs",
-              "RelativeToolTip": "NotationApp\\Database\\NoteDatabase.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAAADwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T14:20:35.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppShellViewModel.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\AppShellViewModel.cs",
-              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\AppShellViewModel.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\AppShellViewModel.cs",
-              "RelativeToolTip": "NotationApp\\ViewModels\\AppShellViewModel.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T15:54:41.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FirestoreService.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\FirestoreService.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Services\\FirestoreService.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\FirestoreService.cs",
-              "RelativeToolTip": "NotationApp\\Services\\FirestoreService.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwAgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:00:22.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Services\\AuthService.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AuthService.cs*",
-              "RelativeToolTip": "NotationApp\\Services\\AuthService.cs*",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAIwB8AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:00:20.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "NotationApp\\MauiProgram.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\MauiProgram.cs*",
-              "RelativeToolTip": "NotationApp\\MauiProgram.cs*",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwDQAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:00:40.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\IAuthService.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Services\\IAuthService.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\IAuthService.cs",
-              "RelativeToolTip": "NotationApp\\Services\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:00:30.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BinPageViewModel.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\BinPageViewModel.cs",
-              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\BinPageViewModel.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\BinPageViewModel.cs",
-              "RelativeToolTip": "NotationApp\\ViewModels\\BinPageViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:13:53.673Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BinItem.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\BinItem.cs",
-              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\BinItem.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\BinItem.cs",
-              "RelativeToolTip": "NotationApp\\ViewModels\\BinItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T12:31:52.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DrawingPageViewModel.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\DrawingPageViewModel.cs",
-              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\DrawingPageViewModel.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\DrawingPageViewModel.cs",
-              "RelativeToolTip": "NotationApp\\ViewModels\\DrawingPageViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:13:58.623Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserProfilePage.xaml",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\UserProfilePage.xaml",
-              "RelativeDocumentMoniker": "NotationApp\\Pages\\UserProfilePage.xaml",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\UserProfilePage.xaml",
-              "RelativeToolTip": "NotationApp\\Pages\\UserProfilePage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-17T15:55:31.72Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserProfilePage.xaml.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\UserProfilePage.xaml.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Pages\\UserProfilePage.xaml.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\UserProfilePage.xaml.cs",
-              "RelativeToolTip": "NotationApp\\Pages\\UserProfilePage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T15:55:27.999Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "firebase-credentials.json",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\firebase-credentials.json",
-              "RelativeDocumentMoniker": "NotationApp\\firebase-credentials.json",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\firebase-credentials.json",
-              "RelativeToolTip": "NotationApp\\firebase-credentials.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-15T13:00:50.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\AppShell.xaml",
-              "RelativeDocumentMoniker": "NotationApp\\AppShell.xaml",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\AppShell.xaml",
-              "RelativeToolTip": "NotationApp\\AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-15T13:00:48.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "App.xaml",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\App.xaml",
-              "RelativeDocumentMoniker": "NotationApp\\App.xaml",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\App.xaml",
-              "RelativeToolTip": "NotationApp\\App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-17T13:12:08.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserProfileViewModel.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\UserProfileViewModel.cs",
-              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\UserProfileViewModel.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\UserProfileViewModel.cs",
-              "RelativeToolTip": "NotationApp\\ViewModels\\UserProfileViewModel.cs",
-              "ViewState": "AgIAANAAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T15:54:46.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "WebAuthenticatorCallback.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\WebAuthenticatorCallback.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Platforms\\Android\\WebAuthenticatorCallback.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\WebAuthenticatorCallback.cs",
-              "RelativeToolTip": "NotationApp\\Platforms\\Android\\WebAuthenticatorCallback.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T13:14:08.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\MainPage.xaml",
-              "RelativeDocumentMoniker": "NotationApp\\MainPage.xaml",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\MainPage.xaml",
-              "RelativeToolTip": "NotationApp\\MainPage.xaml",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-15T13:00:52.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "MainActivity.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\MainActivity.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Platforms\\Android\\MainActivity.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\MainActivity.cs",
-              "RelativeToolTip": "NotationApp\\Platforms\\Android\\MainActivity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T13:16:36.564Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "SignInPage.xaml",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\SignInPage.xaml",
-              "RelativeDocumentMoniker": "NotationApp\\Pages\\SignInPage.xaml",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\SignInPage.xaml",
-              "RelativeToolTip": "NotationApp\\Pages\\SignInPage.xaml",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAAAGcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-17T13:05:02.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "IFirestoreService.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\IFirestoreService.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Services\\IFirestoreService.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\IFirestoreService.cs",
-              "RelativeToolTip": "NotationApp\\Services\\IFirestoreService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:00:31.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AndroidManifest.xml",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\AndroidManifest.xml",
-              "RelativeDocumentMoniker": "NotationApp\\Platforms\\Android\\AndroidManifest.xml",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\AndroidManifest.xml",
-              "RelativeToolTip": "NotationApp\\Platforms\\Android\\AndroidManifest.xml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-12-17T05:22:01.939Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "google-services.json",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\google-services.json",
-              "RelativeDocumentMoniker": "NotationApp\\Platforms\\Android\\google-services.json",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\google-services.json",
-              "RelativeToolTip": "NotationApp\\Platforms\\Android\\google-services.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-17T05:59:21.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "GoogleTokenResponse.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\GoogleTokenResponse.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Services\\GoogleTokenResponse.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\GoogleTokenResponse.cs",
-              "RelativeToolTip": "NotationApp\\Services\\GoogleTokenResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T05:03:06.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AWSRealtimeService.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AWSRealtimeService.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Services\\AWSRealtimeService.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AWSRealtimeService.cs",
-              "RelativeToolTip": "NotationApp\\Services\\AWSRealtimeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:00:33.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
               "Title": "SignInViewModel.cs",
               "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\SignInViewModel.cs",
               "RelativeDocumentMoniker": "NotationApp\\ViewModels\\SignInViewModel.cs",
               "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\SignInViewModel.cs",
               "RelativeToolTip": "NotationApp\\ViewModels\\SignInViewModel.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACsAAABhAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAwwJsAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T14:26:51.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ForgotPasswordViewModel.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\ForgotPasswordViewModel.cs",
-              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\ForgotPasswordViewModel.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\ForgotPasswordViewModel.cs",
-              "RelativeToolTip": "NotationApp\\ViewModels\\ForgotPasswordViewModel.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAmwD8AAABDAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ShareDialogViewModel.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\ShareDialogViewModel.cs",
+              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\ShareDialogViewModel.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\ShareDialogViewModel.cs",
+              "RelativeToolTip": "NotationApp\\ViewModels\\ShareDialogViewModel.cs",
+              "ViewState": "AgIAAGwBAAAAAAAAAAAAAH8BAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T04:57:40.222Z",
+              "WhenOpened": "2024-12-16T18:07:26.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ForgotPasswordPage.xaml",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ForgotPasswordPage.xaml",
-              "RelativeDocumentMoniker": "NotationApp\\Pages\\ForgotPasswordPage.xaml",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ForgotPasswordPage.xaml",
-              "RelativeToolTip": "NotationApp\\Pages\\ForgotPasswordPage.xaml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-17T04:58:41.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "ForgotPasswordPage.xaml.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ForgotPasswordPage.xaml.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Pages\\ForgotPasswordPage.xaml.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ForgotPasswordPage.xaml.cs",
-              "RelativeToolTip": "NotationApp\\Pages\\ForgotPasswordPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "SignUpViewModel.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\SignUpViewModel.cs",
+              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\SignUpViewModel.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\SignUpViewModel.cs",
+              "RelativeToolTip": "NotationApp\\ViewModels\\SignUpViewModel.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAwKIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T04:58:39.829Z",
+              "WhenOpened": "2024-12-18T17:08:17.322Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "AWSAIService.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AWSAIService.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Services\\AWSAIService.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AWSAIService.cs",
-              "RelativeToolTip": "NotationApp\\Services\\AWSAIService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UserProfileViewModel.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\UserProfileViewModel.cs",
+              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\UserProfileViewModel.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\UserProfileViewModel.cs",
+              "RelativeToolTip": "NotationApp\\ViewModels\\UserProfileViewModel.cs",
+              "ViewState": "AgIAAN8AAAAAAAAAAAAcwOoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:00:32.202Z",
+              "WhenOpened": "2024-12-17T15:54:46.529Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Drawing.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Models\\Drawing.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Models\\Drawing.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Models\\Drawing.cs",
-              "RelativeToolTip": "NotationApp\\Models\\Drawing.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAmwEAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Services\\AuthService.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AuthService.cs*",
+              "RelativeToolTip": "NotationApp\\Services\\AuthService.cs*",
+              "ViewState": "AgIAALUAAAAAAAAAAAAmwMgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:31:13.756Z",
+              "WhenOpened": "2024-12-15T13:00:20.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Note_Realtime.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Models\\Note_Realtime.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Models\\Note_Realtime.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Models\\Note_Realtime.cs",
-              "RelativeToolTip": "NotationApp\\Models\\Note_Realtime.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAADgv04AAAAUAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "DrawingPageViewModel.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\DrawingPageViewModel.cs",
+              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\DrawingPageViewModel.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\DrawingPageViewModel.cs",
+              "RelativeToolTip": "NotationApp\\ViewModels\\DrawingPageViewModel.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowEEAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T12:59:47.719Z",
+              "WhenOpened": "2024-12-15T13:13:58.623Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "HomePage.xaml.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\HomePage.xaml.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Pages\\HomePage.xaml.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\HomePage.xaml.cs",
-              "RelativeToolTip": "NotationApp\\Pages\\HomePage.xaml.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T14:55:40.519Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "NotePage.xaml.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\NotePage.xaml.cs",
-              "RelativeDocumentMoniker": "NotationApp\\Pages\\NotePage.xaml.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\NotePage.xaml.cs",
-              "RelativeToolTip": "NotationApp\\Pages\\NotePage.xaml.cs",
-              "ViewState": "AgIAAE0BAAAAAAAAAAAwwBsBAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:33:09.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "HomePage.xaml",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\HomePage.xaml",
-              "RelativeDocumentMoniker": "NotationApp\\Pages\\HomePage.xaml",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\HomePage.xaml",
-              "RelativeToolTip": "NotationApp\\Pages\\HomePage.xaml",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAACEAAACKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-17T03:48:20.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 8,
               "Title": "HomeItem.cs",
               "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\HomeItem.cs",
               "RelativeDocumentMoniker": "NotationApp\\ViewModels\\HomeItem.cs",
@@ -685,33 +347,480 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 9,
+              "Title": "ForgotPasswordViewModel.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\ForgotPasswordViewModel.cs",
+              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\ForgotPasswordViewModel.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\ForgotPasswordViewModel.cs",
+              "RelativeToolTip": "NotationApp\\ViewModels\\ForgotPasswordViewModel.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAuwEMAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T04:57:40.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BinPageViewModel.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\BinPageViewModel.cs",
+              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\BinPageViewModel.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\BinPageViewModel.cs",
+              "RelativeToolTip": "NotationApp\\ViewModels\\BinPageViewModel.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAAwBYAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T13:13:53.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BinItem.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\BinItem.cs",
+              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\BinItem.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\BinItem.cs",
+              "RelativeToolTip": "NotationApp\\ViewModels\\BinItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T12:31:52.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppShellViewModel.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\AppShellViewModel.cs",
+              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\AppShellViewModel.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\AppShellViewModel.cs",
+              "RelativeToolTip": "NotationApp\\ViewModels\\AppShellViewModel.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T15:54:41.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DrawingPage.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\DrawingPage.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\DrawingPage.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\DrawingPage.xaml",
+              "RelativeToolTip": "NotationApp\\Pages\\DrawingPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-15T14:53:37.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BinPage.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\BinPage.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\BinPage.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\BinPage.xaml",
+              "RelativeToolTip": "NotationApp\\Pages\\BinPage.xaml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-19T05:59:29.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Services\\IAuthService.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\IAuthService.cs",
+              "RelativeToolTip": "NotationApp\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAtwBMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T13:00:30.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WebAuthenticatorCallback.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\WebAuthenticatorCallback.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Platforms\\Android\\WebAuthenticatorCallback.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\WebAuthenticatorCallback.cs",
+              "RelativeToolTip": "NotationApp\\Platforms\\Android\\WebAuthenticatorCallback.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:14:08.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ForgotPasswordPage.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ForgotPasswordPage.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\ForgotPasswordPage.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ForgotPasswordPage.xaml",
+              "RelativeToolTip": "NotationApp\\Pages\\ForgotPasswordPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-17T04:58:41.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ForgotPasswordPage.xaml.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ForgotPasswordPage.xaml.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\ForgotPasswordPage.xaml.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ForgotPasswordPage.xaml.cs",
+              "RelativeToolTip": "NotationApp\\Pages\\ForgotPasswordPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T04:58:39.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HomePage.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\HomePage.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\HomePage.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\HomePage.xaml",
+              "RelativeToolTip": "NotationApp\\Pages\\HomePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-17T03:48:20.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "NotePage.xaml",
               "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\NotePage.xaml",
               "RelativeDocumentMoniker": "NotationApp\\Pages\\NotePage.xaml",
               "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\NotePage.xaml",
               "RelativeToolTip": "NotationApp\\Pages\\NotePage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBwAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-15T14:41:00.681Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "ShareDialogViewModel.cs",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\ShareDialogViewModel.cs",
-              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\ShareDialogViewModel.cs",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\ViewModels\\ShareDialogViewModel.cs",
-              "RelativeToolTip": "NotationApp\\ViewModels\\ShareDialogViewModel.cs",
-              "ViewState": "AgIAAIEBAAAAAAAAAIBJwGwBAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T18:07:26.163Z",
+              "DocumentIndex": 21,
+              "Title": "ShareDialog.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ShareDialog.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\ShareDialog.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ShareDialog.xaml",
+              "RelativeToolTip": "NotationApp\\Pages\\ShareDialog.xaml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAFgAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-15T13:32:21.834Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "SignUpPage.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\SignUpPage.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\SignUpPage.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\SignUpPage.xaml",
+              "RelativeToolTip": "NotationApp\\Pages\\SignUpPage.xaml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-18T17:07:02.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserProfilePage.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\UserProfilePage.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\UserProfilePage.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\UserProfilePage.xaml",
+              "RelativeToolTip": "NotationApp\\Pages\\UserProfilePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-17T15:55:31.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\AppShell.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\AppShell.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\AppShell.xaml",
+              "RelativeToolTip": "NotationApp\\AppShell.xaml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAHcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-15T13:00:48.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SignInPage.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\SignInPage.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\SignInPage.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\SignInPage.xaml",
+              "RelativeToolTip": "NotationApp\\Pages\\SignInPage.xaml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAF0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-17T13:05:02.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "NotationApp\\MauiProgram.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\MauiProgram.cs",
+              "RelativeToolTip": "NotationApp\\MauiProgram.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAHYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T13:00:40.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "editor.html",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Resources\\Raw\\editor.html",
+              "RelativeDocumentMoniker": "NotationApp\\Resources\\Raw\\editor.html",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Resources\\Raw\\editor.html",
+              "RelativeToolTip": "NotationApp\\Resources\\Raw\\editor.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-18T16:31:44.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "WelcomePage.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\WelcomePage.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\Platforms\\Android\\WelcomePage.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\WelcomePage.xaml",
+              "RelativeToolTip": "NotationApp\\Platforms\\Android\\WelcomePage.xaml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-18T16:56:48.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SignInPage.xaml.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\SignInPage.xaml.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\SignInPage.xaml.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\SignInPage.xaml.cs",
+              "RelativeToolTip": "NotationApp\\Pages\\SignInPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:07:51.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FirestoreService.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\FirestoreService.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Services\\FirestoreService.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\FirestoreService.cs",
+              "RelativeToolTip": "NotationApp\\Services\\FirestoreService.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T13:00:22.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "NoteDatabase.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Database\\NoteDatabase.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Database\\NoteDatabase.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Database\\NoteDatabase.cs",
+              "RelativeToolTip": "NotationApp\\Database\\NoteDatabase.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAADwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:20:35.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserProfilePage.xaml.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\UserProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\UserProfilePage.xaml.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\UserProfilePage.xaml.cs",
+              "RelativeToolTip": "NotationApp\\Pages\\UserProfilePage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T15:55:27.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "firebase-credentials.json",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\firebase-credentials.json",
+              "RelativeDocumentMoniker": "NotationApp\\firebase-credentials.json",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\firebase-credentials.json",
+              "RelativeToolTip": "NotationApp\\firebase-credentials.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-15T13:00:50.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\App.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\App.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\App.xaml",
+              "RelativeToolTip": "NotationApp\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-17T13:12:08.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\MainPage.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\MainPage.xaml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\MainPage.xaml",
+              "RelativeToolTip": "NotationApp\\MainPage.xaml",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-15T13:00:52.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "MainActivity.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\MainActivity.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Platforms\\Android\\MainActivity.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\MainActivity.cs",
+              "RelativeToolTip": "NotationApp\\Platforms\\Android\\MainActivity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:16:36.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IFirestoreService.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\IFirestoreService.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Services\\IFirestoreService.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\IFirestoreService.cs",
+              "RelativeToolTip": "NotationApp\\Services\\IFirestoreService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T13:00:31.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AndroidManifest.xml",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeDocumentMoniker": "NotationApp\\Platforms\\Android\\AndroidManifest.xml",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\AndroidManifest.xml",
+              "RelativeToolTip": "NotationApp\\Platforms\\Android\\AndroidManifest.xml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2024-12-17T05:22:01.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "google-services.json",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\google-services.json",
+              "RelativeDocumentMoniker": "NotationApp\\Platforms\\Android\\google-services.json",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Platforms\\Android\\google-services.json",
+              "RelativeToolTip": "NotationApp\\Platforms\\Android\\google-services.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-17T05:59:21.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "GoogleTokenResponse.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\GoogleTokenResponse.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Services\\GoogleTokenResponse.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\GoogleTokenResponse.cs",
+              "RelativeToolTip": "NotationApp\\Services\\GoogleTokenResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T05:03:06.932Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 40,
+              "Title": "AWSRealtimeService.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AWSRealtimeService.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Services\\AWSRealtimeService.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AWSRealtimeService.cs",
+              "RelativeToolTip": "NotationApp\\Services\\AWSRealtimeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T13:00:33.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AWSAIService.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AWSAIService.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Services\\AWSAIService.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Services\\AWSAIService.cs",
+              "RelativeToolTip": "NotationApp\\Services\\AWSAIService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T13:00:32.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Drawing.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Models\\Drawing.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Models\\Drawing.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Models\\Drawing.cs",
+              "RelativeToolTip": "NotationApp\\Models\\Drawing.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAmwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T13:31:13.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Note_Realtime.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Models\\Note_Realtime.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Models\\Note_Realtime.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Models\\Note_Realtime.cs",
+              "RelativeToolTip": "NotationApp\\Models\\Note_Realtime.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAADgv04AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T12:59:47.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "HomePage.xaml.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\HomePage.xaml.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\HomePage.xaml.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\HomePage.xaml.cs",
+              "RelativeToolTip": "NotationApp\\Pages\\HomePage.xaml.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:55:40.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "NotePage.xaml.cs",
+              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\NotePage.xaml.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\NotePage.xaml.cs",
+              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\NotePage.xaml.cs",
+              "RelativeToolTip": "NotationApp\\Pages\\NotePage.xaml.cs",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAwwBsBAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T13:33:09.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
               "Title": "UserProfile.cs",
               "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Models\\UserProfile.cs",
               "RelativeDocumentMoniker": "NotationApp\\Models\\UserProfile.cs",
@@ -719,12 +828,11 @@
               "RelativeToolTip": "NotationApp\\Models\\UserProfile.cs",
               "ViewState": "AgIAADcAAAAAAAAAAADgv0UAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:35:22.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T13:35:22.931Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 47,
               "Title": "ShareDialog.xaml.cs",
               "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ShareDialog.xaml.cs",
               "RelativeDocumentMoniker": "NotationApp\\Pages\\ShareDialog.xaml.cs",
@@ -732,12 +840,11 @@
               "RelativeToolTip": "NotationApp\\Pages\\ShareDialog.xaml.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAASwBoAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:32:23.571Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T13:32:23.571Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 49,
               "Title": "DrawingPage.xaml.cs",
               "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\DrawingPage.xaml.cs",
               "RelativeDocumentMoniker": "NotationApp\\Pages\\DrawingPage.xaml.cs",
@@ -745,38 +852,11 @@
               "RelativeToolTip": "NotationApp\\Pages\\DrawingPage.xaml.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAIBJwBwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T14:53:39.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T14:53:39.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "DrawingPage.xaml",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\DrawingPage.xaml",
-              "RelativeDocumentMoniker": "NotationApp\\Pages\\DrawingPage.xaml",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\DrawingPage.xaml",
-              "RelativeToolTip": "NotationApp\\Pages\\DrawingPage.xaml",
-              "ViewState": "AgIAAAwAAAAAAAAAAIBJwBAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-15T14:53:37.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "ShareDialog.xaml",
-              "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ShareDialog.xaml",
-              "RelativeDocumentMoniker": "NotationApp\\Pages\\ShareDialog.xaml",
-              "ToolTip": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Pages\\ShareDialog.xaml",
-              "RelativeToolTip": "NotationApp\\Pages\\ShareDialog.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-15T13:32:21.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 50,
               "Title": "ShareInfo.cs",
               "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\Models\\ShareInfo.cs",
               "RelativeDocumentMoniker": "NotationApp\\Models\\ShareInfo.cs",
@@ -784,12 +864,11 @@
               "RelativeToolTip": "NotationApp\\Models\\ShareInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T13:35:50.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T13:35:50.143Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 51,
               "Title": "NotationApp.csproj",
               "DocumentMoniker": "E:\\GitHub\u002BJava\\AppNotation_fix\\AppNotation_New\\NotationApp\\NotationApp.csproj",
               "RelativeDocumentMoniker": "NotationApp\\NotationApp.csproj",
@@ -797,8 +876,7 @@
               "RelativeToolTip": "NotationApp\\NotationApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAJ4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-15T13:12:38.802Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T13:12:38.802Z"
             }
           ]
         }

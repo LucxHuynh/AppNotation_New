@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NotationApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+7528118d7ea724afbb848bf42c571374b3bfec85")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+4685665a93ce139e925d32947d450c542ed1bbdb")]
 [assembly: System.Reflection.AssemblyProductAttribute("NotationApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NotationApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

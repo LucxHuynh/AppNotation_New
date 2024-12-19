@@ -4,43 +4,33 @@ using Firebase.Auth;
 using NotationApp;
 using NotationApp.Models;
 using NotationApp.Services;
+using NotationApp.ViewModels;
+using System.Windows.Input;
 
-public class SignUpViewModel : ObservableObject
+public partial class SignUpViewModel : ObservableObject
 {
     private readonly IAuthService _authService;
     private readonly IFirestoreService _firestoreService;
 
+    [ObservableProperty]
     private string email;
+
+    [ObservableProperty]
     private string password;
+
+    [ObservableProperty]
     private string confirmPassword;
+
+    [ObservableProperty]
     private string statusMessage;
 
-    public string Email
-    {
-        get => email;
-        set => SetProperty(ref email, value);
-    }
-
-    public string Password
-    {
-        get => password;
-        set => SetProperty(ref password, value);
-    }
-
-    public string ConfirmPassword
-    {
-        get => confirmPassword;
-        set => SetProperty(ref confirmPassword, value);
-    }
-
-    public string StatusMessage
-    {
-        get => statusMessage;
-        set => SetProperty(ref statusMessage, value);
-    }
+    [ObservableProperty]
+    private bool isLoading;
 
     public IRelayCommand NavigateBackCommand { get; }
     public IAsyncRelayCommand RegisterUserCommand { get; }
+
+    public ICommand GoogleSignInCommand => new Command(async () => await SignInWithGoogle());
 
 
     // Bỏ INavigation dependency
@@ -58,13 +48,13 @@ public class SignUpViewModel : ObservableObject
     {
         if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
         {
-            StatusMessage = "Email and password cannot be empty.";
+            StatusMessage = "Email và mật khẩu không được để trống.";
             return;
         }
 
         if (Password != ConfirmPassword)
         {
-            StatusMessage = "Passwords do not match.";
+            StatusMessage = "Mật khẩu không khớp.";
             return;
         }
 
@@ -108,18 +98,18 @@ public class SignUpViewModel : ObservableObject
 
                 if (profileSaved)
                 {
-                    await App.Current.MainPage.DisplayAlert("Success", "Account created successfully!", "OK");
+                    await App.Current.MainPage.DisplayAlert("Thành công", "Tài khoản được tạo thành công!", "OK");
                     Shell.Current.Navigation.PopModalAsync();
                     await Shell.Current.GoToAsync("//HomePage");
                 }
                 else
                 {
-                    StatusMessage = "Account created but failed to save profile. Please try updating your profile later.";
+                    StatusMessage = "Đã tạo tài khoản nhưng không lưu được hồ sơ. Vui lòng thử cập nhật hồ sơ của bạn sau.";
                 }
             }
             else
             {
-                StatusMessage = "Registration failed. Please try again.";
+                StatusMessage = "Đăng ký không thành công. Vui lòng thử lại.";
             }
         }
         catch (FirebaseAuthException ex)
@@ -129,6 +119,52 @@ public class SignUpViewModel : ObservableObject
         catch (Exception ex)
         {
             StatusMessage = $"An error occurred: {ex.Message}";
+        }
+    }
+
+    [RelayCommand]
+    private async Task SignInWithGoogle()
+    {
+        try
+        {
+            IsLoading = true;
+
+            var result = await _authService.SignInWithGoogle();
+            if (result?.User != null)
+            {
+                // Save user info
+                Preferences.Default.Set("UserId", result.User.Uid);
+                Preferences.Default.Set("UserEmail", result.User.Info.Email);
+                Preferences.Default.Set("IsLoggedIn", true);
+
+                // Update UI
+                var shellViewModel = IPlatformApplication.Current.Services.GetService<AppShellViewModel>();
+                if (shellViewModel != null)
+                {
+                    shellViewModel.IsUserLoggedIn = true;
+                    await shellViewModel.UpdateUserData();
+                }
+
+                await Shell.Current.GoToAsync("//HomePage");
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert(
+                    "Lỗi",
+                    "Không thể đăng nhập bằng Google",
+                    "OK");
+            }
+        }
+        catch (Exception ex)
+        {
+            await App.Current.MainPage.DisplayAlert(
+                "Lỗi",
+                    "Không thể đăng nhập bằng Google",
+                    "OK");
+        }
+        finally
+        {
+            IsLoading = false;
         }
     }
 }

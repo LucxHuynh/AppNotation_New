@@ -12,7 +12,7 @@
             Padding="15">
         <Grid RowDefinitions="Auto,Auto,*,Auto,Auto">
             <!-- Header -->
-            <Label Text="Share Item"
+            <Label Text="Chia sẻ"
                    FontSize="20"
                    FontAttributes="Bold"
                    HorizontalOptions="Center"
@@ -20,7 +20,7 @@
 
             <!-- Email Input Section -->
             <VerticalStackLayout Grid.Row="1" Spacing="5">
-                <Label Text="Add email to share:" />
+                <Label Text="Thêm email được chia sẻ:" />
                 <Grid ColumnDefinitions="*,Auto,Auto">
                     <Entry x:Name="EmailEntry"
                            Placeholder="Enter email address"
@@ -37,7 +37,7 @@
 
             <!-- Shared Users List -->
             <VerticalStackLayout Grid.Row="2" Spacing="5" Margin="0,15,0,0">
-                <Label Text="Shared with:" />
+                <Label Text="Đã chia sẻ với:" />
                 <CollectionView ItemsSource="{Binding SharedUsers}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
@@ -65,7 +65,7 @@
 
             <!-- Share Link Section -->
             <VerticalStackLayout Grid.Row="3" Spacing="5" Margin="0,15,0,0">
-                <Label Text="Share Link:" />
+                <Label Text="Đường dẫn chia sẻ:" />
                 <Grid ColumnDefinitions="*, Auto">
                     <Entry Text="{Binding ShareLink}"
                            IsReadOnly="True" />
@@ -80,10 +80,11 @@
                                  Spacing="10"
                                  HorizontalOptions="End"
                                  Margin="0,15,0,0">
-                <Button Text="Cancel"
-                        Command="{Binding CancelCommand}" />
-                <Button Text="Share"
+                
+                <Button Text="Lưu"
                         Command="{Binding ShareCommand}" />
+                <Button Text="Hủy"
+                        Command="{Binding CancelCommand}" />
             </HorizontalStackLayout>
         </Grid>
     </Border>

@@ -9,14 +9,14 @@
 
             <VerticalStackLayout Spacing="8">
                 <Label 
-                    Text="Login here"
+                    Text="Đăng nhập tại đây"
                     TextColor="#1a41cc"
                     FontSize="30"
                     FontAttributes="Bold"
                     HorizontalOptions="Start" />
 
                 <Label 
-                    Text="Welcome back you've been missed!"
+                    Text="Chào mừng bạn đã trở lại!"
                     TextColor="Black"
                     FontSize="20"
                     HorizontalOptions="Start" />
@@ -58,7 +58,7 @@
                 </Frame>
 
                 <Label 
-                    Text="Forgot your password?"
+                    Text="Quên mật khẩu?"
                     TextColor="#1a41cc"
                     FontSize="14"
                     HorizontalOptions="End" />
@@ -71,7 +71,7 @@
                     Color="#1a41cc" />
 
                 <Button 
-                    Text="Sign in"
+                    Text="Đăng nhập"
                     Command="{Binding SignInCommand}"
                     BackgroundColor="#1a41cc"
                     TextColor="White"
@@ -81,7 +81,7 @@
                     IsEnabled="{Binding IsLoading, Converter={StaticResource InverseBoolConverter}}"/>
 
                 <Label 
-                    Text="Create new account"
+                    Text="Tạo tài khoản mới"
                     TextColor="Black"
                     FontSize="14"
                     HorizontalOptions="Center">
@@ -91,25 +91,33 @@
                 </Label>
 
                 <Label 
-                    Text="Or continue with"
+                    Text="Hoặc tiếp tục với"
                     TextColor="#666666"
                     FontSize="14"
                     HorizontalOptions="Center" />
 
-                <HorizontalStackLayout 
-                    Spacing="16" 
-                    HorizontalOptions="Center">
+                <Frame 
+                    HorizontalOptions="Center"
+                    Margin="20,10"
+                    Padding="0"
+                    BorderColor="Transparent"
+                    HasShadow="True"
+                    CornerRadius="4"
+                    MinimumWidthRequest="280">
                     <Button 
                         Command="{Binding GoogleSignInCommand}"
-                        Style="{StaticResource GoogleSignInButtonStyle}"
-                        HorizontalOptions="Center"
-                        ContentLayout="Left,8">
-                        <Button.ImageSource>
-                            <FileImageSource File="google_logo.png"/>
-                        </Button.ImageSource>
-                        <Button.Text>Sign in with Google</Button.Text>
-                    </Button>
-                </HorizontalStackLayout>
+                        HeightRequest="45"
+                        Padding="20,0"
+                        BackgroundColor="White"
+                        BorderColor="#DADCE0"
+                        BorderWidth="1"
+                        CornerRadius="4"
+                        ContentLayout="Left,15"
+                        ImageSource="google_logo.png"
+                        Text="Đăng nhập bằng Google"
+                        TextColor="#3c4043"
+                        FontSize="15"/>
+                </Frame>
             </VerticalStackLayout>
 
             <Label 

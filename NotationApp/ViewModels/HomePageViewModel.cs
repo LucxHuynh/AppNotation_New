@@ -57,12 +57,12 @@ namespace NotationApp.ViewModels
             try
             {
                 IsLoading = true;
-                StatusMessage = "Loading content...";
+                StatusMessage = "Đang tải dữ liệu...";
 
                 var userId = Preferences.Get("UserId", string.Empty);
                 if (string.IsNullOrEmpty(userId))
                 {
-                    StatusMessage = "User not logged in";
+                    StatusMessage = "Người dùng chưa đăng nhập";
                     return;
                 }
 
@@ -97,7 +97,7 @@ namespace NotationApp.ViewModels
 
                 if (string.IsNullOrEmpty(userId))
                 {
-                    StatusMessage = "User not logged in";
+                    StatusMessage = "Người dùng chưa đăng nhập";
                     return;
                 }
 
@@ -164,7 +164,7 @@ namespace NotationApp.ViewModels
                 var userId = Preferences.Get("UserId", string.Empty);
                 if (string.IsNullOrEmpty(userId))
                 {
-                    StatusMessage = "User not logged in";
+                    StatusMessage = "Người dùng chưa đăng nhập";
                     return;
                 }
 
@@ -201,11 +201,11 @@ namespace NotationApp.ViewModels
             try
             {
                 IsLoading = true;
-                Debug.WriteLine("Creating new note...");
+                Debug.WriteLine("Đang tạo ghi chú...");
 
                 var newNote = new Note_Realtime
                 {
-                    Title = "New Note",
+                    Title = "Ghi chú mới",
                     CreateDate = DateTime.Now,
                     UpdateDate = DateTime.Now,
                     OwnerId = _currentUserId ?? "default_user", // Đảm bảo OwnerId không null
@@ -238,14 +238,14 @@ namespace NotationApp.ViewModels
                 else
                 {
                     Debug.WriteLine("Failed to save note");
-                    StatusMessage = "Failed to create new note.";
+                    StatusMessage = "Lỗi trong quá trình tạo ghi chú.";
                 }
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"Error in AddNote: {ex}");
                 Debug.WriteLine($"Stack trace: {ex.StackTrace}");
-                StatusMessage = $"Error creating note: {ex.Message}";
+                StatusMessage = $"Lỗi: {ex.Message}";
             }
             finally
             {
@@ -264,8 +264,7 @@ namespace NotationApp.ViewModels
                     new Dictionary<string, object> { { "SelectedNote", note } });
             }
             catch (Exception ex)
-            {
-                StatusMessage = $"Error navigating to note: {ex.Message}";
+            {                
                 Debug.WriteLine($"Error in NavigateToNoteAsync: {ex}");
             }
         }
@@ -335,14 +334,14 @@ namespace NotationApp.ViewModels
         {
             if (!IsConnectedToInternet())
             {
-                StatusMessage = "No internet connection available";
+                StatusMessage = "Không truy cập được internet";
                 return;
             }
 
             try
             {
                 IsLoading = true;
-                StatusMessage = "Synchronizing with cloud...";
+                StatusMessage = "Đồng bộ hóa với đám mây...";
 
                 // Sync notes
                 await SyncNotesFromFirebaseAsync();
@@ -350,7 +349,7 @@ namespace NotationApp.ViewModels
                 // Sync drawings
                 await SyncDrawingsFromFirebaseAsync();
 
-                StatusMessage = "Sync completed successfully";
+                StatusMessage = "Đồng bộ hoàn tất";
                 Debug.WriteLine("Firebase sync completed successfully");
             }
             catch (Exception ex)
@@ -358,8 +357,8 @@ namespace NotationApp.ViewModels
                 StatusMessage = "Sync failed. Please try again later";
                 Debug.WriteLine($"Firebase sync failed: {ex.Message}");
                 await Application.Current.MainPage.DisplayAlert(
-                    "Sync Error",
-                    "Failed to sync with cloud. Some changes may not be saved.",
+                    "Đồng bộ thất bại",
+                    "Không thể đồng bộ hóa với đám mây. Một số thay đổi có thể không được lưu.",
                     "OK");
             }
             finally

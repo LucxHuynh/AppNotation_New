@@ -22,14 +22,14 @@
             </Frame>
 
             <!-- Change Photo Button -->
-            <Button Text="Change Photo" 
+            <Button Text="Thay đổi ảnh" 
                     Command="{Binding ChangePhotoCommand}"
                     BackgroundColor="#6349F6"
                     TextColor="White"
                     Margin="0,0,0,30"/>
 
             <!-- Profile Fields -->
-            <Label Text="Name:" 
+            <Label Text="Tên:" 
                    Margin="0,0,0,5"/>
             <Entry Text="{Binding Profile.DisplayName}" 
                    Margin="0,0,0,20"/>
@@ -40,25 +40,25 @@
                    TextColor="#1C1B1F"
                    Margin="5,0,0,20"/>
 
-            <Label Text="Phone:" 
+            <Label Text="Số điện thoại:" 
                    Margin="0,0,0,5"/>
             <Entry Text="{Binding Profile.PhoneNumber}"
                    Margin="0,0,0,20"/>
 
-            <Label Text="Joined:" 
+            <Label Text="Tham gia vào ngày:" 
                    Margin="0,0,0,5"/>
             <Label Text="{Binding Profile.DateJoined, StringFormat='{0:MM/dd/yyyy}'}"
                    TextColor="#1C1B1F"
                    Margin="5,0,0,30"/>
 
             <!-- Action Buttons -->
-            <Button Text="Save Changes"
+            <Button Text="Lưu thông tin"
                     Command="{Binding SaveChangesCommand}"
                     BackgroundColor="#6349F6"
                     TextColor="White"
                     Margin="0,0,0,10"/>
 
-            <Button Text="Sign Out"
+            <Button Text="Đăng xuất"
                     Command="{Binding SignOutCommand}"
                     BackgroundColor="#FF0000"
                     TextColor="White"

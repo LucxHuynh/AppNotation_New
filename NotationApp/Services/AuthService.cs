@@ -158,6 +158,45 @@ namespace NotationApp.Services
                 throw new Exception($"Authentication failed: {ex.Message}");
             }
         }
+
+        public async Task SendPasswordResetEmail(string email)
+        {
+            try
+            {
+                Console.WriteLine($"Attempting to send password reset email to: {email}");
+
+                // Validate email format first
+                if (string.IsNullOrWhiteSpace(email))
+                {
+                    throw new ArgumentException("Email address cannot be empty");
+                }
+
+                // Use the FirebaseAuthClient to send the reset email
+                await _authClient.ResetEmailPasswordAsync(email);
+
+                Console.WriteLine("Password reset email sent successfully");
+            }
+            catch (FirebaseAuthException ex)
+            {
+                Console.WriteLine($"Firebase auth error during password reset: {ex.Reason} - {ex.Message}");
+
+                // Convert Firebase-specific errors to more user-friendly messages
+                string errorMessage = ex.Reason switch
+                {
+                    AuthErrorReason.InvalidEmailAddress => "The email address is not valid",
+                    AuthErrorReason.UserNotFound => "No account exists with this email address",
+                    _ => "Failed to send password reset email"
+                };
+
+                throw new Exception(errorMessage);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Unexpected error during password reset: {ex.Message}");
+                throw new Exception("An unexpected error occurred while sending the password reset email");
+            }
+        }
     }
 }
+
 

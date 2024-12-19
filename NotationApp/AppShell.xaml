@@ -106,7 +106,7 @@
         </Grid>
     </Shell.FlyoutHeader>
 
-    <FlyoutItem Title="Tất cả ghi chú" Icon="allnote.png">
+    <FlyoutItem Title="Trang chủ" Icon="allnote.png">
         <ShellContent Route="HomePage"
             ContentTemplate="{DataTemplate local:HomePage}" />
     </FlyoutItem>
@@ -114,15 +114,9 @@
         <ShellContent
         ContentTemplate="{DataTemplate local:BinPage}"/>
     </FlyoutItem>
-
-    <!--<FlyoutItem Title="Chia sẻ ghi chú" Icon="share.png">
-        <ShellContent
-            ContentTemplate="{DataTemplate local:SharePage}"/>
-    </FlyoutItem>-->
-    
-    <FlyoutItem Title="Thư mục" Icon="folder.png">
-        <ShellContent
-            ContentTemplate="{DataTemplate local:FolderPage}"/>
+    <FlyoutItem Title="Thông tin người dùng" Icon="settings.png">
+        <ShellContent Route="UserProfilePage"
+            ContentTemplate="{DataTemplate local:UserProfilePage}"/>
     </FlyoutItem>
 
     <!-- Định nghĩa Route cho NotePage -->
@@ -131,7 +125,6 @@
     <ShellContent Route="WelcomePage" ContentTemplate="{DataTemplate android:WelcomePage}" />
     <ShellContent Route="SignInPage" ContentTemplate="{DataTemplate local:SignInPage}" />
     <ShellContent Route="SignUpPage" ContentTemplate="{DataTemplate local:SignUpPage}" />
-    <ShellContent Route="UserProfilePage" ContentTemplate="{DataTemplate local:UserProfilePage}" />
 
 
 </Shell>
