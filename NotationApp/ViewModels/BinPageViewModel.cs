@@ -20,7 +20,7 @@ namespace NotationApp.ViewModels
         public BinPageViewModel()
         {
             _database = App.Database;
-            firebaseClient = new FirebaseClient("https://my-maui-default-rtdb.firebaseio.com/");
+            firebaseClient = new FirebaseClient("https://appnotation-79a96-default-rtdb.asia-southeast1.firebasedatabase.app/");
         }
 
         public async Task LoadDeletedItemsAsync()
@@ -120,7 +120,7 @@ namespace NotationApp.ViewModels
             {
                 try
                 {
-                    string firebaseUrl = $"https://my-maui-default-rtdb.firebaseio.com/{(item.ItemType.ToLower())}s/{item.Id}.json";
+                    string firebaseUrl = $"https://appnotation-79a96-default-rtdb.asia-southeast1.firebasedatabase.app/{(item.ItemType.ToLower())}s/{item.Id}.json";
                     using (var client = new HttpClient())
                     {
                         var response = await client.DeleteAsync(firebaseUrl);

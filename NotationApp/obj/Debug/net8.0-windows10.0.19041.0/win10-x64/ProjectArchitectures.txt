@@ -1,1 +1,1 @@
-E:\GitHub+Java\Nhan\main\AppNotation_New\NotationApp\NotationApp.csproj;x64
+D:\Hoc_Tap\DACN\main\AppNotation_New\NotationApp\NotationApp.csproj;x64

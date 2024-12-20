@@ -375,7 +375,7 @@ namespace NotationApp.ViewModels
             // Get notes keys with retry
             var keys = await ExecuteWithRetryAsync(async () =>
             {
-                var keysUrl = "https://my-maui-default-rtdb.firebaseio.com/notes.json?shallow=true";
+                var keysUrl = "https://appnotation-79a96-default-rtdb.asia-southeast1.firebasedatabase.app/notes.json?shallow=true";
                 var response = await client.GetAsync(keysUrl);
                 response.EnsureSuccessStatusCode();
                 return await response.Content.ReadFromJsonAsync<Dictionary<string, object>>();
@@ -390,7 +390,7 @@ namespace NotationApp.ViewModels
                 {
                     var note = await ExecuteWithRetryAsync(async () =>
                     {
-                        var noteUrl = $"https://my-maui-default-rtdb.firebaseio.com/notes/{key}.json";
+                        var noteUrl = $"https://appnotation-79a96-default-rtdb.asia-southeast1.firebasedatabase.app/notes/{key}.json";
                         var response = await client.GetAsync(noteUrl);
                         response.EnsureSuccessStatusCode();
                         return await response.Content.ReadFromJsonAsync<Note_Realtime>();
@@ -417,7 +417,7 @@ namespace NotationApp.ViewModels
             // Get drawings keys with retry
             var keys = await ExecuteWithRetryAsync(async () =>
             {
-                var keysUrl = "https://my-maui-default-rtdb.firebaseio.com/drawings.json?shallow=true";
+                var keysUrl = "https://appnotation-79a96-default-rtdb.asia-southeast1.firebasedatabase.app/drawings.json?shallow=true";
                 var response = await client.GetAsync(keysUrl);
                 response.EnsureSuccessStatusCode();
                 return await response.Content.ReadFromJsonAsync<Dictionary<string, object>>();
@@ -432,7 +432,7 @@ namespace NotationApp.ViewModels
                 {
                     var drawing = await ExecuteWithRetryAsync(async () =>
                     {
-                        var drawingUrl = $"https://my-maui-default-rtdb.firebaseio.com/drawings/{key}.json";
+                        var drawingUrl = $"https://appnotation-79a96-default-rtdb.asia-southeast1.firebasedatabase.app/drawings/{key}.json";
                         var response = await client.GetAsync(drawingUrl);
                         response.EnsureSuccessStatusCode();
                         return await response.Content.ReadFromJsonAsync<Drawing>();
@@ -460,8 +460,9 @@ namespace NotationApp.ViewModels
 
             if (localNote != null)
             {
-                // Cập nhật nếu dữ liệu Firebase mới hơn
-                if (firebaseNote.UpdateDate > localNote.UpdateDate)
+                // Also sync if Firebase note is deleted while local isn't
+                if (firebaseNote.UpdateDate > localNote.UpdateDate ||
+                    (firebaseNote.IsDeleted && !localNote.IsDeleted))
                 {
                     await _database.SaveNoteAsync(firebaseNote);
                     return firebaseNote.Id;
@@ -469,7 +470,6 @@ namespace NotationApp.ViewModels
             }
             else
             {
-                // Tạo mới nếu chưa tồn tại
                 await _database.SaveNoteAsync(firebaseNote);
                 return firebaseNote.Id;
             }
@@ -477,17 +477,26 @@ namespace NotationApp.ViewModels
         }
 
         // Hàm đồng bộ một hình vẽ từ Firebase vào cơ sở dữ liệu cục bộ
-        private async Task SyncDrawingToLocalDatabase(Drawing drawing)
+        public async Task<int> SyncDrawingToLocalDatabase(Drawing drawing)
         {
-            var existingDrawing = await _database.GetDrawingByIdAsync(drawing.Id);
-            if (existingDrawing == null)
+            var localDraw = await _database.GetDrawingByIdAsync(drawing.Id);
+
+            if (localDraw != null)
             {
-                await _database.SaveDrawingAsync(drawing); // Lưu mới
+                // Also sync if Firebase note is deleted while local isn't
+                if (drawing.UpdateDate > localDraw.UpdateDate ||
+                    (drawing.IsDeleted && !localDraw.IsDeleted))
+                {
+                    await _database.SaveDrawingAsync(drawing);
+                    return drawing.Id;
+                }
             }
-            else if (existingDrawing.UpdateDate < drawing.UpdateDate)
+            else
             {
-                await _database.UpdateDrawingAsync(drawing); // Cập nhật nếu dữ liệu từ Firebase mới hơn
+                await _database.SaveDrawingAsync(drawing);
+                return drawing.Id;
             }
+            return 0;
         }
 
 

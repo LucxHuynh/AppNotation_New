@@ -98,7 +98,6 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
-            <inheritdoc/>
         </member>
         <member name="P:NotationApp.ViewModels.HomePageViewModel.SelectedNote">
             <inheritdoc cref="F:NotationApp.ViewModels.HomePageViewModel.selectedNote"/>
@@ -173,12 +172,6 @@
         </member>
         <member name="P:NotationApp.ViewModels.HomePageViewModel.ShareItemCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.ShareItemAsync(System.Object)"/>.</summary>
-        </member>
-        <member name="F:NotationApp.ViewModels.HomePageViewModel.updateSharePermissionsCommand">
-            <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.UpdateSharePermissionsCommand"/>.</summary>
-        </member>
-        <member name="P:NotationApp.ViewModels.HomePageViewModel.UpdateSharePermissionsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:NotationApp.ViewModels.HomePageViewModel.UpdateSharePermissionsAsync(System.Object)"/>.</summary>
         </member>
         <member name="F:NotationApp.ViewModels.HomePageViewModel.stopSharingCommand">
             <summary>The backing field for <see cref="P:NotationApp.ViewModels.HomePageViewModel.StopSharingCommand"/>.</summary>

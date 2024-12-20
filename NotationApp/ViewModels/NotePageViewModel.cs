@@ -130,7 +130,7 @@ namespace NotationApp.ViewModels
             }
 
             // Sử dụng Id của ghi chú để xác định URL cụ thể cho ghi chú đó trên Firebase
-            string firebaseUrl = $"https://my-maui-default-rtdb.firebaseio.com/notes/{note.Id}.json";
+            string firebaseUrl = $"https://appnotation-79a96-default-rtdb.asia-southeast1.firebasedatabase.app/notes/{note.Id}.json";
 
             using (HttpClient client = new HttpClient())
             {
