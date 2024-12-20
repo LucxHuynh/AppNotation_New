@@ -19,7 +19,7 @@ namespace NotationApp.Models
         public bool IsSelected { get; set; } = false;
         public bool IsSynced { get; set; } = false;
         // Thuộc tính tag
-        public string TagName { get; set; } = "Personal";
+        public string TagName { get; set; } = "Cá nhân";
         // Thuộc tính ghim
         public bool IsPinned { get; set; } = false;
         // New sharing properties

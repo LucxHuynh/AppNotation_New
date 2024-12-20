@@ -59,7 +59,7 @@ namespace NotationApp.ViewModels
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error saving note: {ex.Message}");
+                Console.WriteLine($"Lỗi khi lưu ghi chú: {ex.Message}");
                 throw;
             }
         }
@@ -71,7 +71,7 @@ namespace NotationApp.ViewModels
             {
                 var newDraw = new Drawing
                 {
-                    Title = "New Drawing",
+                    Title = "Hình vẽ mới",
                     CreateDate = DateTime.Now,
                     UpdateDate = DateTime.Now,
                     OwnerId = _currentUserId ?? "default_user",
@@ -177,7 +177,7 @@ namespace NotationApp.ViewModels
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error toggling pin: {ex.Message}");
+                Console.WriteLine($"Lỗi: {ex.Message}");
                 throw;
             }
         }
@@ -193,7 +193,7 @@ namespace NotationApp.ViewModels
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error updating tag: {ex.Message}");
+                Console.WriteLine($"Lỗi khi cập nhật thẻ: {ex.Message}");
                 throw;
             }
         }

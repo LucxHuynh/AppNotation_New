@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|d:\\hoc_tap\\dacn\\main\\appnotation_new\\notationapp\\pages\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|d:\\hoc_tap\\dacn\\main\\appnotation_new\\notationapp\\viewmodels\\homepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\homepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|d:\\hoc_tap\\dacn\\main\\appnotation_new\\notationapp\\viewmodels\\notepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\notepageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|d:\\hoc_tap\\dacn\\main\\appnotation_new\\notationapp\\database\\notedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\database\\notedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|d:\\hoc_tap\\dacn\\main\\appnotation_new\\notationapp\\viewmodels\\homeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\homeitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|d:\\hoc_tap\\dacn\\main\\appnotation_new\\notationapp\\models\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\models\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|d:\\hoc_tap\\dacn\\main\\appnotation_new\\notationapp\\pages\\notepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\notepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|d:\\hoc_tap\\dacn\\main\\appnotation_new\\notationapp\\pages\\drawingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\pages\\drawingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|d:\\hoc_tap\\dacn\\main\\appnotation_new\\notationapp\\viewmodels\\drawingpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8730C2D8-4F16-48EB-A172-E4D57C40648E}|NotationApp\\NotationApp.csproj|solutionrelative:notationapp\\viewmodels\\drawingpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,27 +55,105 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NotePageViewModel.cs",
-              "DocumentMoniker": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\ViewModels\\NotePageViewModel.cs",
-              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\NotePageViewModel.cs",
-              "ToolTip": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\ViewModels\\NotePageViewModel.cs",
-              "RelativeToolTip": "NotationApp\\ViewModels\\NotePageViewModel.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAwwIoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-20T13:19:09.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "HomePageViewModel.cs",
               "DocumentMoniker": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\ViewModels\\HomePageViewModel.cs",
               "RelativeDocumentMoniker": "NotationApp\\ViewModels\\HomePageViewModel.cs",
               "ToolTip": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\ViewModels\\HomePageViewModel.cs",
               "RelativeToolTip": "NotationApp\\ViewModels\\HomePageViewModel.cs",
-              "ViewState": "AgIAANgBAAAAAAAAAAAUwOoBAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAO0CAAAAAAAAAAAYwPkBAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-20T12:51:16.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NoteDatabase.cs",
+              "DocumentMoniker": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\Database\\NoteDatabase.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Database\\NoteDatabase.cs",
+              "ToolTip": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\Database\\NoteDatabase.cs",
+              "RelativeToolTip": "NotationApp\\Database\\NoteDatabase.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAkwMEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T15:51:12.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomePage.xaml.cs",
+              "DocumentMoniker": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\Pages\\HomePage.xaml.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\HomePage.xaml.cs",
+              "ToolTip": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\Pages\\HomePage.xaml.cs",
+              "RelativeToolTip": "NotationApp\\Pages\\HomePage.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T16:06:31.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Drawing.cs",
+              "DocumentMoniker": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\Models\\Drawing.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Models\\Drawing.cs",
+              "ToolTip": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\Models\\Drawing.cs",
+              "RelativeToolTip": "NotationApp\\Models\\Drawing.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwBUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T16:00:46.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeItem.cs",
+              "DocumentMoniker": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\ViewModels\\HomeItem.cs",
+              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\HomeItem.cs",
+              "ToolTip": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\ViewModels\\HomeItem.cs",
+              "RelativeToolTip": "NotationApp\\ViewModels\\HomeItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T15:56:23.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NotePage.xaml",
+              "DocumentMoniker": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\Pages\\NotePage.xaml",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\NotePage.xaml",
+              "ToolTip": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\Pages\\NotePage.xaml",
+              "RelativeToolTip": "NotationApp\\Pages\\NotePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-20T16:02:35.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DrawingPage.xaml.cs",
+              "DocumentMoniker": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\Pages\\DrawingPage.xaml.cs",
+              "RelativeDocumentMoniker": "NotationApp\\Pages\\DrawingPage.xaml.cs",
+              "ToolTip": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\Pages\\DrawingPage.xaml.cs",
+              "RelativeToolTip": "NotationApp\\Pages\\DrawingPage.xaml.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwDUAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T15:47:30.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DrawingPageViewModel.cs",
+              "DocumentMoniker": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\ViewModels\\DrawingPageViewModel.cs",
+              "RelativeDocumentMoniker": "NotationApp\\ViewModels\\DrawingPageViewModel.cs",
+              "ToolTip": "D:\\Hoc_Tap\\DACN\\main\\AppNotation_New\\NotationApp\\ViewModels\\DrawingPageViewModel.cs",
+              "RelativeToolTip": "NotationApp\\ViewModels\\DrawingPageViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T15:50:40.195Z",
               "EditorCaption": ""
             }
           ]

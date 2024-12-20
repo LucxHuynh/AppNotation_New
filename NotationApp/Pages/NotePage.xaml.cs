@@ -204,7 +204,7 @@ namespace NotationApp.Pages
                     // Thực hiện hành động thêm vào sổ tay
                     break;
                 case "Tag":
-                    var tags = new string[] { "Work", "Personal", "Todo", "Study", "Other" };
+                    var tags = new string[] { "Công việc", "Cá nhân", "Công việc phải làm", "Học tập", "Khác" };
                     var selectedTag = await DisplayActionSheet("Chọn thẻ", "Hủy", null, tags);
 
                     if (selectedTag != "Hủy" && selectedTag != null)
@@ -344,7 +344,7 @@ namespace NotationApp.Pages
                 await viewModel.SaveNoteAsync(content);
 
                 // Thông báo lưu thành công cho người dùng (tùy chọn)
-                await DisplayAlert("Success", "Note saved successfully.", "OK");
+                await DisplayAlert("Thành công", "Ghi chú được lưu thành công", "OK");
 
                 //// Quay lại trang trước đó (HomePage) sau khi lưu
                 //await Shell.Current.GoToAsync("..");

@@ -32,7 +32,7 @@ namespace NotationApp.ViewModels
         public ObservableCollection<Drawing> SharedWithMeDrawings { get; private set; } = new();
 
         public ObservableCollection<HomeItem> Items { get; } = new();
-        public string SelectedTag { get; private set; } = "All";
+        public string SelectedTag { get; private set; } = "ALL";
 
         [ObservableProperty] private Note_Realtime selectedNote;
         [ObservableProperty] private Drawing selectedDrawing;
@@ -565,7 +565,7 @@ namespace NotationApp.ViewModels
                     TagName = n.TagName,
                     IsPinned = n.IsPinned,
                     IsShared = n.IsShared,
-                    ItemType = "Note",
+                    ItemType = "Ghi chú",
                     OriginalItem = n
                 })
                 .Concat(filteredDrawings.Select(d => new HomeItem
@@ -576,7 +576,7 @@ namespace NotationApp.ViewModels
                     TagName = d.TagName,
                     IsPinned = d.IsPinned,
                     IsShared = d.IsShared,
-                    ItemType = "Drawing",
+                    ItemType = "Hình vẽ",
                     OriginalItem = d
                 }))
                 .OrderByDescending(i => i.UpdateDate);
@@ -605,12 +605,12 @@ namespace NotationApp.ViewModels
         private async Task TapItem(HomeItem item)
         {
             var navigationParameter = new Dictionary<string, object>();
-            if (item.ItemType == "Note")
+            if (item.ItemType == "Ghi chú")
             {
                 navigationParameter.Add("SelectedNote", item.OriginalItem);
                 await Shell.Current.GoToAsync("NotePage", navigationParameter);
             }
-            else if (item.ItemType == "Drawing")
+            else if (item.ItemType == "Hình vẽ")
             {
                 navigationParameter.Add("SelectedDrawing", item.OriginalItem);
                 await Shell.Current.GoToAsync("DrawingPage", navigationParameter);

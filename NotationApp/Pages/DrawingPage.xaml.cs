@@ -49,7 +49,7 @@ namespace NotationApp.Pages
                     // Thực hiện hành động thêm vào sổ tay
                     break;
                 case "Tag":
-                    var tags = new string[] { "Work", "Personal", "Todo", "Study", "Other" };
+                    var tags = new string[] { "Công việc", "Cá nhân", "Công việc phải làm", "Học tập", "Khác" };
                     var selectedTag = await DisplayActionSheet("Chọn thẻ", "Hủy", null, tags);
                     if (selectedTag != "Hủy" && selectedTag != null)
                     {

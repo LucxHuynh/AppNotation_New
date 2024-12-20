@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\Hoc_Tap\DACN\main\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-20T12:57:28.962</Modified>
+      <Modified>2024-12-20T17:06:46.401</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Hoc_Tap\DACN\main\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-20T12:57:28.702</Modified>
+      <Modified>2024-12-20T17:06:46.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hoc_Tap\DACN\main\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NotationApp.runtimeconfig.json">
       <PackagePath>NotationApp.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hoc_Tap\DACN\main\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NotationApp.dll">
       <PackagePath>NotationApp.dll</PackagePath>
-      <Modified>2024-12-20T12:57:27.153</Modified>
+      <Modified>2024-12-20T17:06:44.520</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hoc_Tap\DACN\main\AppNotation_New\NotationApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>NotationApp.exe</PackagePath>
-      <Modified>2024-12-20T12:57:27.169</Modified>
+      <Modified>2024-12-20T17:06:44.566</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hoc_Tap\DACN\main\AppNotation_New\NotationApp\Resources\Raw\drawing_editor.html">
       <PackagePath>drawing_editor.html</PackagePath>
@@ -416,7 +416,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hoc_Tap\DACN\main\AppNotation_New\NotationApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NotationApp.deps.json">
       <PackagePath>NotationApp.deps.json</PackagePath>
-      <Modified>2024-12-20T12:57:28.505</Modified>
+      <Modified>2024-12-20T17:06:45.932</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\huynh\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.41\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
