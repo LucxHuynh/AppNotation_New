@@ -13,6 +13,7 @@ using System.Net.Http.Json;
 using NotationApp.Services;
 using CommunityToolkit.Maui.Views;
 using System.Globalization;
+using System.Linq;
 
 namespace NotationApp.ViewModels
 {
@@ -21,7 +22,7 @@ namespace NotationApp.ViewModels
         private readonly NoteDatabase _database;
         private readonly IFirestoreService _firestoreService;
         private readonly string _currentUserId;
-
+        private readonly string _currentUserEmail;
         private const int MaxRetries = 3;
         private const int InitialDelayMs = 1000;
 
@@ -29,6 +30,8 @@ namespace NotationApp.ViewModels
         public ObservableCollection<Note_Realtime> SharedWithMeNotes { get; private set; } = new();
         public ObservableCollection<Drawing> Drawings { get; private set; } = new();
         public ObservableCollection<Drawing> SharedWithMeDrawings { get; private set; } = new();
+
+        public ObservableCollection<HomeItem> Items { get; } = new();
         public string SelectedTag { get; private set; } = "All";
 
         [ObservableProperty] private Note_Realtime selectedNote;
@@ -42,80 +45,11 @@ namespace NotationApp.ViewModels
             _database = App.Database;
             _firestoreService = firestoreService;
             _currentUserId = Preferences.Get("UserId", string.Empty);
+            _currentUserEmail = Preferences.Get("UserEmail", string.Empty);
         }
 
 
         #region Note Loading and Management
-
-        private async Task SyncToRemoteDatabase(Note_Realtime note)
-        {
-            if (!IsConnectedToInternet()) return;
-
-            try
-            {
-                Debug.WriteLine($"Starting sync to Firebase for note ID: {note.Id}");
-                Debug.WriteLine($"SharedWithUsers before sync: {note.SharedWithUsers}");
-
-                string firebaseUrl = $"https://notationapp-98854-default-rtdb.firebaseio.com/notes/{note.Id}.json";
-                using var client = new HttpClient();
-
-                // Đảm bảo SharedWithUsers không null trước khi sync
-                if (string.IsNullOrEmpty(note.SharedWithUsers))
-                {
-                    note.SharedWithUsers = JsonConvert.SerializeObject(new Dictionary<string, string>());
-                }
-
-                // Tạo object để sync
-                var noteToSync = new
-                {
-                    Id = note.Id,
-                    Title = note.Title,
-                    Text = note.Text,
-                    CreateDate = note.CreateDate,
-                    UpdateDate = note.UpdateDate,
-                    IsDeleted = note.IsDeleted,
-                    IsSynced = note.IsSynced,
-                    TagName = note.TagName,
-                    IsPinned = note.IsPinned,
-                    OwnerId = note.OwnerId,
-                    IsShared = note.IsShared,
-                    Permission = note.Permission,
-                    ShareLink = note.ShareLink,
-                    SharedWithUsers = note.SharedWithUsers  // Ensure this is included
-                };
-
-                var jsonData = JsonConvert.SerializeObject(noteToSync);
-                Debug.WriteLine($"Data being sent to Firebase: {jsonData}");
-
-                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-                var response = await client.PutAsync(firebaseUrl, content);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    note.IsSynced = true;
-                    await _database.UpdateNoteAsync(note);
-                    Debug.WriteLine($"Successfully synced note {note.Id} to Firebase");
-
-                    // Verify the sync
-                    var verifyResponse = await client.GetAsync(firebaseUrl);
-                    if (verifyResponse.IsSuccessStatusCode)
-                    {
-                        var verifyData = await verifyResponse.Content.ReadAsStringAsync();
-                        Debug.WriteLine($"Verification data from Firebase: {verifyData}");
-                    }
-                }
-                else
-                {
-                    Debug.WriteLine($"Failed to sync to Firebase. Status: {response.StatusCode}");
-                    Debug.WriteLine($"Response content: {await response.Content.ReadAsStringAsync()}");
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error during Firebase sync: {ex.Message}");
-                Debug.WriteLine($"Stack trace: {ex.StackTrace}");
-            }
-        }
 
         [RelayCommand]
         public async Task LoadAllContentAsync()
@@ -123,12 +57,12 @@ namespace NotationApp.ViewModels
             try
             {
                 IsLoading = true;
-                StatusMessage = "Loading content...";
+                StatusMessage = "Đang tải dữ liệu...";
 
                 var userId = Preferences.Get("UserId", string.Empty);
                 if (string.IsNullOrEmpty(userId))
                 {
-                    StatusMessage = "User not logged in";
+                    StatusMessage = "Người dùng chưa đăng nhập";
                     return;
                 }
 
@@ -150,7 +84,6 @@ namespace NotationApp.ViewModels
             }
         }
 
-        [RelayCommand]
         public async Task LoadNotesAsync()
         {
             try
@@ -160,32 +93,31 @@ namespace NotationApp.ViewModels
                 SharedWithMeNotes.Clear();
 
                 var userId = Preferences.Get("UserId", string.Empty);
+                var userEmail = Preferences.Get("UserEmail", string.Empty);
+
                 if (string.IsNullOrEmpty(userId))
                 {
-                    StatusMessage = "User not logged in";
+                    StatusMessage = "Người dùng chưa đăng nhập";
                     return;
                 }
 
-                // Load owned notes
+                // Load owned notes - bao gồm cả notes chưa share
                 var ownedNotes = await _database.GetOwnedNotesAsync(userId);
                 foreach (var note in ownedNotes.Where(n => !n.IsDeleted))
                 {
                     Notes.Add(note);
                 }
 
-                // Load shared notes
-                var sharedNotes = await _database.GetSharedNotesAsync(userId);
-                foreach (var note in sharedNotes.Where(n => !n.IsDeleted && n.OwnerId != userId))
+                // Load shared notes - chỉ load những note được share với user
+                var sharedNotes = await _database.GetSharedNotesAsync(userEmail);
+                foreach (var note in sharedNotes.Where(n => !n.IsDeleted && n.OwnerId != userId && n.IsSharedWithUser(userEmail)))
                 {
                     SharedWithMeNotes.Add(note);
                 }
-
-                Debug.WriteLine($"Loaded {Notes.Count} owned notes and {SharedWithMeNotes.Count} shared notes");
             }
             catch (Exception ex)
             {
                 StatusMessage = $"Error loading notes: {ex.Message}";
-                Debug.WriteLine($"Error in LoadNotesAsync: {ex}");
             }
             finally
             {
@@ -232,7 +164,7 @@ namespace NotationApp.ViewModels
                 var userId = Preferences.Get("UserId", string.Empty);
                 if (string.IsNullOrEmpty(userId))
                 {
-                    StatusMessage = "User not logged in";
+                    StatusMessage = "Người dùng chưa đăng nhập";
                     return;
                 }
 
@@ -269,16 +201,18 @@ namespace NotationApp.ViewModels
             try
             {
                 IsLoading = true;
-                Debug.WriteLine("Creating new note...");
+                Debug.WriteLine("Đang tạo ghi chú...");
 
                 var newNote = new Note_Realtime
                 {
-                    Title = "New Note",
+                    Title = "Ghi chú mới",
                     CreateDate = DateTime.Now,
                     UpdateDate = DateTime.Now,
+                    OwnerId = _currentUserId ?? "default_user", // Đảm bảo OwnerId không null
+                    OwnerEmail = _currentUserEmail ?? "default_user",
                 };
 
-                Debug.WriteLine($"New note created with initial values: Title={newNote.Title}, OwnerId={newNote.OwnerId}");
+                Debug.WriteLine($"New note created with initial values: Title={newNote.Title}, OwnerId={newNote.OwnerId}, OwnerEmail={newNote.OwnerEmail}");
 
                 Debug.WriteLine("Saving note to database...");
                 var  result = await _database.SaveNoteAsync(newNote);
@@ -304,14 +238,14 @@ namespace NotationApp.ViewModels
                 else
                 {
                     Debug.WriteLine("Failed to save note");
-                    StatusMessage = "Failed to create new note.";
+                    StatusMessage = "Lỗi trong quá trình tạo ghi chú.";
                 }
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"Error in AddNote: {ex}");
                 Debug.WriteLine($"Stack trace: {ex.StackTrace}");
-                StatusMessage = $"Error creating note: {ex.Message}";
+                StatusMessage = $"Lỗi: {ex.Message}";
             }
             finally
             {
@@ -330,8 +264,7 @@ namespace NotationApp.ViewModels
                     new Dictionary<string, object> { { "SelectedNote", note } });
             }
             catch (Exception ex)
-            {
-                StatusMessage = $"Error navigating to note: {ex.Message}";
+            {                
                 Debug.WriteLine($"Error in NavigateToNoteAsync: {ex}");
             }
         }
@@ -401,14 +334,14 @@ namespace NotationApp.ViewModels
         {
             if (!IsConnectedToInternet())
             {
-                StatusMessage = "No internet connection available";
+                StatusMessage = "Không truy cập được internet";
                 return;
             }
 
             try
             {
                 IsLoading = true;
-                StatusMessage = "Synchronizing with cloud...";
+                StatusMessage = "Đồng bộ hóa với đám mây...";
 
                 // Sync notes
                 await SyncNotesFromFirebaseAsync();
@@ -416,7 +349,7 @@ namespace NotationApp.ViewModels
                 // Sync drawings
                 await SyncDrawingsFromFirebaseAsync();
 
-                StatusMessage = "Sync completed successfully";
+                StatusMessage = "Đồng bộ hoàn tất";
                 Debug.WriteLine("Firebase sync completed successfully");
             }
             catch (Exception ex)
@@ -424,8 +357,8 @@ namespace NotationApp.ViewModels
                 StatusMessage = "Sync failed. Please try again later";
                 Debug.WriteLine($"Firebase sync failed: {ex.Message}");
                 await Application.Current.MainPage.DisplayAlert(
-                    "Sync Error",
-                    "Failed to sync with cloud. Some changes may not be saved.",
+                    "Đồng bộ thất bại",
+                    "Không thể đồng bộ hóa với đám mây. Một số thay đổi có thể không được lưu.",
                     "OK");
             }
             finally
@@ -442,7 +375,7 @@ namespace NotationApp.ViewModels
             // Get notes keys with retry
             var keys = await ExecuteWithRetryAsync(async () =>
             {
-                var keysUrl = "https://notationapp-98854-default-rtdb.firebaseio.com/notes.json?shallow=true";
+                var keysUrl = "https://my-maui-default-rtdb.firebaseio.com/notes.json?shallow=true";
                 var response = await client.GetAsync(keysUrl);
                 response.EnsureSuccessStatusCode();
                 return await response.Content.ReadFromJsonAsync<Dictionary<string, object>>();
@@ -457,7 +390,7 @@ namespace NotationApp.ViewModels
                 {
                     var note = await ExecuteWithRetryAsync(async () =>
                     {
-                        var noteUrl = $"https://notationapp-98854-default-rtdb.firebaseio.com/notes/{key}.json";
+                        var noteUrl = $"https://my-maui-default-rtdb.firebaseio.com/notes/{key}.json";
                         var response = await client.GetAsync(noteUrl);
                         response.EnsureSuccessStatusCode();
                         return await response.Content.ReadFromJsonAsync<Note_Realtime>();
@@ -484,7 +417,7 @@ namespace NotationApp.ViewModels
             // Get drawings keys with retry
             var keys = await ExecuteWithRetryAsync(async () =>
             {
-                var keysUrl = "https://notationapp-98854-default-rtdb.firebaseio.com/drawings.json?shallow=true";
+                var keysUrl = "https://my-maui-default-rtdb.firebaseio.com/drawings.json?shallow=true";
                 var response = await client.GetAsync(keysUrl);
                 response.EnsureSuccessStatusCode();
                 return await response.Content.ReadFromJsonAsync<Dictionary<string, object>>();
@@ -499,7 +432,7 @@ namespace NotationApp.ViewModels
                 {
                     var drawing = await ExecuteWithRetryAsync(async () =>
                     {
-                        var drawingUrl = $"https://notationapp-98854-default-rtdb.firebaseio.com/drawings/{key}.json";
+                        var drawingUrl = $"https://my-maui-default-rtdb.firebaseio.com/drawings/{key}.json";
                         var response = await client.GetAsync(drawingUrl);
                         response.EnsureSuccessStatusCode();
                         return await response.Content.ReadFromJsonAsync<Drawing>();
@@ -566,38 +499,112 @@ namespace NotationApp.ViewModels
             try
             {
                 var userId = Preferences.Get("UserId", string.Empty);
-                if (string.IsNullOrEmpty(userId))
+                var userEmail = Preferences.Get("UserEmail", string.Empty);
+
+                Debug.WriteLine($"FilterByTag called with tag: {tag}");
+                Debug.WriteLine($"UserId: {userId}");
+                Debug.WriteLine($"UserEmail: {userEmail}");
+
+                // Load data
+                var ownedNotes = await _database.GetOwnedNotesAsync(userId);
+                Debug.WriteLine($"Loaded {ownedNotes.Count} owned notes");
+
+                var ownedDrawings = await _database.GetOwnedDrawingsAsync(userId);
+                Debug.WriteLine($"Loaded {ownedDrawings.Count} owned drawings");
+
+                // Kiểm tra dữ liệu mẫu
+                foreach (var note in ownedNotes)
                 {
-                    StatusMessage = "User not logged in";
-                    return;
+                    Debug.WriteLine($"Note: Id={note.Id}, Title={note.Title}, OwnerId={note.OwnerId}, IsDeleted={note.IsDeleted}");
                 }
 
-                SelectedTag = tag ?? "All";
-                var allNotes = await _database.GetNotesAsync();
+                foreach (var drawing in ownedDrawings)
+                {
+                    Debug.WriteLine($"Drawing: Id={drawing.Id}, Title={drawing.Title}, OwnerId={drawing.OwnerId}, IsDeleted={drawing.IsDeleted}");
+                }
+
+                var sharedNotes = await _database.GetSharedNotesAsync(userEmail);
+                var sharedDrawings = await _database.GetSharedDrawingsAsync(userEmail);
 
                 var filteredNotes = tag switch
                 {
-                    "All" => allNotes.Where(n => !n.IsDeleted && n.OwnerId == userId),
-                    "Pinned" => allNotes.Where(n => n.IsPinned && !n.IsDeleted && n.OwnerId == userId),
-                    "Shared" => allNotes.Where(n => n.IsShared && !n.IsDeleted && (JsonConvert.DeserializeObject<string[]>(n.SharedWithUsers)?.Contains(userId) ?? false)),
-                    "Work" => allNotes.Where(n => n.TagName == "Work" && !n.IsDeleted && n.OwnerId == userId),
-                    "Personal" => allNotes.Where(n => n.TagName == "Personal" && !n.IsDeleted && n.OwnerId == userId),
-                    "Todo" => allNotes.Where(n => n.TagName == "Todo" && !n.IsDeleted && n.OwnerId == userId),
-                    "Study" => allNotes.Where(n => n.TagName == "Study" && !n.IsDeleted && n.OwnerId == userId),
-                    "Other" => allNotes.Where(n => n.TagName == "Other" && !n.IsDeleted && n.OwnerId == userId),
-                    _ => allNotes.Where(n => !n.IsDeleted && n.OwnerId == userId)
+                    "ALL" => ownedNotes.Where(n => !n.IsDeleted),
+                    "Pinned" => ownedNotes.Where(n => !n.IsDeleted && n.IsPinned),
+                    "Shared" => sharedNotes.Where(n => !n.IsDeleted && n.IsSharedWithUser(userEmail)),
+                    _ => ownedNotes.Where(n => !n.IsDeleted && n.TagName == tag),
                 };
 
-                Notes.Clear();
-                foreach (var note in filteredNotes)
+                var filteredDrawings = tag switch
                 {
-                    Notes.Add(note);
+                    "ALL" => ownedDrawings.Where(d => !d.IsDeleted),
+                    "Pinned" => ownedDrawings.Where(d => !d.IsDeleted && d.IsPinned),
+                    "Shared" => ownedDrawings.Where(d => !d.IsDeleted && d.IsShared)
+                            .Concat(sharedDrawings.Where(d => !d.IsDeleted && d.IsSharedWithUser(userEmail))),
+                    _ => ownedDrawings.Where(d => !d.IsDeleted && d.TagName == tag),
+                };
+
+                Debug.WriteLine($"Filtered notes count: {filteredNotes.Count()}");
+                Debug.WriteLine($"Filtered drawings count: {filteredDrawings.Count()}");
+
+                // Convert to HomeItems
+                var homeItems = filteredNotes.Select(n => new HomeItem
+                {
+                    Id = n.Id,
+                    Title = n.Title,
+                    Content = n.PlainText,
+                    UpdateDate = n.UpdateDate,
+                    TagName = n.TagName,
+                    IsPinned = n.IsPinned,
+                    IsShared = n.IsShared,
+                    ItemType = "Note",
+                    OriginalItem = n
+                })
+                .Concat(filteredDrawings.Select(d => new HomeItem
+                {
+                    Id = d.Id,
+                    Title = d.Title,
+                    UpdateDate = d.UpdateDate,
+                    TagName = d.TagName,
+                    IsPinned = d.IsPinned,
+                    IsShared = d.IsShared,
+                    ItemType = "Drawing",
+                    OriginalItem = d
+                }))
+                .OrderByDescending(i => i.UpdateDate);
+
+                var homeItemsList = homeItems.ToList(); // Chuyển sang list để đếm
+                Debug.WriteLine($"Total home items after conversion: {homeItemsList.Count}");
+
+                Items.Clear();
+                foreach (var item in homeItemsList)
+                {
+                    Items.Add(item);
+                    Debug.WriteLine($"Added item: ID={item.Id}, Type={item.ItemType}, Title={item.Title}");
                 }
+
+                Debug.WriteLine($"Final Items collection count: {Items.Count}");
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"FilterByTag error: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error", "Failed to filter notes", "OK");
+                Debug.WriteLine($"Exception in FilterByTag: {ex.Message}");
+                Debug.WriteLine($"Stack trace: {ex.StackTrace}");
+                await Shell.Current.DisplayAlert("Lỗi", "Không thể lọc các mục", "OK");
+            }
+        }
+
+        [RelayCommand]
+        private async Task TapItem(HomeItem item)
+        {
+            var navigationParameter = new Dictionary<string, object>();
+            if (item.ItemType == "Note")
+            {
+                navigationParameter.Add("SelectedNote", item.OriginalItem);
+                await Shell.Current.GoToAsync("NotePage", navigationParameter);
+            }
+            else if (item.ItemType == "Drawing")
+            {
+                navigationParameter.Add("SelectedDrawing", item.OriginalItem);
+                await Shell.Current.GoToAsync("DrawingPage", navigationParameter);
             }
         }
         [RelayCommand]
@@ -623,48 +630,48 @@ namespace NotationApp.ViewModels
             }
         }
 
-        [RelayCommand]
-        private async Task UpdateSharePermissionsAsync(object item)
-        {
-            if (item == null) return;
+        //[RelayCommand]
+        //private async Task UpdateSharePermissionsAsync(object item)
+        //{
+        //    if (item == null) return;
 
-            try
-            {
-                IsLoading = true;
-                if (item is Note_Realtime note)
-                {
-                    // Toggle between different permission levels
-                    note.Permission = note.Permission switch
-                    {
-                        Note_Realtime.SharePermission.ReadOnly => Note_Realtime.SharePermission.ReadWrite,
-                        Note_Realtime.SharePermission.ReadWrite => Note_Realtime.SharePermission.Full,
-                        Note_Realtime.SharePermission.Full => Note_Realtime.SharePermission.ReadOnly,
-                        _ => Note_Realtime.SharePermission.ReadOnly
-                    };
-                    await _database.UpdateNoteAsync(note);
-                }
-                else if (item is Drawing drawing)
-                {
-                    drawing.Permission = drawing.Permission switch
-                    {
-                        Drawing.SharePermission.ReadOnly => Drawing.SharePermission.ReadWrite,
-                        Drawing.SharePermission.ReadWrite => Drawing.SharePermission.Full,
-                        Drawing.SharePermission.Full => Drawing.SharePermission.ReadOnly,
-                        _ => Drawing.SharePermission.ReadOnly
-                    };
-                    await _database.UpdateDrawingAsync(drawing);
-                }
-            }
-            catch (Exception ex)
-            {
-                StatusMessage = $"Error updating share permissions: {ex.Message}";
-                Debug.WriteLine($"Error in UpdateSharePermissionsAsync: {ex}");
-            }
-            finally
-            {
-                IsLoading = false;
-            }
-        }
+        //    try
+        //    {
+        //        IsLoading = true;
+        //        if (item is Note_Realtime note)
+        //        {
+        //            // Toggle between different permission levels
+        //            note.Permission = note.Permission switch
+        //            {
+        //                Note_Realtime.SharePermission.ReadOnly => Note_Realtime.SharePermission.ReadWrite,
+        //                Note_Realtime.SharePermission.ReadWrite => Note_Realtime.SharePermission.Full,
+        //                Note_Realtime.SharePermission.Full => Note_Realtime.SharePermission.ReadOnly,
+        //                _ => Note_Realtime.SharePermission.ReadOnly
+        //            };
+        //            await _database.UpdateNoteAsync(note);
+        //        }
+        //        else if (item is Drawing drawing)
+        //        {
+        //            drawing.Permission = drawing.Permission switch
+        //            {
+        //                Drawing.SharePermission.ReadOnly => Drawing.SharePermission.ReadWrite,
+        //                Drawing.SharePermission.ReadWrite => Drawing.SharePermission.Full,
+        //                Drawing.SharePermission.Full => Drawing.SharePermission.ReadOnly,
+        //                _ => Drawing.SharePermission.ReadOnly
+        //            };
+        //            await _database.UpdateDrawingAsync(drawing);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        StatusMessage = $"Error updating share permissions: {ex.Message}";
+        //        Debug.WriteLine($"Error in UpdateSharePermissionsAsync: {ex}");
+        //    }
+        //    finally
+        //    {
+        //        IsLoading = false;
+        //    }
+        //}
 
         [RelayCommand]
         private async Task StopSharingAsync(object item)

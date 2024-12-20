@@ -138,7 +138,7 @@ namespace NotationApp.ViewModels
         {
             if (string.IsNullOrWhiteSpace(EmailInput))
             {
-                await Application.Current.MainPage.DisplayAlert("Error", "Please enter an email address", "OK");
+                await Application.Current.MainPage.DisplayAlert("Lỗi", "Vui lòng nhập địa chỉ email", "OK");
                 return;
             }
 
@@ -151,14 +151,14 @@ namespace NotationApp.ViewModels
                 string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
                 if (!Regex.IsMatch(EmailInput, pattern))
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "Please enter a valid email address", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Lỗi", "Vui lòng nhập địa chỉ email hợp lệ", "OK");
                     return;
                 }
 
                 // Check if email already exists
                 if (SharedUsers.Any(u => u.Email == EmailInput))
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "This email has already been added", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Lỗi", "Email này đã được thêm", "OK");
                     return;
                 }
 
@@ -181,7 +181,7 @@ namespace NotationApp.ViewModels
                     if (database != null)
                     {
                         await database.UpdateNoteAsync(note);
-                        Debug.WriteLine("Note update completed successfully");
+                        Debug.WriteLine("Cập nhật thành công");
                     }
                     else
                     {
@@ -208,7 +208,7 @@ namespace NotationApp.ViewModels
             {
                 Debug.WriteLine($"Error in AddEmail: {ex.Message}");
                 Debug.WriteLine($"Stack trace: {ex.StackTrace}");
-                await Application.Current.MainPage.DisplayAlert("Error", $"Failed to add email: {ex.Message}", "OK");
+                await Application.Current.MainPage.DisplayAlert("Lỗi", $"Lỗi khi thêm email: {ex.Message}", "OK");
             }
         }
 
@@ -282,26 +282,6 @@ namespace NotationApp.ViewModels
                         throw;
                     }
                 }
-
-                // 3. Remove from recipient's SharedWithMe in Firestore
-                try
-                {
-                    var recipientProfile = await _firestoreService.GetUserProfile(email);
-                    if (recipientProfile?.SharedWithMe != null)
-                    {
-                        var itemIdentifier = _itemType == "Note" ? _itemId : $"drawing_{_itemId}";
-                        recipientProfile.SharedWithMe.RemoveAll(item => item.Contains(itemIdentifier));
-
-                        var updateResult = await _firestoreService.UpdateUserProfile(recipientProfile);
-                        Debug.WriteLine($"Updated recipient profile result: {updateResult}");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine($"Error updating recipient profile: {ex.Message}");
-                    // Don't throw here - we still want to save the local changes
-                }
-
                 Debug.WriteLine("Remove sharing completed successfully");
             }
             catch (Exception ex)
@@ -309,8 +289,8 @@ namespace NotationApp.ViewModels
                 Debug.WriteLine($"Error in RemoveEmail: {ex.Message}");
                 Debug.WriteLine($"Stack trace: {ex.StackTrace}");
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "Failed to remove shared access. Please try again.",
+                    "Lỗi",
+                    "Không thể xóa quyền truy cập được chia sẻ. Vui lòng thử lại.",
                     "OK");
             }
         }
@@ -323,7 +303,7 @@ namespace NotationApp.ViewModels
                 var currentUserId = Preferences.Get("UserId", string.Empty);
                 if (string.IsNullOrEmpty(currentUserId))
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "User not authenticated", "OK");
+                    await Application.Current.MainPage.DisplayAlert("Lỗi", "Người dùng chưa được xác thực", "OK");
                     return;
                 }
 
@@ -333,8 +313,8 @@ namespace NotationApp.ViewModels
                     if (!await _firestoreService.IsValidUser(user.Email))
                     {
                         await Application.Current.MainPage.DisplayAlert(
-                            "Error",
-                            $"User with email {user.Email} does not exist in the system",
+                            "Lỗi",
+                            $"Người dùng với email là {user.Email} không tồn tại",
                             "OK");
                         return;
                     }
@@ -350,8 +330,8 @@ namespace NotationApp.ViewModels
                     if (note.OwnerId != currentUserId)
                     {
                         await Application.Current.MainPage.DisplayAlert(
-                            "Error",
-                            "You don't have permission to share this note",
+                            "Lỗi",
+                            "Bạn không có quyền chia sẻ ghi chú này",
                             "OK");
                         return;
                     }
@@ -380,8 +360,8 @@ namespace NotationApp.ViewModels
                 // Similar logic for Drawing...
 
                 await Application.Current.MainPage.DisplayAlert(
-                    "Success",
-                    "Share settings updated successfully",
+                    "Thành công",
+                    "Đã cập nhật cài đặt chia sẻ thành công",
                     "OK");
                 _closeDialogAction?.Invoke();
             }
@@ -389,8 +369,8 @@ namespace NotationApp.ViewModels
             {
                 Debug.WriteLine($"Error in Share: {ex.Message}");
                 await Application.Current.MainPage.DisplayAlert(
-                    "Error",
-                    "Failed to update share settings",
+                    "Lỗi",
+                    "Không cập nhật được cài đặt chia sẻ",
                     "OK");
             }
         }
@@ -401,7 +381,7 @@ namespace NotationApp.ViewModels
             if (!string.IsNullOrEmpty(ShareLink))
             {
                 await Clipboard.SetTextAsync(ShareLink);
-                await Application.Current.MainPage.DisplayAlert("Success", "Share link copied to clipboard", "OK");
+                await Application.Current.MainPage.DisplayAlert("Thành công", "Đã sao chép liên kết chia sẻ vào clipboard", "OK");
             }
         }
 

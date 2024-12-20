@@ -24,7 +24,7 @@ namespace NotationApp.Pages
         {
             base.OnAppearing();
             await _viewModel.SyncDataFromFirebaseAsync(); // Đồng bộ từ firebase
-            await _viewModel.LoadNotesAsync(); // Tải và đồng bộ các ghi chú chưa đồng bộ khi trang xuất hiện
+            /*await _viewModel.LoadAllContentAsync()*/; // Tải và đồng bộ các ghi chú chưa đồng bộ khi trang xuất hiện
         }
 
         private void OnAddButtonClicked(object sender, EventArgs e)

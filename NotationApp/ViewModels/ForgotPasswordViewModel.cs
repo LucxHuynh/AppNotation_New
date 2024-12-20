@@ -45,27 +45,27 @@ namespace NotationApp.ViewModels
         {
             if (string.IsNullOrWhiteSpace(Email))
             {
-                StatusMessage = "Please enter your email address.";
+                StatusMessage = "Vui lòng nhập địa chỉ email của bạn.";
                 return;
             }
 
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             if (!Regex.IsMatch(Email, pattern))
             {
-                StatusMessage = "Please enter a valid email address.";
+                StatusMessage = "Vui lòng nhập địa chỉ email hợp lệ.";
                 return;
             }
 
             try
             {
                 IsLoading = true;
-                StatusMessage = "Sending reset password email...";
+                StatusMessage = "Gửi email đặt lại mật khẩu...";
 
-                //await _authService.SendPasswordResetEmail(Email);
+                await _authService.SendPasswordResetEmail(Email);
 
                 await App.Current.MainPage.DisplayAlert(
-                    "Success",
-                    "Password reset email has been sent. Please check your inbox.",
+                    "Thành công",
+                    "Email đặt lại mật khẩu đã được gửi. Vui lòng kiểm tra hộp thư đến của bạn.",
                     "OK");
 
                 await Shell.Current.GoToAsync("..");

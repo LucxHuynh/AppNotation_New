@@ -17,5 +17,6 @@ namespace NotationApp.Services
         Task<UserProfile> GetUserProfileByEmail(string email);
         Task<bool> UpdateSharedItems(string userId, string itemId, string itemType);
 
+        Task<bool> DeleteUserProfile(string userId);
     }
 }

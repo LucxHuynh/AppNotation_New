@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "388493852290",
+    "project_id": "my-maui",
+    "storage_bucket": "my-maui.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:388493852290:android:d750bf9f3b35e05aa93e9b",
+        "android_client_info": {
+          "package_name": "com.cscompany.appnotations"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "388493852290-qbf7b6q76g6ufpod7m72o08rrtr7ikom.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cscompany.appnotations",
+            "certificate_hash": "2B:94:1D:8E:83:03:8D:5B:26:50:67:94:0C:AD:33:E6:76:2E:E0:73"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9oQxB8qWhG02NkOSnePhGILuFJiE8olM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

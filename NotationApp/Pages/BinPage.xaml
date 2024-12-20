@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:NotationApp.ViewModels"
              x:Class="NotationApp.Pages.BinPage"
-             Title="Trash Bin">
+             Title="Thùng rác">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="checkbox_checked.png" Order="Primary" Priority="0" Clicked="OnSelectAllTapped" />

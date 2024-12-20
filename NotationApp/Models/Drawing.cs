@@ -24,8 +24,9 @@ namespace NotationApp.Models
         public bool IsPinned { get; set; } = false;
         // New sharing properties
         public string OwnerId { get; set; } = string.Empty;
+        public string OwnerEmail { get; set; } = string.Empty;
         public bool IsShared { get; set; } = false;
-        public string SharedWithUsers { get; set; } = JsonConvert.SerializeObject(Array.Empty<string>());
+        public string SharedWithUsers { get; set; } = JsonConvert.SerializeObject(new Dictionary<string, string>());
         public string ShareLink { get; set; } = string.Empty;
         public SharePermission Permission { get; set; } = SharePermission.ReadOnly;
 
@@ -34,6 +35,47 @@ namespace NotationApp.Models
             ReadOnly,
             ReadWrite,
             Full
+        }
+
+        public bool IsSharedWithUser(string userEmail)
+        {
+            if (!IsShared || IsDeleted || string.IsNullOrEmpty(userEmail))
+                return false;
+
+            try
+            {
+                var sharedUsers = JsonConvert.DeserializeObject<Dictionary<string, string>>(SharedWithUsers ?? "{}");
+                return sharedUsers.ContainsKey(userEmail);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+        public bool CanUserEdit(string userEmail)
+        {
+            if (string.IsNullOrEmpty(userEmail))
+                return false;
+
+            // Owner can always edit
+            if (OwnerEmail == userEmail)
+                return true;
+
+            try
+            {
+                var sharedUsers = JsonConvert.DeserializeObject<Dictionary<string, string>>(SharedWithUsers ?? "{}");
+                if (sharedUsers.TryGetValue(userEmail, out string permission))
+                {
+                    return permission == "ReadWrite" || permission == "Full";
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 

@@ -39,7 +39,7 @@ namespace NotationApp.ViewModels
             try
             {
                 IsBusy = true;
-                StatusMessage = "Loading profile...";
+                StatusMessage = "Đang tải...";
 
                 // Kiểm tra UserId
                 var userId = Preferences.Default.Get("UserId", string.Empty);
@@ -50,7 +50,7 @@ namespace NotationApp.ViewModels
 
                 if (string.IsNullOrEmpty(userId))
                 {
-                    StatusMessage = "Please sign in to view profile";
+                    StatusMessage = "Vui lòng đăng nhập để xem hồ sơ";
                     return;
                 }
 
@@ -85,7 +85,7 @@ namespace NotationApp.ViewModels
             }
             catch (Exception ex)
             {
-                StatusMessage = "Failed to load profile";
+                StatusMessage = "Không tải được hồ sơ";
                 System.Diagnostics.Debug.WriteLine($"LoadProfile Error: {ex}");
             }
             finally
@@ -103,12 +103,12 @@ namespace NotationApp.ViewModels
             try
             {
                 IsBusy = true;
-                StatusMessage = "Saving changes...";
+                StatusMessage = "Đang lưu...";
 
                 string userId = Preferences.Get("UserId", string.Empty);
                 if (string.IsNullOrEmpty(userId))
                 {
-                    StatusMessage = "User ID not found";
+                    StatusMessage = "Không tìm thấy ID người dùng";
                     return;
                 }
 
@@ -117,7 +117,7 @@ namespace NotationApp.ViewModels
 
                 if (success)
                 {
-                    StatusMessage = "Profile updated successfully";
+                    StatusMessage = "Hồ sơ được cập nhật thành công";
                     await Task.Delay(2000);
                     StatusMessage = string.Empty;
                     var shellViewModel = IPlatformApplication.Current.Services.GetService<AppShellViewModel>();
@@ -125,12 +125,12 @@ namespace NotationApp.ViewModels
                 }
                 else
                 {
-                    StatusMessage = "Failed to update profile";
+                    StatusMessage = "Không thể cập nhật hồ sơ";
                 }
             }
             catch (Exception ex)
             {
-                StatusMessage = "Error saving profile";
+                StatusMessage = "Lỗi lưu hồ sơ";
                 System.Diagnostics.Debug.WriteLine($"Error in SaveChanges: {ex}");
             }
             finally
@@ -148,21 +148,20 @@ namespace NotationApp.ViewModels
             try
             {
                 IsBusy = true;
-                StatusMessage = "Selecting photo...";
 
                 var photo = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
                 {
-                    Title = "Select Profile Photo"
+                    Title = "Chọn ảnh hồ sơ"
                 });
 
                 if (photo != null)
                 {
-                    StatusMessage = "Uploading photo...";
+                    StatusMessage = "Đang tải ảnh...";
                     var userId = Preferences.Get("UserId", string.Empty);
 
                     if (string.IsNullOrEmpty(userId))
                     {
-                        StatusMessage = "User ID not found";
+                        StatusMessage = "Không tìm thấy ID người dùng";
                         return;
                     }
 
@@ -177,7 +176,7 @@ namespace NotationApp.ViewModels
                     }
                     else
                     {
-                        StatusMessage = "Failed to upload photo";
+                        StatusMessage = "Không thể tải ảnh lên";
                     }
                 }
             }
@@ -201,7 +200,6 @@ namespace NotationApp.ViewModels
             try
             {
                 IsBusy = true;
-                StatusMessage = "Signing out...";
 
                 // Clear preferences
                 Preferences.Clear();
@@ -225,8 +223,118 @@ namespace NotationApp.ViewModels
             }
             catch (Exception ex)
             {
-                StatusMessage = "Error signing out";
+                StatusMessage = "Lỗi đăng xuất";
                 Debug.WriteLine($"Error in SignOut: {ex}");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        [RelayCommand]
+        private async Task DeleteAccount()
+        {
+            if (IsBusy) return;
+
+            try
+            {
+                // Show confirmation dialog
+                bool confirm = await Application.Current.MainPage.DisplayAlert(
+                    "Xóa tài khoản",
+                    "Bạn có chắc chắn muốn xóa tài khoản? Hành động này không thể hoàn tác và tất cả dữ liệu của bạn sẽ bị xóa.",
+                    "Xóa",
+                    "Hủy"
+                );
+
+                if (!confirm) return;
+
+                IsBusy = true;
+                StatusMessage = "Đang xóa tài khoản...";
+
+                var userId = Preferences.Get("UserId", string.Empty);
+                if (string.IsNullOrEmpty(userId))
+                {
+                    StatusMessage = "Không tìm thấy ID người dùng";
+                    return;
+                }
+
+                // Delete all notes from local database
+                var database = App.Database;
+                var notes = await database.GetNotesAsync();
+                foreach (var note in notes.Where(n => n.OwnerId == userId))
+                {
+                    await database.DeleteNoteAsync(note);
+                }
+
+                // Delete all drawings
+                var drawings = await database.GetDrawingsAsync();
+                foreach (var drawing in drawings.Where(d => d.OwnerId == userId))
+                {
+                    await database.DeleteDrawingAsync(drawing);
+                }
+
+                // Delete from Firebase Realtime Database
+                using (var client = new HttpClient())
+                {
+                    // Delete notes
+                    var notesUrl = $"https://my-maui-default-rtdb.firebaseio.com/notes.json?orderBy=\"OwnerId\"&equalTo=\"{userId}\"";
+                    await client.DeleteAsync(notesUrl);
+
+                    // Delete drawings
+                    var drawingsUrl = $"https://my-maui-default-rtdb.firebaseio.com/drawings.json?orderBy=\"OwnerId\"&equalTo=\"{userId}\"";
+                    await client.DeleteAsync(drawingsUrl);
+                }
+
+                // Delete user profile from Firestore
+                await _firestoreService.DeleteUserProfile(userId);
+
+                // Delete Firebase Auth account
+                await _authService.DeleteAccount();
+
+                // Clear preferences
+                Preferences.Clear();
+
+                // Reset AppShell data
+                var shellViewModel = IPlatformApplication.Current.Services.GetService<AppShellViewModel>();
+                if (shellViewModel != null)
+                {
+                    shellViewModel.UserDisplayName = string.Empty;
+                    shellViewModel.UserEmail = string.Empty;
+                    shellViewModel.UserProfileImage = "default_profile.png";
+                    shellViewModel.IsUserLoggedIn = false;
+                }
+
+                await Application.Current.MainPage.DisplayAlert(
+                    "Tài khoản đã xóa",
+                    "Tài khoản của bạn đã được xóa thành công.",
+                    "OK"
+                );
+
+                // Navigate to sign in page
+                await Shell.Current.GoToAsync("//SignInPage");
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("sign in again"))
+                {
+                    await Application.Current.MainPage.DisplayAlert(
+                        "Xác thực lại",
+                        "Vui lòng đăng nhập lại trước khi xóa tài khoản",
+                        "OK"
+                    );
+                    await SignOut(); // Sign out and redirect to login
+                }
+                else
+                {
+                    StatusMessage = "Lỗi xóa tài khoản";
+                    Debug.WriteLine($"Error in DeleteAccount: {ex}");
+                    await Application.Current.MainPage.DisplayAlert(
+                        "Lỗi",
+                        "Không thể xóa tài khoản. Vui lòng thử lại sau.",
+                        "OK"
+                    );
+                }
             }
             finally
             {

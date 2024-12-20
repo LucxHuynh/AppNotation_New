@@ -58,6 +58,14 @@
 		<MauiFont Include="Resources\Fonts\*" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+
+		<MauiAsset Include="Resources\Raw\drawing_editor.html">
+			<LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+		</MauiAsset>
+		<MauiAsset Include="Resources\Raw\editor.html">
+			<LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
+		</MauiAsset>
+		
 	</ItemGroup>
 
 	<ItemGroup>
@@ -85,19 +93,13 @@
 	  <None Remove="Resources\Images\pin_icon.png" />
 	  <None Remove="Resources\Images\restore.png" />
 	  <None Remove="Resources\Images\save.png" />
-	  <None Remove="Resources\Raw\drawing_editor.html" />
-	  <None Remove="Resources\Raw\editor.html" />
+	  <None Remove="Resources\Images\settings.png" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <Content Include="firebase-credentials.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Content>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiAsset Include="Resources\Raw\drawing_editor.html" />
-	  <MauiAsset Include="Resources\Raw\editor.html" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -121,9 +123,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\DrawingPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\FolderPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\ForgotPasswordPage.xaml">

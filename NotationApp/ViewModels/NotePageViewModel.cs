@@ -16,11 +16,14 @@ namespace NotationApp.ViewModels
         private readonly NoteDatabase _database;
         private readonly Note_Realtime _note;
         private readonly string _currentUserId;
+        private readonly string _currentUserEmail;
 
         public ObservableCollection<Drawing> Drawings { get; private set; } = new();
         public ObservableCollection<Drawing> SharedWithMeDrawings { get; private set; } = new();
 
         [ObservableProperty] private Drawing selectedDrawing;
+
+        [ObservableProperty] private bool isEditable = true; // Mặc định cho phép edit
 
         public NotePageViewModel(Note_Realtime note)
         {
@@ -29,6 +32,7 @@ namespace NotationApp.ViewModels
             Title = _note.Title;
             Text = _note.Text;
             _currentUserId = Preferences.Get("UserId", string.Empty);
+            _currentUserEmail = Preferences.Get("UserEmail", string.Empty);
         }
 
         [ObservableProperty]
@@ -46,8 +50,6 @@ namespace NotationApp.ViewModels
                 _note.Title = Title;
                 _note.Text = htmlContent;
                 _note.UpdateDate = DateTime.Now;
-                _note.OwnerId = _currentUserId ?? "default_user"; // Đảm bảo OwnerId không null                   
-                _note.SharedWithUsers = JsonConvert.SerializeObject(Array.Empty<string>());
 
                 // Lưu local
                 await _database.SaveNoteAsync(_note);
@@ -73,7 +75,7 @@ namespace NotationApp.ViewModels
                     CreateDate = DateTime.Now,
                     UpdateDate = DateTime.Now,
                     OwnerId = _currentUserId ?? "default_user",
-                    SharedWithUsers = JsonConvert.SerializeObject(Array.Empty<string>())
+                    OwnerEmail = _currentUserEmail ?? "default_user",
                 };
 
                 Debug.WriteLine($"New drawing created with initial values: Title={newDraw.Title}, OwnerId={newDraw.OwnerId}");
@@ -128,7 +130,7 @@ namespace NotationApp.ViewModels
             }
 
             // Sử dụng Id của ghi chú để xác định URL cụ thể cho ghi chú đó trên Firebase
-            string firebaseUrl = $"https://notationapp-98854-default-rtdb.firebaseio.com/notes/{note.Id}.json";
+            string firebaseUrl = $"https://my-maui-default-rtdb.firebaseio.com/notes/{note.Id}.json";
 
             using (HttpClient client = new HttpClient())
             {

@@ -11,30 +11,29 @@ namespace NotationApp.Converters
     {
         // Dictionary định nghĩa màu text cho từng tag
         private readonly Dictionary<string, (Color selected, Color unselected)> _tagTextColors = new()
-    {
-        { "All", (Colors.White, Colors.Black) },
-        { "Personal", (Colors.White, Colors.Orange) },
-        { "Work", (Colors.White, Colors.Blue) },
-        { "Family", (Colors.White, Colors.Red) },
-        { "Study", (Colors.White, Colors.Green) },
-        { "Todo", (Colors.White, Colors.Purple) },
-        { "Shared", (Colors.White, Colors.LightBlue) },
-        { "Other", (Colors.White, Colors.Gray) }
-    };
+        {
+            { "ALL", (Colors.White, Colors.Black) },
+            { "Personal", (Colors.White, Colors.Orange) },
+            { "Work", (Colors.White, Colors.Blue) },
+            { "Family", (Colors.White, Colors.Red) },
+            { "Study", (Colors.White, Colors.Green) },
+            { "Todo", (Colors.White, Colors.Purple) },
+            { "Shared", (Colors.White, Colors.LightBlue) },
+            { "Other", (Colors.White, Colors.Gray) }
+        };
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            string currentTag = value as string;
-            string buttonTag = parameter as string;
+            string currentTag = (string)value;
+            string buttonTag = (string)parameter;
 
             if (_tagTextColors.TryGetValue(buttonTag, out var colors))
             {
-                // Nếu tag được chọn, trả về màu selected, ngược lại trả về màu unselected
                 return currentTag == buttonTag ? colors.selected : colors.unselected;
             }
 
-            // Fallback nếu không tìm thấy tag trong dictionary
-            return currentTag == buttonTag ? Colors.White : Colors.Black;
+            // Default colors if tag not found in dictionary
+            return currentTag == buttonTag ? Colors.White : Color.FromArgb("#6B4EFF");
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

@@ -19,32 +19,40 @@
                    HorizontalOptions="StartAndExpand"/>
 
             <!-- Các nút thao tác nhỏ hơn với khoảng cách -->
-            <ImageButton Source="save.png" Command="{Binding SaveCommand}" HeightRequest="24" WidthRequest="24" Grid.Column="2" VerticalOptions="Center" BackgroundColor="#512BD4" Clicked="OnSaveButtonClicked"/>
+            <ImageButton 
+                x:Name="SaveButton"
+                Source="save.png" 
+                HeightRequest="24" 
+                WidthRequest="24" 
+                Grid.Column="2" 
+                VerticalOptions="Center" 
+                BackgroundColor="#512BD4" 
+                Clicked="OnSaveButtonClicked"/> 
 
             <ImageButton
-            x:Name="DrawButton"
-            Source="draw.png" 
-            HeightRequest="24" 
-            WidthRequest="24" 
-            Grid.Column="4" 
-            VerticalOptions="Center" 
-            BackgroundColor="#512BD4"
-            Clicked="OnDrawButtonClicked"/>
+                x:Name="DrawButton"
+                Source="draw.png" 
+                HeightRequest="24" 
+                WidthRequest="24" 
+                Grid.Column="4" 
+                VerticalOptions="Center" 
+                BackgroundColor="#512BD4"
+                Clicked="OnDrawButtonClicked"/>
             <ImageButton 
-            x:Name="RecordButton"
-            Source="microphone.png" 
-            HeightRequest="24" 
-            WidthRequest="24" 
-            Grid.Column="6" 
-            VerticalOptions="Center" 
-            BackgroundColor="#512BD4"
-            Clicked="OnRecordButtonClicked"/>
-            <ImageButton Source="dots.png" Command="{Binding MoreOptionsCommand}" HeightRequest="24" WidthRequest="24" Grid.Column="8" VerticalOptions="Center" BackgroundColor="#512BD4" Clicked="OnDotsButtonClicked"/>
+                x:Name="RecordButton"
+                Source="microphone.png" 
+                HeightRequest="24" 
+                WidthRequest="24" 
+                Grid.Column="6" 
+                VerticalOptions="Center" 
+                BackgroundColor="#512BD4"
+                Clicked="OnRecordButtonClicked"/>
+                <ImageButton Source="dots.png" Command="{Binding MoreOptionsCommand}" HeightRequest="24" WidthRequest="24" Grid.Column="8" VerticalOptions="Center" BackgroundColor="#512BD4" Clicked="OnDotsButtonClicked"/>
         </Grid>
     </Shell.TitleView>
 
     <!-- Nội dung chính -->
-    <Grid Padding="10" RowDefinitions="*, Auto">
+    <Grid Padding="0" RowDefinitions="*, Auto">
         <WebView x:Name="EditorWebView"
         HorizontalOptions="FillAndExpand"
         VerticalOptions="FillAndExpand"

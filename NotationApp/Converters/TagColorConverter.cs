@@ -23,15 +23,19 @@ namespace NotationApp.Converters
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            string currentTag = value as string;
-            string buttonTag = parameter as string;
+            string currentTag = (string)value;
+            string buttonTag = (string)parameter;
 
             if (currentTag == buttonTag)
             {
-                return _tagColors.TryGetValue(buttonTag, out var color) ? color : Colors.Gray;
+                if (_tagColors.TryGetValue(buttonTag, out Color tagColor))
+                {
+                    return tagColor;
+                }
+                return Color.FromArgb("#6B4EFF"); // Default color if tag not found
             }
 
-            return Colors.Transparent;
+            return Colors.Transparent; // Unselected state
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

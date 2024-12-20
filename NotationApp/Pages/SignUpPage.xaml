@@ -10,14 +10,14 @@
 
             <VerticalStackLayout Spacing="8">
                 <Label 
-                    Text="Create Account"
+                    Text="Tạo tài khoản"
                     TextColor="#1a41cc"
                     FontSize="30"
                     FontAttributes="Bold"
                     HorizontalOptions="Start" />
 
                 <Label 
-                    Text="Create an account so you can explore all the existing jobs"
+                    Text="Tạo một tài khoản để bạn có thể khám phá tất cả các công việc hiện có"
                     TextColor="Black"
                     FontSize="20"
                     HorizontalOptions="Start" />
@@ -72,7 +72,7 @@
                 </Frame>
 
                 <Button 
-                    Text="Sign up"
+                    Text="Đăng ký"
                     Command="{Binding RegisterUserCommand}"
                     BackgroundColor="#1a41cc"
                     TextColor="White"
@@ -81,7 +81,7 @@
                     FontAttributes="Bold" />
 
                 <Label 
-                    Text="Already have an account"
+                    Text="Đã có tài khoản!"
                     TextColor="Black"
                     FontSize="14"
                     HorizontalOptions="Center">
@@ -91,46 +91,33 @@
                 </Label>
 
                 <Label 
-                    Text="Or continue with"
+                    Text="Hoặc tiếp tục với"
                     TextColor="#666666"
                     FontSize="14"
                     HorizontalOptions="Center" />
 
-                <HorizontalStackLayout 
-                    Spacing="16" 
-                    HorizontalOptions="Center">
-                    <Frame 
-                        BorderColor="#e8e8e8"
-                        BackgroundColor="White"
-                        CornerRadius="24"
-                        HeightRequest="48"
-                        WidthRequest="48"
-                        Padding="0"
-                        HasShadow="False">
-                        <Image 
-                            Source="google_logo.png"
-                            HeightRequest="24"
-                            WidthRequest="24"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center" />
-                    </Frame>
-
-                    <Frame 
-                        BorderColor="#e8e8e8"
-                        BackgroundColor="White"
-                        CornerRadius="24"
-                        HeightRequest="48"
-                        WidthRequest="48"
-                        Padding="0"
-                        HasShadow="False">
-                        <Image 
-                            Source="apple_logo.png"
-                            HeightRequest="24"
-                            WidthRequest="24"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center" />
-                    </Frame>
-                </HorizontalStackLayout>
+                <Frame 
+                     HorizontalOptions="Center"
+                     Margin="20,10"
+                     Padding="0"
+                     BorderColor="Transparent"
+                     HasShadow="True"
+                     CornerRadius="4"
+                     MinimumWidthRequest="280">
+                    <Button 
+                         Command="{Binding GoogleSignInCommand}"
+                         HeightRequest="45"
+                         Padding="20,0"
+                         BackgroundColor="White"
+                         BorderColor="#DADCE0"
+                         BorderWidth="1"
+                         CornerRadius="4"
+                         ContentLayout="Left,15"
+                         ImageSource="google_logo.png"
+                         Text="Đăng nhập bằng Google"
+                         TextColor="#3c4043"
+                         FontSize="15"/>
+                </Frame>
             </VerticalStackLayout>
 
             <Label 

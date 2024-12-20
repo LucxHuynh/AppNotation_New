@@ -58,14 +58,7 @@ namespace NotationApp.Models
             get => phoneNumber;
             set => SetProperty(ref phoneNumber, value);
         }
-
-        private List<string> sharedWithMe = new();
-        public List<string> SharedWithMe
-        {
-            get => sharedWithMe;
-            set => SetProperty(ref sharedWithMe, value);
-        }
-
+       
         private List<string> mySharedItems = new();
         public List<string> MySharedItems
         {

@@ -22,7 +22,17 @@
                 <Setter Property="Padding" Value="15,0"/>
                 <Setter Property="BorderWidth" Value="0"/>
                 <Setter Property="Opacity" Value="1"/>
-                
+            </Style>
+
+            <Style x:Key="GoogleSignInButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="White"/>
+                <Setter Property="TextColor" Value="#333333"/>
+                <Setter Property="BorderColor" Value="#e8e8e8"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="CornerRadius" Value="24"/>
+                <Setter Property="HeightRequest" Value="48"/>
+                <Setter Property="Padding" Value="16,0"/>
+                <Setter Property="FontSize" Value="14"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

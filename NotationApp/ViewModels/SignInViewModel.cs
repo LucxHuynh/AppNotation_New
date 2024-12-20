@@ -8,6 +8,7 @@ using NotationApp.Pages;
 using NotationApp.Services;
 using System;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace NotationApp.ViewModels
 {
@@ -39,6 +40,9 @@ namespace NotationApp.ViewModels
 
         public IAsyncRelayCommand SignInCommand { get; }
         public IRelayCommand NavigateToRegisterCommand { get; }
+        public IAsyncRelayCommand NavigateToForgotPasswordCommand { get; }
+
+        public ICommand GoogleSignInCommand => new Command(async () => await SignInWithGoogle());
 
         public SignInViewModel(INavigation navigation, IAuthService authService)
         {
@@ -48,6 +52,8 @@ namespace NotationApp.ViewModels
             // Initialize commands using explicitly defined methods
             SignInCommand = new AsyncRelayCommand(SignInCommandHandler);
             NavigateToRegisterCommand = new RelayCommand(NavigateToRegisterCommandHandler);
+
+            NavigateToForgotPasswordCommand = new AsyncRelayCommand(NavigateToForgotPassword);
         }
 
         private void ValidateEmail()
@@ -63,6 +69,12 @@ namespace NotationApp.ViewModels
             }
             UpdateIsValid();
         }
+
+        private async Task NavigateToForgotPassword()
+        {
+            await Shell.Current.GoToAsync("ForgotPasswordPage");
+        }
+
 
         private void ValidatePassword()
         {
@@ -114,8 +126,8 @@ namespace NotationApp.ViewModels
             if (!IsValid)
             {
                 await Application.Current.MainPage.DisplayAlert(
-                    "Validation Error",
-                    "Please fix all validation errors before proceeding.",
+                    "Lỗi xác thực",
+                    "Vui lòng sửa tất cả các lỗi xác thực trước khi tiếp tục.",
                     "OK");
                 return;
             }
@@ -144,13 +156,13 @@ namespace NotationApp.ViewModels
                 }
                 else
                 {
-                    await App.Current.MainPage.DisplayAlert("Error", "Invalid email or password", "OK");
+                    await App.Current.MainPage.DisplayAlert("Lỗi", "Email hoặc mật khẩu không hợp lệ", "OK");
                 }
             }
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine($"Unexpected Error: {ex}");
-                await App.Current.MainPage.DisplayAlert("Error", "An unexpected error occurred. Please try again", "OK");
+                await App.Current.MainPage.DisplayAlert("Lỗi", "Đã xảy ra lỗi không mong muốn. Vui lòng thử lại", "OK");
             }
             finally
             {
@@ -176,6 +188,53 @@ namespace NotationApp.ViewModels
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
+            }
+        }
+
+        [RelayCommand]
+        private async Task SignInWithGoogle()
+        {
+            try
+            {
+                IsLoading = true;
+
+                var result = await _authService.SignInWithGoogle();
+                if (result?.User != null)
+                {
+                    // Save user info
+                    Preferences.Default.Set("UserId", result.User.Uid);
+                    Preferences.Default.Set("UserEmail", result.User.Info.Email);
+                    Preferences.Default.Set("IsLoggedIn", true);
+
+                    // Update UI
+                    var shellViewModel = IPlatformApplication.Current.Services.GetService<AppShellViewModel>();
+                    if (shellViewModel != null)
+                    {
+                        shellViewModel.IsUserLoggedIn = true;
+                        await shellViewModel.UpdateUserData();
+                    }
+
+                    await Shell.Current.GoToAsync("//HomePage");
+                }
+                else
+                {
+                    await App.Current.MainPage.DisplayAlert(
+                        "Lỗi",
+                        "Không đăng nhập được bằng Google",
+                        "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = $"Lỗi đăng nhập bằng Google: {ex.Message}";
+                await App.Current.MainPage.DisplayAlert(
+                    "Lỗi",
+                    "Không đăng nhập được bằng Google",
+                    "OK");
+            }
+            finally
+            {
+                IsLoading = false;
             }
         }
     }
